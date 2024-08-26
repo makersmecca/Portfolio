@@ -1,10 +1,9 @@
-import "./App.css";
-import AboutMe from "./about";
+import Home from "./Components/Home";
 
 function App() {
   return (
     <>
-      <AboutMe />
+    <Home />
     </>
   );
 }
