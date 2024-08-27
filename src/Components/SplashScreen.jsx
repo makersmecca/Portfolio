@@ -10,7 +10,7 @@ const SplashScreen = ({ onAnimationEnd }) => {
   return (
     <div className="relative">
       <div className="h-screen p-10 bg-black absolute font-Kanit w-full text-center text-center">
-        <div className="text-5xl">WELCOME</div>
+        <div className="text-5xl animate-bounce">WELCOME</div>
       </div>
     </div>
   );
