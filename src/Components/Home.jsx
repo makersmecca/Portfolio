@@ -1,9 +1,10 @@
+import { useState } from "react";
 const Home = () => {
-
-    return(<h1 className="text-5xl font-italic underline">
-        Hello world!
-    </h1>
-    )
-}
+  return (
+    <>
+      <h3>HOME</h3>
+    </>
+  );
+};
 
 export default Home;
