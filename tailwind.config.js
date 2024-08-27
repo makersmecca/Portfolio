@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {},
     fontFamily:{
-      signature: ["Kanit"]
+      Kanit: ["Kanit", "sans-serif"]
     }
   },
   plugins: [],

@@ -12,11 +12,11 @@ const DisplayDateTime = () => {
   return (
     <>
       <div className="py-5">
-        <h5 className="font-signature text-center">
+        <h5 className="font-Kanit text-center">
           <span className="text-6xl">{`${currentTime.getHours()}:${currentTime.getMinutes()}`}</span>
           {/* {currentTime.toTimeString().substring(0, 8)} */}
         </h5>
-        <h5 className="text-3xl font-semibold text-center">
+        <h5 className="font-Kanit text-3xl font-semibold text-center">
           {currentTime.toDateString().substring(3)}
         </h5>
       </div>

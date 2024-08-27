@@ -2,7 +2,7 @@ import { useState } from "react";
 const Home = () => {
   return (
     <>
-      <h3>HOME</h3>
+      <h1 className="text-3xl">HOME 1234567890</h1>
     </>
   );
 };
