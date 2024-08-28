@@ -6,7 +6,11 @@ const SplashScreen = ({ onAnimationEnd }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
+<<<<<<< HEAD
     }, 500); //!!! set to 500 for testing. set to 3000 when deploying !!!
+=======
+    }, 500);
+>>>>>>> caa1492275b2f5bd7d3d26d07c05309e4304ba64
 
     return () => clearTimeout(timer);
   }, []);

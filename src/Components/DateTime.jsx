@@ -12,8 +12,8 @@ const DisplayDateTime = () => {
   return (
     <>
       <div className="py-5">
-        <h5 className="font-Kanit text-center">
-          <span className="text-6xl">
+        <h5 className="font-Kanit flex justify-center">
+          <span className="md:text-6xl text-3xl">
             {currentTime.getHours() < 10 ? (
               <span>0{currentTime.getHours()}</span>
             ) : (
@@ -29,7 +29,7 @@ const DisplayDateTime = () => {
           {/* <span className="text-6xl">{`${currentTime.getHours()}:${currentTime.getMinutes()}`}</span> */}
           {/* {currentTime.toTimeString().substring(0, 8)} */}
         </h5>
-        <h5 className="font-Kanit text-2xl font-semibold text-center">
+        <h5 className="font-Kanit md:text-2xl font-semibold flex justify-center">
           <span>
             {currentTime.toDateString().substring(0, 3)},{" "}
             {currentTime.toDateString().substring(8, 10)}{" "}

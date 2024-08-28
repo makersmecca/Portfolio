@@ -1,6 +1,9 @@
-import Home from "./Components/Home";
+import Intro from "./Components/Intro";
 import DisplayDateTime from "./Components/DateTime";
 import SplashScreen from "./Components/SplashScreen";
+import Socials from "./Components/Socials";
+import TechStack from "./Components/TechStack";
+import Projects from "./Components/Projects";
 
 import { useState } from "react";
 
@@ -17,7 +20,10 @@ const App = () => {
     <>
       {showSplash && <SplashScreen onAnimationEnd={updateShowSplash} />}
       <DisplayDateTime />
-      <Home />
+      <Intro />
+      <Projects />
+      <TechStack />
+      <Socials />
     </>
   );
 };
