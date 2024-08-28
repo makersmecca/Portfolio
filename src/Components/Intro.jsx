@@ -20,7 +20,7 @@ const Intro = () => {
       </div> */}
 
       <div className="md:mt-20 mt-10 grid grid-cols-1 lg:grid-cols-3 lg:gap-5 xl:px-80 lg:px-52 md:px-36 px-8">
-        <div className="flex lg:flex-col flex-row justify-center ">
+        <div className="flex justify-center lg:justify-end">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100"
@@ -35,11 +35,11 @@ const Intro = () => {
             />
           </svg>
         </div>
-        <div className="px-6 md:col-span-2 mt-10 lg:mt-0">
-          <h2 className="md:text-3xl text-2xl text-center lg:text-end">
+        <div className="px-6 md:px-20 lg:px-32 md:col-span-2 mt-10 lg:mt-0">
+          <h2 className="md:text-3xl text-2xl text-center lg:text-start">
             Display Name
           </h2>
-          <p className="flex justify-center text-center lg:text-end pt-5 md:pt-3">
+          <p className="flex justify-center text-center lg:text-start pt-5 md:pt-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quos
             dolores corporis velit nam. Voluptate sed laudantium architecto,
             nostrum eum animi ipsam quas iure minus, dicta magnam officia enim
