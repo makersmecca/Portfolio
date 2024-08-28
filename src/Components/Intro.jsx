@@ -19,7 +19,7 @@ const Intro = () => {
         </div>
       </div> */}
 
-      <div className="md:mt-20 mt-10 grid grid-cols-1 xl:grid-cols-3 xl:gap-5 xl:px-80 px-64">
+      <div className="md:mt-20 mt-10 grid grid-cols-1 xl:grid-cols-3 xl:gap-5 xl:px-80 lg:px-64 px-8">
         <div className="flex xl:flex-col flex-row justify-center ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
