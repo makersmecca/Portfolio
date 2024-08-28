@@ -1,4 +1,4 @@
-import Home from "./Components/Home";
+import Intro from "./Components/Intro";
 import DisplayDateTime from "./Components/DateTime";
 import SplashScreen from "./Components/SplashScreen";
 
@@ -17,7 +17,7 @@ const App = () => {
     <>
       {showSplash && <SplashScreen onAnimationEnd={updateShowSplash} />}
       <DisplayDateTime />
-      <Home />
+      <Intro />
     </>
   );
 };
