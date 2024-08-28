@@ -11,7 +11,7 @@ const DisplayDateTime = () => {
 
   return (
     <>
-      <div className="py-5">
+      <div className="pt-7 mt-7 lg:pt-64 lg:mb-20">
         <h5 className="font-Kanit flex justify-center">
           <span className="md:text-6xl text-3xl">
             {currentTime.getHours() < 10 ? (
