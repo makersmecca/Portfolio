@@ -1,17 +1,4 @@
-@keyframes blob {
-  0% {
-    clip-path: polygon(50% 0%, 100% 38%);
-  }
-}
-
-.blob-container {
-  max-height: 170px;
-  max-width: 170px;
-}
-
-
-/* Keyframes for the blob animation */
-@keyframes blob {
+/* @keyframes blob {
   0% {
     clip-path: polygon(50% 0%, 100% 38%, 88% 100%, 50% 85%, 12% 100%, 0% 38%);
   }
@@ -27,16 +14,33 @@
   100% {
     clip-path: polygon(50% 0%, 100% 38%, 88% 100%, 50% 85%, 12% 100%, 0% 38%);
   }
+} */
+
+@keyframes wobble {
+  0% {
+    clip-path: circle(50% at 50% 50%);
+  }
+  25% {
+    clip-path: ellipse(52% 48% at 50% 50%);
+  }
+  50% {
+    clip-path: ellipse(48% 52% at 50% 50%);
+  }
+  75% {
+    clip-path: ellipse(51% 49% at 50% 50%);
+  }
+  100% {
+    clip-path: ellipse(50% at 50% 50%);
+  }
 }
 
-/* The class that applies the animation */
 .blob-container {
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4); /* Custom gradient border */
-  padding: 8px; /* Space for the border effect */
-  clip-path: polygon(50% 0%, 100% 38%, 88% 100%, 50% 85%, 12% 100%, 0% 38%); /* Initial blob shape */
+  background: black;
+  padding: 8px;
+  clip-path: circle(50% at 50% 50%);
   transition: clip-path 1s ease-in-out;
 }
 
 .animate-blob {
-  animation: blob 8s infinite ease-in-out; /* Animation duration and infinite loop */
+  animation: wobble 8s infinite ease-in-out;
 }
