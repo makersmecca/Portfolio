@@ -1,0 +1,10 @@
+@keyframes blob {
+  0% {
+    clip-path: polygon(50% 0%, 100% 38%);
+  }
+}
+
+.blob-container {
+  max-height: 170px;
+  max-width: 170px;
+}
