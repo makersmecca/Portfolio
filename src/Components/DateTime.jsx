@@ -11,7 +11,7 @@ const DisplayDateTime = () => {
 
   return (
     <>
-      <div className="ps-10">
+      <div className="md:ps-10 ps-5 text-start">
         {currentTime.getHours() < 10 ? (
           <span>0{currentTime.getHours()}</span>
         ) : (
@@ -23,7 +23,7 @@ const DisplayDateTime = () => {
         ) : (
           <span>{currentTime.getMinutes()}</span>
         )}
-        <span className="ps-10">
+        <span className="md:ps-10 ps-5">
           {currentTime.toDateString().substring(0, 3)},{" "}
           {currentTime.toDateString().substring(8, 10)}{" "}
           {currentTime.toDateString().substring(4, 7)}
