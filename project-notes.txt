@@ -1,0 +1,17 @@
+NOTES:
+
+----------------------------------------------------------**Things To Add**-------------------------------------------------------------
+-- add wobbly ellipse animation to the display picture
+-- add a few subtle scroll effects
+-- maybe add an animation to the background preferebly one that responses to the cursor position
+-- add project links and card thumbnails for the projects inside the project cards
+
+----------------------------------------------------------**Things to Fix**-------------------------------------------------------------
+-- fix issue with display picture being rendered on splashscreen 
+   !--->issue is caused by the css property of "infinite". need to use a state to dynamically add and remove the css className to the component
+
+-- Fix the alignment and the overall font of the page
+-- try to make it look more minimalistic
+-- add animation to the buttons and links
+
+----------------------------------------------------------**Additional Info**-------------------------------------------------------------
