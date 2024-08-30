@@ -1,19 +1,18 @@
 import "./profileborder.css";
 const DisplayPicture = ({ isAnimated }) => {
   return (
-    // <div className="">
+    // <div className="relative w-44 h-44 blob-container animate-blob">
     //   <img
     //     src="/displayPicture.jpg"
     //     alt="profile picture"
-    //     className="w-full h-full rounded-full wobbly-circle animate-wobble"
+    //     className="w-full h-full object-cover rounded-full"
     //   />
     // </div>
-
-    <div className="w-48 h-48 overflow-hidden rounded-full">
+    <div>
       <img
         src="/displayPicture.jpg"
         alt="profile picture"
-        className="w-full h-full object-cover animate-wobble"
+        className="blob md:h-52 md:w-52 h-44 w-44"
       />
     </div>
   );
