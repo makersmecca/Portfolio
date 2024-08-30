@@ -2,13 +2,12 @@ const TechStack = () => {
   return (
     <>
       <div className="mt-10 md:mt-20 pt-5 grid grid-cols-2 md:grid-cols-5 xl:px-80 lg:px-52 md:px-36 px-8">
-        <div className="mb-10 col-span-2 md:col-span-3 col-start-1 text-center md:text-start md:ps-16 md:me-9 text-3xl md:text-4xl">
+        <div className="mb-10 col-span-full col-start-1 text-center md:text-start md:ps-16 md:me-9 text-3xl md:text-4xl">
           Tech-Stack
         </div>
-        <div className="md:col-start-1 flex justify-center ">
+        <div className=" flex justify-center ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
             aria-hidden="true"
             role="img"
             className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
@@ -23,14 +22,14 @@ const TechStack = () => {
             ></path>
           </svg>
         </div>
-        <div className="md:col-start-2 flex justify-center">
+        <div className=" flex justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             role="img"
             className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
-            width="65"
-            height="65"
+            width="80"
+            height="80"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 384 512"
           >
@@ -40,14 +39,14 @@ const TechStack = () => {
             />
           </svg>
         </div>
-        <div className="md:col-start-3 flex justify-center">
+        <div className=" flex justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             role="img"
             className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
-            width="65"
-            height="65"
+            width="80"
+            height="80"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 448 512"
           >
@@ -57,14 +56,14 @@ const TechStack = () => {
             />
           </svg>
         </div>
-        <div className="md:col-start-4 flex justify-center">
+        <div className=" flex justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             role="img"
             className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
-            width="65"
-            height="65"
+            width="80"
+            height="80"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 576 512"
           >
@@ -74,14 +73,14 @@ const TechStack = () => {
             />
           </svg>
         </div>
-        <div className="md:col-start-5 flex justify-center">
+        <div className=" flex justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             role="img"
             className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
-            width="65"
-            height="65"
+            width="80"
+            height="80"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 384 512"
           >
