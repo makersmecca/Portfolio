@@ -1,28 +1,23 @@
-@keyframes wobble {
+.blob {
+  background-size: cover;
+  animation: animate 5s ease-in-out infinite;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes animate {
   0% {
-    clip-path: circle(50% at 50% 50%);
+    border-radius: 60% 30% 40% 70%/60% 30% 70% 40%;
   }
   25% {
-    clip-path: ellipse(52% 48% at 50% 50%);
+    border-radius: 60% 30% 40% 70%/60% 30% 70% 40%;
   }
   50% {
-    clip-path: ellipse(48% 52% at 50% 50%);
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
   }
   75% {
-    clip-path: ellipse(51% 49% at 50% 50%);
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 60%;
   }
   100% {
-    clip-path: ellipse(50% at 50% 50%);
+    border-radius: 60% 30% 40% 70%/60% 30% 70% 40%;
   }
-}
-
-.blob-container {
-  background: black;
-  padding: 8px;
-  clip-path: circle(50% at 50% 50%);
-  transition: clip-path 1s ease-in-out;
-}
-
-.animate-blob {
-  animation: wobble 8s infinite ease-in-out;
 }
