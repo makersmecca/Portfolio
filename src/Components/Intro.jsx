@@ -1,6 +1,5 @@
 import { useState } from "react";
 import DisplayPicture from "./DisplayPicture";
-import "./profileborder.css";
 const Intro = ({ isAnimated }) => {
   return (
     <>

@@ -4,7 +4,6 @@ import SplashScreen from "./Components/SplashScreen";
 import Socials from "./Components/Socials";
 import TechStack from "./Components/TechStack";
 import Projects from "./Components/Projects";
-import "./Components/profileborder.css";
 import { useState } from "react";
 
 import "./Components/style.css";

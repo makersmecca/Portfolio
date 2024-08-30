@@ -1,0 +1,28 @@
+@keyframes wobble {
+  0% {
+    clip-path: circle(50% at 50% 50%);
+  }
+  25% {
+    clip-path: ellipse(52% 48% at 50% 50%);
+  }
+  50% {
+    clip-path: ellipse(48% 52% at 50% 50%);
+  }
+  75% {
+    clip-path: ellipse(51% 49% at 50% 50%);
+  }
+  100% {
+    clip-path: ellipse(50% at 50% 50%);
+  }
+}
+
+.blob-container {
+  background: black;
+  padding: 8px;
+  clip-path: circle(50% at 50% 50%);
+  transition: clip-path 1s ease-in-out;
+}
+
+.animate-blob {
+  animation: wobble 8s infinite ease-in-out;
+}
