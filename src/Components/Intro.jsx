@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DisplayPicture from "./DisplayPicture";
 import "/src/index.css";
+import ScrollDownArrow from "./ScrollDownArrow";
 const Intro = ({ splashStatus }) => {
   console.log(splashStatus);
   return (
@@ -12,7 +13,6 @@ const Intro = ({ splashStatus }) => {
               <DisplayPicture />
             </div>
             <div className="col-span-2 md:col-span-1 text-center flex justify-center items-center mt-12 md:mt-0">
-              {/* <div className=" ">Hi.</div> */}
               <div
                 className={
                   splashStatus
@@ -24,7 +24,7 @@ const Intro = ({ splashStatus }) => {
               </div>
             </div>
 
-            <div className="col-span-3 md:col-start-2 text-center mt-12 px-10 md:text-2xl">
+            <div className="col-span-3 md:col-start-2 text-center mt-12 px-10 text-2xl">
               My name is Ayudh.
             </div>
             <div className="col-span-3 md:col-start-2 md:text-center text-justify hyphens-auto md:hyphens-none mt-5 px-10 md:text-xl">
@@ -36,23 +36,7 @@ const Intro = ({ splashStatus }) => {
             </div>
           </div>
         </div>
-        <div
-          className={`${
-            splashStatus ? "" : "absolute"
-          } inset-x-0  bottom-0 flex justify-center mb-4`}
-        >
-          <div className="text-3xl text-gray-500 animate-bounce">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="white"
-              viewBox="0 0 512 512"
-            >
-              <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-            </svg>
-          </div>
-        </div>
+        <ScrollDownArrow splashStatus={splashStatus} />
       </div>
     </>
   );
