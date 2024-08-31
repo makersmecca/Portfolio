@@ -19,7 +19,7 @@ const App = () => {
     <>
       {showSplash && <SplashScreen onAnimationEnd={updateShowSplash} />}
       <DisplayDateTime />
-      <Intro />
+      <Intro splashStatus={showSplash} />
       <Projects />
       <TechStack />
       <Socials />
