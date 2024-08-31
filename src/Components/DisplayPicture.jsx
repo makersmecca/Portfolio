@@ -1,13 +1,20 @@
 import "./profileborder.css";
 import dispPic from "/images/displayPicture.jpg";
 
-const DisplayPicture = () => {
+const DisplayPicture = ({ splashStatus }) => {
   return (
     <div>
+      <div
+        className={`${
+          splashStatus ? "hidden" : "absolute animate-appear"
+        } blob md:h-64 md:w-64 h-44 w-44 bg-slate-800 blur-3xl`}
+      ></div>
       <img
         src={dispPic}
         alt="profile picture"
-        className="blob md:h-64 md:w-64 h-44 w-44"
+        className={`${
+          splashStatus ? "" : "relative"
+        } blob md:h-64 md:w-64 h-44 w-44`}
       />
     </div>
   );
