@@ -1,13 +1,6 @@
 import "./profileborder.css";
-const DisplayPicture = ({ isAnimated }) => {
+const DisplayPicture = () => {
   return (
-    // <div className="relative w-44 h-44 blob-container animate-blob">
-    //   <img
-    //     src="/displayPicture.jpg"
-    //     alt="profile picture"
-    //     className="w-full h-full object-cover rounded-full"
-    //   />
-    // </div>
     <div>
       <img
         src="/displayPicture.jpg"
@@ -19,5 +12,3 @@ const DisplayPicture = ({ isAnimated }) => {
 };
 
 export default DisplayPicture;
-//className="rounded-full md:h-44 md:w-44 h-32 w-32"
-// ${isAnimated ? "blob-container animate-blob" : ""}
