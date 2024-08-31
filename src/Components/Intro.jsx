@@ -9,10 +9,10 @@ const Intro = ({ splashStatus }) => {
       <div className="flex flex-col min-h-screen">
         <div className="flex justify-center items-center min-h-screen">
           <div className="grid grid-cols-2 md:grid-cols-5 xl:px-80 lg:px-52 md:px-36 px-8">
-            <div className="col-span-2 flex justify-center mt-12 md:mt-0">
+            <div className="col-span-2 md:row-span-3 flex justify-center md:items-center mt-12 md:mt-0">
               <DisplayPicture />
             </div>
-            <div className="col-span-2 md:col-span-1 text-center flex justify-center items-center mt-12 md:mt-0">
+            <div className="col-span-2 md:col-span-3 md:col-start-3 text-center md:text-start flex md:justify-start justify-center items-center mt-12 px-10 md:mt-0">
               <div
                 className={
                   splashStatus
@@ -24,10 +24,10 @@ const Intro = ({ splashStatus }) => {
               </div>
             </div>
 
-            <div className="col-span-3 md:col-start-2 text-center mt-12 px-10 text-2xl">
+            <div className="col-span-3 md:col-start-3 md:text-start text-center flex justify-center md:justify-start mt-8 px-10 text-2xl">
               My name is Ayudh.
             </div>
-            <div className="col-span-3 md:col-start-2 text-center hyphens-none mt-5 px-10 md:text-xl">
+            <div className="col-span-3 md:col-start-3 md:text-start text-center hyphens-none mt-5 px-10 md:text-xl">
               I am a Frontend developer with experience in building responsive,
               <br />
               user-friendly websites & Progressive Web Apps with React.
