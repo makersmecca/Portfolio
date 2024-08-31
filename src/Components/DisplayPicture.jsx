@@ -5,7 +5,7 @@ const DisplayPicture = () => {
       <img
         src="/displayPicture.jpg"
         alt="profile picture"
-        className="blob md:h-52 md:w-52 h-44 w-44"
+        className="blob md:h-64 md:w-64 h-44 w-44"
       />
     </div>
   );
