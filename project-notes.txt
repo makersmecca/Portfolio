@@ -1,5 +1,5 @@
 NOTES:
-
+Tailwind grid breakpoints
 Breakpointprefix --- Minimum width --- CSS
 sm	                     640px	       @media (min-width: 640px) { ... }
 md	                     768px	       @media (min-width: 768px) { ... }
@@ -22,3 +22,4 @@ xl	                    1280px	       @media (min-width: 1280px) { ... }
 -- add animation to the buttons and links
 
 ----------------------------------------------------------**Additional Info**-------------------------------------------------------------
+-- "https://stackoverflow.com/questions/76753785/how-to-make-typing-animation-with-tailwind-next13-4-tailwind"
