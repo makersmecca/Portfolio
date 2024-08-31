@@ -19,10 +19,48 @@ xl	                    1280px	       @media (min-width: 1280px) { ... }
 ----------------------------------------------------------**Things to Fix**-------------------------------------------------------------
 -- fix issue with display picture being rendered on splashscreen [FIXED]
    !--->issue is caused by the css property of "infinite". need to use a state to dynamically add and remove the css className to the component
-
+-- fix issue of adding more than one animation on dp background glow effect [FIXED]
 -- Fix the alignment and the overall font of the page
 -- try to make it look more minimalistic
 -- add animation to the buttons and links
 
 ----------------------------------------------------------**Additional Info**-------------------------------------------------------------
+---------------------------------------------------------**LINKS**------------------------------------------------------------------------
 -- "https://stackoverflow.com/questions/76753785/how-to-make-typing-animation-with-tailwind-next13-4-tailwind"
+
+--------------------------------------------------------**Explanations**------------------------------------------------------------------
+
+Breakdown:
+--0%, 100%:
+   This specifies two keyframe positions in the animation timeline:
+   --0%: This is the start of the animation (when the animation begins).
+   --100%: This is the end of the animation (when the animation completes one cycle).
+      By defining the same properties for both 0% and 100%, you ensure that the shape starts 
+      and ends with the same configuration, creating a seamless loop in the animation.
+
+--borderRadius: '60% 30% 40% 70% / 60% 30% 70% 40%':
+   This sets the border-radius of the element to create an abstract, blob-like shape.
+   The border-radius value is being split into two sections:
+   The first part (60% 30% 40% 70%) applies to the horizontal radii (top-left, top-right, bottom-right, bottom-left corners in that order).
+   The second part (60% 30% 70% 40%) applies to the vertical radii (top-left, top-right, bottom-right, bottom-left corners vertically).
+   These uneven percentages for the corners create the abstract, irregular blob shape instead of a perfect circle or rectangle.
+   How It Works in the Animation:
+-- At 0% and 100%:
+   The blob shape will have a specific border-radius that gives it the irregular, blobby appearance 
+   defined by the 60% 30% 40% 70% / 60% 30% 70% 40% values.
+-- During the animation (e.g., 50%, 75%):
+   The shape will change (morph) to different border-radius values, making it "wobble" or "morph" as the animation progresses.
+-- Why 0%, 100%:
+   By having the same border-radius values at both 0% and 100%, the animation loops smoothly. 
+   This ensures that the shape gradually transforms during the animation and returns to 
+   the original shape at the end, creating a continuous loop.
+
+
+-------------------------------------------------***profileborder.css***--------------------------------------------------------------
+-- blob-fadein Class:
+      We define a new class .blob-fadein in the CSS file.
+      Using the @apply directive, it applies the animate-blob from Tailwind's config.
+      Additionally, we manually set animation to run both the fadeInOnce and blob animations.
+-- Combining Animations:
+      fadeInOnce 2s ease-in-out forwards: Runs once to fade in the blob.
+      blob 5s ease-in-out infinite: Keeps running to morph the shape indefinitely.
