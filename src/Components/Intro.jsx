@@ -3,7 +3,7 @@ import DisplayPicture from "./DisplayPicture";
 import "/src/index.css";
 import ScrollDownArrow from "./ScrollDownArrow";
 const Intro = ({ splashStatus }) => {
-  console.log(splashStatus);
+  //console.log(splashStatus);
   return (
     <>
       <div className="flex flex-col min-h-screen">
@@ -27,10 +27,11 @@ const Intro = ({ splashStatus }) => {
             <div className="col-span-3 md:col-start-2 text-center mt-12 px-10 text-2xl">
               My name is Ayudh.
             </div>
-            <div className="col-span-3 md:col-start-2 md:text-center text-justify hyphens-auto md:hyphens-none mt-5 px-10 md:text-xl">
+            <div className="col-span-3 md:col-start-2 text-center hyphens-none mt-5 px-10 md:text-xl">
               I am a Frontend developer with experience in building responsive,
-              user-friendly websites & Progressive Web Apps. I'm Proficient in
-              React JS.
+              <br />
+              user-friendly websites & Progressive Web Apps with React.
+              <br />
               <br />
               Eager to contribute and grow in a collaborative team.
             </div>
