@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DisplayPicture from "./DisplayPicture";
+import "/src/index.css";
 const Intro = ({ splashStatus }) => {
   console.log(splashStatus);
   return (
@@ -11,9 +12,19 @@ const Intro = ({ splashStatus }) => {
               <DisplayPicture />
             </div>
             <div className="col-span-2 md:col-span-1 text-center flex justify-center items-center mt-12 md:mt-0">
-              <div className="md:text-5xl text-3xl">Hi.</div>
+              {/* <div className=" ">Hi.</div> */}
+              <div
+                className={
+                  splashStatus
+                    ? `text-darktheme md:text-5xl text-3xl`
+                    : `text-white inline-block overflow-hidden whitespace-nowrap font-mono animate-typing border-r-4 md:text-5xl text-3xl`
+                }
+              >
+                Hi...
+              </div>
             </div>
-            <div className="col-span-3 md:col-start-2 text-center mt-5 px-10 md:text-2xl">
+
+            <div className="col-span-3 md:col-start-2 text-center mt-12 px-10 md:text-2xl">
               My name is Ayudh.
             </div>
             <div className="col-span-3 md:col-start-2 md:text-center text-justify hyphens-auto md:hyphens-none mt-5 px-10 md:text-xl">
