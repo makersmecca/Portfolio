@@ -20,7 +20,7 @@ const ScrollDownArrow = ({ splashStatus }) => {
       <div
         className={`${
           splashStatus ? "hidden" : "block ease-in-out"
-        } absolute inset-x-0 bottom-0 flex justify-center mb-4 animate-slideDown transition-opacity duration-300
+        } fixed inset-x-0 bottom-0 flex justify-center mb-4 animate-slideDown transition-opacity duration-300
         ${isVisible ? "" : "ease-in-out hidden"}
         `}
       >
