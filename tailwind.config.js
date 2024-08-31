@@ -7,9 +7,14 @@ export default {
         darktheme: "#0d0d0d",
       },
       animation: {
-        typing: "typing 2s steps(11), blink 1s infinite",
+        typing: "typing 2s steps(11), blink 0.4s infinite alternate",
+        slideDown: "slideDown 1s ease-in-out forwards",
       },
       keyframes: {
+        slideDown: {
+          "0%": { opacity: 0, transform: "translateY(-100%)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
         typing: {
           from: {
             width: "0",
