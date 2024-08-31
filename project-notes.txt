@@ -8,13 +8,16 @@ xl	                    1280px	       @media (min-width: 1280px) { ... }
 2xl	                 1536px	       @media (min-width: 1536px) { ... }
 
 ----------------------------------------------------------**Things To Add**-------------------------------------------------------------
--- add wobbly ellipse animation to the display picture
+-- The downward scroll arrow, when clicked, should scroll to the Projects section
+   !--->need to add a prop to do this
 -- add a few subtle scroll effects
 -- maybe add an animation to the background preferebly one that responses to the cursor position
 -- add project links and card thumbnails for the projects inside the project cards
 
+-- add wobbly ellipse animation to the display picture [DONE]
+
 ----------------------------------------------------------**Things to Fix**-------------------------------------------------------------
--- fix issue with display picture being rendered on splashscreen 
+-- fix issue with display picture being rendered on splashscreen [FIXED]
    !--->issue is caused by the css property of "infinite". need to use a state to dynamically add and remove the css className to the component
 
 -- Fix the alignment and the overall font of the page
