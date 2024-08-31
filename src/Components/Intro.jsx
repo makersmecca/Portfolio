@@ -25,7 +25,7 @@ const Intro = ({ splashStatus }) => {
             </div>
 
             <div className="col-span-3 md:col-start-2 text-center mt-12 px-10 text-2xl">
-              My name is Ayudh...
+              My name is Ayudh.
             </div>
             <div className="col-span-3 md:col-start-2 md:text-center text-justify hyphens-auto md:hyphens-none mt-5 px-10 md:text-xl">
               I am a Frontend developer with experience in building responsive,
