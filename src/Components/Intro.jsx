@@ -9,13 +9,16 @@ const Intro = ({ isAnimated }) => {
             <div className="col-span-2 flex justify-center mt-12 md:mt-0">
               <DisplayPicture isAnimated={isAnimated} />
             </div>
-            <div className="col-span-2 text-center flex justify-center items-center mt-12 md:mt-0">
-              <h2 className="md:text-5xl text-3xl">AYUDH</h2>
+            <div className="col-span-2 md:col-span-1 text-center flex justify-center items-center mt-12 md:mt-0">
+              <div className="md:text-5xl text-3xl">Hi.</div>
             </div>
-            <div className="col-span-3 md:col-start-2 text-center mt-12 lg-pt-12 px-10 md:text-xl">
-              Frontend developer with experience in building responsive,
-              user-friendly websites & progressive web apps. Proficient in React
-              JS.
+            <div className="col-span-3 md:col-start-2 text-center mt-5 px-10 md:text-2xl">
+              My name is Ayudh.
+            </div>
+            <div className="col-span-3 md:col-start-2 text-center mt-5 px-10 md:text-xl">
+              I am a Frontend developer with experience in building responsive,
+              user-friendly websites & progressive web apps. I'm Proficient in
+              React JS.
               <br />
               Eager to contribute and grow in a collaborative team.
             </div>
