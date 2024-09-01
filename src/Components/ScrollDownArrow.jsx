@@ -4,7 +4,7 @@ const ScrollDownArrow = ({ splashStatus, btnClicked }) => {
 
   useEffect(() => {
     const scrollDetect = () => {
-      setIsVisible(window.scrollY > 90 ? false : true);
+      setIsVisible(window.scrollY > 100 ? false : true);
     };
     window.addEventListener("scroll", scrollDetect);
     //console.log(isVisible);
