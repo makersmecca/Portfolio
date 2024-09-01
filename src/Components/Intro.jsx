@@ -1,12 +1,18 @@
-import { useState } from "react";
 import DisplayPicture from "./DisplayPicture";
 import "/src/index.css";
 import ScrollDownArrow from "./ScrollDownArrow";
+import Navbar from "./Navbar";
+
 const Intro = ({ splashStatus, scrollHandler }) => {
   //console.log(splashStatus);
   return (
     <div>
-      <div className="flex flex-col min-h-screen">
+      <div
+        className={`flex flex-col min-h-screen ${
+          splashStatus ? "" : "relative"
+        }`}
+      >
+        <Navbar splashStatus={splashStatus} />
         <div className="flex justify-center items-center min-h-screen">
           <div className="grid grid-cols-2 md:grid-cols-5 xl:px-80 lg:px-52 md:px-36 px-8">
             <div
