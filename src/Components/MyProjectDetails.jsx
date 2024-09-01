@@ -11,8 +11,10 @@ const MyProjectDetails = ({ projectDetails }) => {
         <div className="col-span-2 col-start-1 text-center md:text-start md:ps-16 md:me-9 text-3xl md:text-4xl">
           Projects
         </div>
+        {/* first two projects go here */}
         <div className="col-span-2 col-start-1 flex justify-center">
           <ul className="md:pt-10 pt-0">
+            {/* first two projects go here */}
             {arr1.map((i) => (
               <li key={i.name} className="md:pt-7 pt-5">
                 <a
@@ -43,8 +45,10 @@ const MyProjectDetails = ({ projectDetails }) => {
             ))}
           </ul>
         </div>
+        {/* first two projects go here */}
         <div className="col-span-2 md:col-start-4 flex justify-center">
           <ul className="md:pt-10 pt-0">
+            {/* first two projects go here */}
             {arr2.map((i) => (
               <li key={i.name} className="md:pt-7 pt-5">
                 <a
