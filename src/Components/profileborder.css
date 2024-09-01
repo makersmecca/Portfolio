@@ -21,7 +21,36 @@
   }
 } */
 
-.blob-fadein {
+/* .blob-fadein {
   @apply animate-blob;
   animation: appear 0.8s ease-in-out forwards, blob 5s ease-in-out infinite;
+} */
+
+/* animations.css */
+@keyframes shadowBlob {
+  0%,
+  100% {
+    border-radius: 60% 30% 40% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  75% {
+    border-radius: 65% 45% 30% 65% / 60% 30% 70% 60%;
+  }
+}
+
+@keyframes shadowFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* CSS class that applies both animations */
+.shadowBlobFadeIn {
+  animation: shadowFadeIn 2s ease-in-out forwards,
+    shadowBlob 5s ease-in-out infinite;
 }
