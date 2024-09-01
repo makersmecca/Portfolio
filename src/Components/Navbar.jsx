@@ -8,10 +8,10 @@ const Navbar = ({ splashStatus }) => {
     <nav
       className={`${
         splashStatus ? "hidden" : "absolute fadeInOnly"
-      } top-28 left-0 w-full p-4 z-10`}
+      } lg:top-28 md:top-16 left-0 w-full p-4 z-10`}
     >
       <div className="md:block hidden">
-        <ul className="flex justify-end px-20">
+        <ul className="flex justify-end px-24 md:text-lg">
           <li>
             <DownloadResume />
           </li>
