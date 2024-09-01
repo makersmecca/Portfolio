@@ -5,6 +5,10 @@ export default {
     extend: {
       colors: {
         darktheme: "#0d0d0d",
+        textBlue: "#6ca7da",
+        newOrange: "#e28743",
+        darkBlue: "#98c3e4",
+        newYellow: "#d4bb2c",
       },
       animation: {
         typing: "typing 2s steps(11), blink 0.4s infinite alternate",
