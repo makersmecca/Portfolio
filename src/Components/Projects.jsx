@@ -1,5 +1,15 @@
 import MyProjectDetails from "./MyProjectDetails";
-const Projects = () => {
+import { useRef } from "react";
+const Projects = ({ scrollClicked }) => {
+  const targetRef = useRef(null);
+
+  if (scrollClicked) {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+  // console.log("state:" + scrollClicked);
+
   const projectDetails = [
     {
       img: "https://github.com/makersmecca/Project-ShopSum/raw/master/ShopSum-poster.png",
@@ -28,9 +38,9 @@ const Projects = () => {
   ];
 
   return (
-    <>
+    <div ref={targetRef}>
       <MyProjectDetails projectDetails={projectDetails} />
-    </>
+    </div>
   );
 };
 
