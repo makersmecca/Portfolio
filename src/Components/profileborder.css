@@ -47,6 +47,11 @@
   }
 }
 
+.fadeInOnly {
+  transform: translateZ(0);
+  animation: shadowFadeIn 0.8s ease-in-out forwards;
+}
+
 .shadowBlobFadeIn {
   border-radius: 60% 30% 40% 70% / 60% 30% 70% 40%;
 
