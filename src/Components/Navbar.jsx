@@ -74,7 +74,7 @@ const Navbar = ({ splashStatus }) => {
         </div>
         <div
           className={`h-full z-10 transition-all duration-100 ease-in-out min-w-10 ${
-            isOpen ? "animate-slideIn" : "animate-slideOut"
+            isOpen ? "animate-slideIn block" : "animate-slideOut hidden"
           }`}
         >
           <ul className="flex flex-col items-end md:text-lg">
