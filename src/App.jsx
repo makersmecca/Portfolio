@@ -1,5 +1,4 @@
 import Intro from "./Components/Intro";
-import DisplayDateTime from "./Components/DateTime";
 import SplashScreen from "./Components/SplashScreen";
 import Socials from "./Components/Socials";
 import TechStack from "./Components/TechStack";
@@ -32,7 +31,6 @@ const App = () => {
   return (
     <>
       {showSplash && <SplashScreen onAnimationEnd={updateShowSplash} />}
-      <DisplayDateTime />
       <Intro splashStatus={showSplash} scrollHandler={scrollHandler} />
       <Projects scrollClicked={scrollClicked} />
       <TechStack />
