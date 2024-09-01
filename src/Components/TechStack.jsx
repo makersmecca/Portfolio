@@ -1,4 +1,3 @@
-import tailwindIcon from "/images/tailwind-svgrepo-com.svg";
 const TechStack = () => {
   return (
     <>
