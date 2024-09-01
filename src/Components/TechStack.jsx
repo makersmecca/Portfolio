@@ -1,11 +1,13 @@
+import tailwindIcon from "/images/tailwind-svgrepo-com.svg";
 const TechStack = () => {
   return (
     <>
-      <div className="mt-10 md:mt-20 pt-5 grid grid-cols-2 md:grid-cols-5 xl:px-80 lg:px-52 md:px-36 px-8">
+      <div className="mt-10 md:mt-20 pt-5 grid grid-cols-2 md:grid-cols-6 xl:px-80 lg:px-52 md:px-36 px-8">
         <div className="mb-10 col-span-full col-start-1 text-center md:text-start md:ps-16 md:me-9 text-3xl md:text-4xl">
           Tech-Stack
         </div>
-        <div className=" flex justify-center ">
+        {/* react */}
+        <div className="flex justify-center mt-2 md:mt-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
@@ -22,24 +24,8 @@ const TechStack = () => {
             ></path>
           </svg>
         </div>
-        <div className=" flex justify-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            role="img"
-            className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
-            width="80"
-            height="80"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 384 512"
-          >
-            <path
-              fill="red"
-              d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"
-            />
-          </svg>
-        </div>
-        <div className=" flex justify-center">
+        {/* javascript */}
+        <div className="flex justify-center mt-2 md:mt-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
@@ -56,7 +42,45 @@ const TechStack = () => {
             />
           </svg>
         </div>
-        <div className=" flex justify-center">
+        {/* html5 */}
+        <div className="flex justify-center mt-3 md:mt-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            role="img"
+            className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
+            width="80"
+            height="80"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 384 512"
+          >
+            <path
+              fill="red"
+              d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"
+            />
+          </svg>
+        </div>
+
+        {/* css3 */}
+        <div className="flex justify-center mt-3 md:mt-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            role="img"
+            className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
+            width="80"
+            height="80"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 384 512"
+          >
+            <path
+              fill="#00D8FF"
+              d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3 .1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2 .1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"
+            />
+          </svg>
+        </div>
+        {/* bootstrap */}
+        <div className="flex justify-center mt-3 md:mt-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
@@ -73,21 +97,23 @@ const TechStack = () => {
             />
           </svg>
         </div>
-        <div className=" flex justify-center">
+
+        {/* tailwind */}
+        <div className="flex justify-center mt-3 md:mt-0">
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            viewBox="-3.2 -3.2 38.40 38.40"
             aria-hidden="true"
             role="img"
-            className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
-            width="80"
-            height="80"
+            className="hover:-translate-y-1 ease-in-out transition-transform -my-2"
+            width="100"
+            height="100"
             preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 384 512"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill="#00D8FF"
-              d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3 .1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2 .1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"
-            />
+              d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z"
+              style={{ fill: "#38bdf8" }}
+            ></path>
           </svg>
         </div>
       </div>
