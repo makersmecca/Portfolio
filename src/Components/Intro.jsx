@@ -2,7 +2,7 @@ import { useState } from "react";
 import DisplayPicture from "./DisplayPicture";
 import "/src/index.css";
 import ScrollDownArrow from "./ScrollDownArrow";
-const Intro = ({ splashStatus }) => {
+const Intro = ({ splashStatus, scrollHandler }) => {
   //console.log(splashStatus);
   return (
     <div>
@@ -39,7 +39,10 @@ const Intro = ({ splashStatus }) => {
             </div>
           </div>
         </div>
-        <ScrollDownArrow splashStatus={splashStatus} />
+        <ScrollDownArrow
+          splashStatus={splashStatus}
+          btnClicked={scrollHandler}
+        />
       </div>
     </div>
   );
