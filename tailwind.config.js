@@ -20,12 +20,12 @@ export default {
       },
       keyframes: {
         slideIn: {
-          "0%": { transform: "translateX(100%)" },
+          "0%": { transform: "translateX(100vw)" },
           "100%": { transform: "translateX(0)" },
         },
         slideOut: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(100vw)" },
         },
         blob: {
           "0%, 100%": {
