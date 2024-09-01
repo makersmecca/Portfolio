@@ -1,3 +1,26 @@
+/* .blob {
+  animation: animate 5s ease-in-out infinite;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    border-radius: 60% 30% 40% 70%/60% 30% 70% 40%;
+  }
+  25% {
+    border-radius: 60% 30% 40% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  75% {
+    border-radius: 65% 45% 30% 65%/60% 30% 70% 60%;
+  }
+  100% {
+    border-radius: 60% 30% 40% 70%/60% 30% 70% 40%;
+  }
+} */
+
 /* .blob-fadein {
   @apply animate-blob;
   animation: appear 0.8s ease-in-out forwards, blob 5s ease-in-out infinite;
@@ -28,6 +51,7 @@
 
 /* CSS class that applies both animations */
 .shadowBlobFadeIn {
+  border-radius: 60% 30% 40% 70% / 60% 30% 70% 40%;
   animation: shadowFadeIn 2s ease-in-out forwards,
     shadowBlob 5s ease-in-out infinite;
 }
