@@ -27,7 +27,67 @@
 } */
 
 /* animations.css */
+/* animations.css */
+@-webkit-keyframes shadowBlob {
+  0%,
+  100% {
+    border-radius: 60% 30% 40% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  75% {
+    border-radius: 65% 45% 30% 65% / 60% 30% 70% 60%;
+  }
+}
+
 @keyframes shadowBlob {
+  0%,
+  100% {
+    border-radius: 60% 30% 40% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  75% {
+    border-radius: 65% 45% 30% 65% / 60% 30% 70% 60%;
+  }
+}
+
+@-webkit-keyframes shadowFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shadowFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.shadowBlobFadeIn {
+  /* Set the initial border-radius for browsers that don’t animate properly */
+  border-radius: 60% 30% 40% 70% / 60% 30% 70% 40%;
+
+  /* Enable hardware acceleration for smoother animations */
+  transform: translateZ(0);
+
+  /* Combine fade-in and blob morphing */
+  animation: shadowFadeIn 2s ease-in-out forwards,
+    shadowBlob 5s ease-in-out infinite;
+
+  /* Ensure iOS uses hardware acceleration */
+  will-change: border-radius, opacity;
+}
+
+/* @keyframes shadowBlob {
   0%,
   100% {
     border-radius: 60% 30% 40% 70% / 60% 30% 70% 40%;
@@ -47,11 +107,11 @@
   100% {
     opacity: 1;
   }
-}
+} */
 
 /* CSS class that applies both animations */
-.shadowBlobFadeIn {
+/* .shadowBlobFadeIn {
   border-radius: 60% 30% 40% 70% / 60% 30% 70% 40%;
   animation: shadowFadeIn 2s ease-in-out forwards,
     shadowBlob 5s ease-in-out infinite;
-}
+} */
