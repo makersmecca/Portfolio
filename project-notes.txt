@@ -19,7 +19,7 @@ xl	                    1280px	       @media (min-width: 1280px) { ... }
 ----------------------------------------------------------**Things to Fix**-------------------------------------------------------------
 -- fix issue with display picture being rendered on splashscreen [FIXED]
    !--->issue is caused by the css property of "infinite". need to use a state to dynamically add and remove the css className to the component
--- fix issue of adding more than one animation on dp background glow effect [FIXED]
+-- fix issue of adding more than one animation on dp background glow effect. @apply works on localhost but not on netlfiy.[FIXED used separate css]
 -- Fix the alignment and the overall font of the page
 -- try to make it look more minimalistic
 -- add animation to the buttons and links
