@@ -7,16 +7,29 @@ lg	                    1024px	       @media (min-width: 1024px) { ... }
 xl	                    1280px	       @media (min-width: 1280px) { ... }
 2xl	                 1536px	       @media (min-width: 1536px) { ... }
 
+
+
 ----------------------------------------------------------**Things To Add**-------------------------------------------------------------
--- The downward scroll arrow, when clicked, should scroll to the Projects section
-   !--->need to add a prop to do this
+
+-- Add a navbar with resume download link, time date and weather[if possible]
 -- add a few subtle scroll effects
 -- maybe add an animation to the background preferebly one that responses to the cursor position
 -- add project links and card thumbnails for the projects inside the project cards
 
 -- add wobbly ellipse animation to the display picture [DONE]
+-- The downward scroll arrow, when clicked, should scroll to the Projects section [DONE]
+   !--->need to add a prop to do this
+
+
+
+
+
+
 
 ----------------------------------------------------------**Things to Fix**-------------------------------------------------------------
+
+
+
 -- fix issue with display picture being rendered on splashscreen [FIXED]
    !--->issue is caused by the css property of "infinite". need to use a state to dynamically add and remove the css className to the component
 -- fix issue of adding more than one animation on dp background glow effect. @apply works on localhost but not on netlfiy.[FIXED used separate css]
