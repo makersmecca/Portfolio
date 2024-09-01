@@ -16,7 +16,10 @@ const Navbar = ({ splashStatus }) => {
     <nav
       className={`${
         splashStatus ? "hidden" : "absolute fadeInOnly"
-      } lg:top-28 md:top-16 left-0 w-full p-4 z-10 min-h-screen overflow-x-hidden`}
+      } lg:top-28 md:top-16 left-0 w-full p-4 z-10 
+      ${
+        isOpen ? "min-h-screen overflow-x-hidden" : "min-h-0 overflow-x-visible"
+      }`}
     >
       <div className="md:block hidden">
         <ul className="flex justify-end px-24 md:text-lg">
