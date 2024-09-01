@@ -26,16 +26,19 @@ const Intro = ({ splashStatus, scrollHandler }) => {
               </div>
             </div>
 
-            <div className="col-span-3 md:col-start-3 md:text-start text-center flex justify-center md:justify-start mt-8 px-10 text-2xl">
-              My name is Ayudh.
+            <div className="col-span-3 md:col-start-3 md:text-start text-center flex justify-center md:justify-start mt-8 px-10 text-2xl md:text-3xl">
+              I'm <span className="ps-2 text-textBlue">Ayudh</span>.
             </div>
             <div className="col-span-3 md:col-start-3 md:text-start text-center hyphens-none mt-5 px-10 md:text-xl">
               I am a Frontend developer with experience in building responsive,
               <br />
-              user-friendly websites & Progressive Web Apps with React.
+              user-friendly websites & Progressive Web Apps with{" "}
+              <span className="text-newOrange">React</span>,{" "}
+              <span className="text-darkBlue">Vite</span> and{" "}
+              <span className="text-newYellow"> Tailwind</span>.
               <br />
               <br />
-              Eager to contribute and grow in a collaborative team.
+              I'm eager to contribute and grow in a collaborative team.
             </div>
           </div>
         </div>
