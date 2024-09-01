@@ -73,7 +73,7 @@ const Navbar = ({ splashStatus }) => {
           </div>
         </div>
         <div
-          className={`h-full  z-10 transition-all duration-400 ease-in-out min-w-10 ${
+          className={`h-full z-10 transition-all duration-100 ease-in-out min-w-10 ${
             isOpen ? "animate-slideIn" : "animate-slideOut"
           }`}
         >

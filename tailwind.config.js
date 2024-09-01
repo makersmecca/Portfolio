@@ -15,8 +15,8 @@ export default {
         slideDown: "slideDown 1s ease-in-out forwards",
         appear: "appear 0.8s ease-in-out",
         blob: "blob 5s ease-in-out infinite",
-        slideIn: "slideIn 0.5s ease-in-out forwards",
-        slideOut: "slideOut 0.5s ease-in-out forwards",
+        slideIn: "slideIn 0.2s ease-in-out forwards",
+        slideOut: "slideOut 0.2s ease-in-out forwards",
       },
       keyframes: {
         slideIn: {
