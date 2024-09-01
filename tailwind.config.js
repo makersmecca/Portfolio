@@ -15,8 +15,18 @@ export default {
         slideDown: "slideDown 1s ease-in-out forwards",
         appear: "appear 0.8s ease-in-out",
         blob: "blob 5s ease-in-out infinite",
+        slideIn: "slideIn 0.5s ease-in-out forwards",
+        slideOut: "slideOut 0.5s ease-in-out forwards",
       },
       keyframes: {
+        slideIn: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        slideOut: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
+        },
         blob: {
           "0%, 100%": {
             borderRadius: "60% 30% 40% 70% / 60% 30% 70% 40%",
