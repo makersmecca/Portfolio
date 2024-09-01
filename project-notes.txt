@@ -23,13 +23,10 @@ xl	                    1280px	       @media (min-width: 1280px) { ... }
 
 
 
-
-
-
 ----------------------------------------------------------**Things to Fix**-------------------------------------------------------------
 
 
-
+-- mobile page becomes horizontally scrollable when nav menu is opened [FIXED, removed overflow]
 -- fix issue with display picture being rendered on splashscreen [FIXED]
    !--->issue is caused by the css property of "infinite". need to use a state to dynamically add and remove the css className to the component
 -- fix issue of adding more than one animation on dp background glow effect. @apply works on localhost but not on netlfiy.[FIXED used separate css]
