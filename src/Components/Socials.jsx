@@ -5,7 +5,7 @@ const Socials = () => {
         <div className="mb-4 md:mb-10 col-span-full col-start-1 text-center md:text-start md:ps-14 md:me-9 text-lg md:text-xl">
           Let's Connect? Say Hi!
         </div>
-        <div className="col-start-1 col-span-4 flex flex-row md:justify-start justify-around">
+        <div className="col-start-1 col-span-full flex flex-row md:justify-start justify-around">
           <a
             href="https://github.com/makersmecca"
             target="_blank"
@@ -119,8 +119,8 @@ const Socials = () => {
             </svg>
           </a>
         </div>
-        <div className="col-start-1 md:col-start-5 col-span-2 text-xs md:text-sm flex justify-center items-center mt-7 md:mt-0">
-          Powered by Vite and Tailwind
+        <div className="col-span-full text-xs md:text-sm flex justify-center lg:justify-end items-center mt-8 xl:mt-0">
+          Powered by Vite and Tailwind.
         </div>
       </div>
     </>
