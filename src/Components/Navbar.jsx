@@ -4,11 +4,12 @@ import DownloadResume from "./DownloadResume";
 import "./profileborder.css";
 import { useState } from "react";
 
-const Navbar = ({ splashStatus }) => {
+const Navbar = ({ splashStatus, invokeBlur }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = () => {
     console.log("toggled");
+    invokeBlur(isOpen);
     setIsOpen(() => !isOpen);
   };
 
