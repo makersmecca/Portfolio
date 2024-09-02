@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-const ScrollDownArrow = ({ splashStatus, btnClicked }) => {
+const ScrollDownArrow = ({ splashStatus, btnClicked, blurStatus }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -20,7 +20,11 @@ const ScrollDownArrow = ({ splashStatus, btnClicked }) => {
         ${isVisible ? "" : "ease-in-out hidden"}
         `}
       >
-        <button className="text-3xl text-gray-500 animate-bounce">
+        <button
+          className={`text-3xl text-gray-500 animate-bounce ${
+            blurStatus ? "blur-sm duration-500" : "blur-none duration-500"
+          }`}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="white"
