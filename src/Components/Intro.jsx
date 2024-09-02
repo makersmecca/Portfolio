@@ -3,7 +3,14 @@ import "/src/index.css";
 import ScrollDownArrow from "./ScrollDownArrow";
 import Navbar from "./Navbar";
 
+import { useState } from "react";
+
 const Intro = ({ splashStatus, scrollHandler }) => {
+  const [isBlur, setIsBlur] = useState(false);
+
+  const blurContent = (isopen) => {
+    setIsBlur(!isopen);
+  };
   //console.log(splashStatus);
   return (
     <div>
@@ -12,8 +19,12 @@ const Intro = ({ splashStatus, scrollHandler }) => {
           splashStatus ? "" : "relative"
         }`}
       >
-        <Navbar splashStatus={splashStatus} />
-        <div className="flex justify-center items-center min-h-screen">
+        <Navbar splashStatus={splashStatus} invokeBlur={blurContent} />
+        <div
+          className={`flex justify-center items-center min-h-screen ${
+            isBlur ? "blur-md duration-500" : "blur-none duration-500"
+          }`}
+        >
           <div className="grid grid-cols-2 md:grid-cols-5 xl:px-80 lg:px-52 md:px-36 px-8">
             <div
               className={`col-span-2 md:row-span-3 flex justify-center md:items-center mt-12 md:mt-0`}
@@ -51,6 +62,7 @@ const Intro = ({ splashStatus, scrollHandler }) => {
         <ScrollDownArrow
           splashStatus={splashStatus}
           btnClicked={scrollHandler}
+          blurStatus={isBlur}
         />
       </div>
     </div>
