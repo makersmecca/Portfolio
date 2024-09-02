@@ -9,7 +9,7 @@ const DisplayPicture = ({ splashStatus }) => {
           splashStatus
             ? "hidden"
             : "absolute shadowBlobFadeIn transition-all ease-in-out duration-500"
-        } md:h-64 md:w-64 h-44 w-44 bg-slate-800 blur-xl`}
+        } md:h-64 md:w-64 h-44 w-44 bg-slate-800 blur-2xl`}
       ></div>
       <img
         src={dispPic}
