@@ -18,10 +18,10 @@ const Projects = ({ scrollClicked }) => {
       url: "https://github.com/makersmecca/Project-ShopSum",
     },
     {
-      img: "/",
-      name: "ShopSum2",
-      details: "Payments Simplified",
-      url: "www.github.com",
+      img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/portfolio-poster.png",
+      name: "Portfolio",
+      details: "My personal portfolio built with React",
+      url: "https://github.com/makersmecca/Portfolio",
     },
     {
       img: "/",
