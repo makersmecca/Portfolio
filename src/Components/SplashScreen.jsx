@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import HelloText from "./HelloText";
 const SplashScreen = ({ onAnimationEnd }) => {
   const [loading, setLoading] = useState(true);
 
@@ -28,9 +29,7 @@ const SplashScreen = ({ onAnimationEnd }) => {
         !loading ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      <h1 className="text-white font-Kanit text-4xl font-bold animate-pulse">
-        WELCOME
-      </h1>
+      <HelloText />
     </div>
   );
 };
