@@ -2,7 +2,6 @@ import DisplayPicture from "./DisplayPicture";
 import "/src/index.css";
 import ScrollDownArrow from "./ScrollDownArrow";
 import Navbar from "./Navbar";
-
 import { useState } from "react";
 
 const Intro = ({ splashStatus, scrollHandler }) => {
