@@ -49,9 +49,7 @@ const MyProjectDetails = ({ projectDetails }) => {
                   <h5 className="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {i.name}
                   </h5>
-                  <p className="font-normal text-center text-gray-700 dark:text-gray-400">
-                    {i.details}
-                  </p>
+                  <p className="font-normal text-center text-sm">{i.details}</p>
                 </a>
               </li>
             ))}
