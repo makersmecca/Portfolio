@@ -31,10 +31,10 @@ const Projects = ({ scrollClicked }) => {
       url: "https://github.com/makersmecca/Portfolio",
     },
     {
-      img: "/",
-      name: "ShopSum4",
-      details: "Payments Simplified",
-      url: "https://www.github.com",
+      img: "https://raw.githubusercontent.com/makersmecca/HID-Knob/master/hidKnob_Schematics2.png.png",
+      name: "HID Knob",
+      details: "Multifunction Customizable Controller for Personal Computers",
+      url: "https://github.com/makersmecca/HID-Knob",
     },
   ];
 
