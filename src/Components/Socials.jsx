@@ -1,7 +1,13 @@
-const Socials = () => {
+const Socials = ({ globalBlur }) => {
   return (
     <>
-      <div className="mt-10 md:mt-24 pt-5 grid grid-cols-2 md:grid-cols-6 xl:px-80 lg:px-52 md:px-36 px-8 mb-10">
+      <div
+        className={`mt-10 md:mt-24 pt-5 grid grid-cols-2 md:grid-cols-6 xl:px-80 lg:px-52 md:px-36 px-8 mb-10 ${
+          globalBlur
+            ? "md:blur-none blur-md duration-500 ease-in-out"
+            : "blur-none duration-500 ease-in-out"
+        }`}
+      >
         <div className="mb-4 md:mb-10 col-span-full col-start-1 text-center md:text-start md:ps-14 md:me-9 text-lg md:text-xl">
           Let's Connect? Say Hi!
         </div>
