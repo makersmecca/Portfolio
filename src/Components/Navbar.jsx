@@ -17,7 +17,7 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
     <nav
       className={`${
         splashStatus ? "hidden" : "absolute fadeInOnly"
-      } lg:top-28 md:top-16 left-0 w-full p-4 z-10 
+      } lg:top-8 md:top-8 left-0 w-full p-4 z-10 
       ${
         isOpen ? "min-h-screen overflow-x-hidden" : "min-h-0 overflow-x-visible"
       }`}
