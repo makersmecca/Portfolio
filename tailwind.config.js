@@ -70,6 +70,11 @@ export default {
     },
     fontFamily: {
       Kanit: ["Kanit", "sans-serif"],
+      Japanese: ["Noto+Sans+JP", "sans-serif"],
+      Hindi: ["Mukta", "sans-serif"],
+      Bengali: ["Noto+Sans+Bengali", "sans-serif"],
+      Urdu: ["Noto+Nastaliq+Urdu", "sans-serif"],
+      Tamil: ["Noto+Sans+Tamil", "sans-serif"],
     },
   },
   plugins: [],
