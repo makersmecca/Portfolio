@@ -21,7 +21,7 @@ const Intro = ({ splashStatus, scrollHandler, globalBlur }) => {
       >
         <Navbar splashStatus={splashStatus} invokeBlur={blurContent} />
         <div
-          className={`flex justify-center items-center min-h-screen ${
+          className={`flex justify-center items-center min-h-screen sm:mt-28 mt-12 md:mt-36 lg:mt-0 ${
             isBlur
               ? "md:blur-none blur-md duration-500 ease-in-out"
               : "blur-none duration-500 ease-in-out"
@@ -29,7 +29,7 @@ const Intro = ({ splashStatus, scrollHandler, globalBlur }) => {
         >
           <div className="grid grid-cols-2 md:grid-cols-5 xl:px-80 lg:px-52 md:px-36 px-8">
             <div
-              className={`col-span-2 md:row-span-3 flex justify-center md:items-center mt-12 md:mt-0`}
+              className={`col-span-2 md:row-span-3 flex justify-center md:items-center`}
             >
               <DisplayPicture splashStatus={splashStatus} />
             </div>
