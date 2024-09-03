@@ -28,13 +28,24 @@ const App = () => {
   const scrollHandler = () => {
     setScrollClicked(true);
   };
+
+  const [isGlobalBlur, setIsGlobalBlur] = useState(false);
+  const blurStatus = (isBlur) => {
+    setIsGlobalBlur(isBlur);
+    console.log("app.jsx" + isBlur);
+  };
+
   return (
     <>
       {showSplash && <SplashScreen onAnimationEnd={updateShowSplash} />}
-      <Intro splashStatus={showSplash} scrollHandler={scrollHandler} />
-      <Projects scrollClicked={scrollClicked} />
-      <TechStack />
-      <Socials />
+      <Intro
+        splashStatus={showSplash}
+        scrollHandler={scrollHandler}
+        globalBlur={blurStatus}
+      />
+      <Projects scrollClicked={scrollClicked} globalBlur={isGlobalBlur} />
+      <TechStack globalBlur={isGlobalBlur} />
+      <Socials globalBlur={isGlobalBlur} />
     </>
   );
 };
