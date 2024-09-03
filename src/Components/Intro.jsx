@@ -4,11 +4,12 @@ import ScrollDownArrow from "./ScrollDownArrow";
 import Navbar from "./Navbar";
 import { useState } from "react";
 
-const Intro = ({ splashStatus, scrollHandler }) => {
+const Intro = ({ splashStatus, scrollHandler, globalBlur }) => {
   const [isBlur, setIsBlur] = useState(false);
 
   const blurContent = (isopen) => {
     setIsBlur(!isopen);
+    globalBlur(!isopen);
   };
   //console.log(splashStatus);
   return (
