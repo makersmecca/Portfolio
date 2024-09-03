@@ -22,7 +22,9 @@ const ScrollDownArrow = ({ splashStatus, btnClicked, blurStatus }) => {
       >
         <button
           className={`text-3xl text-gray-500 animate-bounce ${
-            blurStatus ? "blur-sm duration-500" : "blur-none duration-500"
+            blurStatus
+              ? "blur-sm md:blur-none duration-500"
+              : "blur-none duration-500"
           }`}
         >
           <svg

@@ -22,7 +22,7 @@ const Intro = ({ splashStatus, scrollHandler }) => {
         <div
           className={`flex justify-center items-center min-h-screen ${
             isBlur
-              ? "blur-md duration-500 ease-in-out"
+              ? "md:blur-none blur-md duration-500 ease-in-out"
               : "blur-none duration-500 ease-in-out"
           }`}
         >
