@@ -12,12 +12,12 @@ const TechStack = ({ globalBlur }) => {
           Tech-Stack
         </div>
         {/* react */}
-        <div className="flex justify-center mt-2 md:mt-0">
+        <div className="flex justify-center mt-2 md:mt-0 group">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             role="img"
-            className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
+            className="iconify iconify--logos group-hover:-translate-y-1 ease-in-out transition-transform"
             width="80"
             height="80"
             preserveAspectRatio="xMidYMid meet"
