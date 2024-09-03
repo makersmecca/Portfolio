@@ -15,7 +15,7 @@ const Projects = ({ scrollClicked, globalBlur }) => {
       img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/shopsumPoster.png",
       name: "Shop Sum",
       details:
-        "Payment App for Small Vendors, Roadside Stalls and Humble Kirana (Grocery) Shops",
+        "Payment App for Small Vendors, Roadside Stalls and Humble Corner Shops",
       url: "https://github.com/makersmecca/Project-ShopSum",
     },
     {
