@@ -75,6 +75,7 @@ export default {
       Bengali: ["Noto+Sans+Bengali", "sans-serif"],
       Urdu: ["Noto+Nastaliq+Urdu", "sans-serif"],
       Tamil: ["Noto+Sans+Tamil", "sans-serif"],
+      French: ["Noto+Sans:ital", "sans-serif"],
     },
   },
   plugins: [],
