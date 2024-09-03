@@ -8,7 +8,7 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = () => {
-    console.log("toggled");
+    // console.log("toggled");
     invokeBlur(isOpen);
     setIsOpen(() => !isOpen);
   };
