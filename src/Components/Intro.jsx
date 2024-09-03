@@ -21,7 +21,7 @@ const Intro = ({ splashStatus, scrollHandler, globalBlur }) => {
       >
         <Navbar splashStatus={splashStatus} invokeBlur={blurContent} />
         <div
-          className={`flex justify-center items-center min-h-screen sm:mt-28 mt-12 md:mt-36 lg:mt-0 ${
+          className={`flex justify-center items-center min-h-screen sm:mt-28 mt-12 lg:mt-0 ${
             isBlur
               ? "md:blur-none blur-md duration-500 ease-in-out"
               : "blur-none duration-500 ease-in-out"
