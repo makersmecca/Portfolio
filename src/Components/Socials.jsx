@@ -10,7 +10,7 @@ const Socials = () => {
             href="https://github.com/makersmecca"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex justify-center items-end mt-3 md:mt-0 md:me-14 md:ms-16 group"
+            className="flex justify-center items-center mt-3 md:mt-0 md:me-14 md:ms-16 group"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ const Socials = () => {
               width="15"
               height="15"
               fill="currentColor"
-              className="bi bi-box-arrow-up-right mb-2 ms-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+              className="bi bi-box-arrow-up-right mb-2 ms-2 opacity-0 md:block hidden group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
               viewBox="0 0 16 16"
             >
               <path
@@ -67,7 +67,7 @@ const Socials = () => {
               width="15"
               height="15"
               fill="currentColor"
-              className="bi bi-box-arrow-up-right mb-2 ms-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+              className="bi bi-box-arrow-up-right mb-2 ms-2 md:block hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
               viewBox="0 0 16 16"
             >
               <path
@@ -105,7 +105,7 @@ const Socials = () => {
               width="15"
               height="15"
               fill="currentColor"
-              className="bi bi-box-arrow-up-right mb-2 ms-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+              className="bi bi-box-arrow-up-right mb-2 ms-2 md:block hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
               viewBox="0 0 16 16"
             >
               <path
