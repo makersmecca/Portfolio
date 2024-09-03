@@ -16,15 +16,21 @@ const MyProjectDetails = ({ projectDetails }) => {
           <ul className="md:pt-10 pt-0">
             {/* first two projects go here */}
             {arr1.map((i) => (
-              <li key={i.name} className="md:pt-7 pt-5">
+              <li key={i.name} className="md:pt-7 pt-5 group">
                 <a
                   href={i.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+                  className="block max-w-sm p-6 bg-gray-800 border-gray-700 group-hover:bg-gray-700 rounded-lg"
                 >
-                  <img src={i.img} alt="banner" className="mb-3 rounded-lg" />
-                  <h5 className="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <div className="overflow-hidden rounded-lg">
+                    <img
+                      src={i.img}
+                      alt="banner"
+                      className="rounded-lg inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+                    />
+                  </div>
+                  <h5 className="pt-2 mb-2 text-center text-2xl font-bold tracking-tight text-white rounded-lg">
                     {i.name}
                   </h5>
                   <p className="font-normal text-center text-sm">{i.details}</p>
@@ -38,15 +44,21 @@ const MyProjectDetails = ({ projectDetails }) => {
           <ul className="md:pt-10 pt-0">
             {/* first two projects go here */}
             {arr2.map((i) => (
-              <li key={i.name} className="md:pt-7 pt-5">
+              <li key={i.name} className="md:pt-7 pt-5 rounded-lg group">
                 <a
                   href={i.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+                  className="block max-w-sm p-6 bg-gray-800 border-gray-700 group-hover:bg-gray-700 rounded-lg"
                 >
-                  <img src={i.img} alt="banner" className="mb-3 rounded-lg" />
-                  <h5 className="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <div className="overflow-hidden rounded-lg">
+                    <img
+                      src={i.img}
+                      alt="banner"
+                      className="rounded-lg inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+                    />
+                  </div>
+                  <h5 className="pt-2 mb-2 text-center text-2xl font-bold tracking-tight text-white rounded-lg">
                     {i.name}
                   </h5>
                   <p className="font-normal text-center text-sm">{i.details}</p>
