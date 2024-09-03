@@ -26,9 +26,9 @@ const Projects = ({ scrollClicked }) => {
     },
     {
       img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/wirelessChargerPoster.png",
-      name: "Wireless Charger project",
+      name: "Charge Spot",
       details:
-        "Companion PWA for Wireless Charger project to monitor battery charge status",
+        "Companion PWA for Wireless Charger project to monitor battery status",
       url: "https://github.com/makersmecca/wireless_charger_project",
     },
     {
