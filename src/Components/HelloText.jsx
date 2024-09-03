@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-const HelloText = () => {
+const HelloText = ({ helloTextStatus }) => {
   const [currentWord, setCurrentWord] = useState(0);
-  const [intervals, setIntervals] = useState(1200);
+  const [intervals, setIntervals] = useState(1500);
   const words = [
     {
       text: "Hello!",
@@ -39,28 +39,26 @@ const HelloText = () => {
       if (currentWord == 0) {
         setIntervals(() => 170);
       }
-      // if (currentWord < words.length) {
-      //   setCurrentWord((i) => i + 1);
-      // } else {
-      //   setCurrentWord(0);
-      // }
+
+      //update the state variable once all the words are done displaying
+      currentWord === words.length - 1 && helloTextStatus();
     }, intervals);
     //console.log(intervals);
     return () => clearTimeout(timer);
   });
 
-  // console.log(words[currentWord].text);
-  // console.log(words[currentWord].font);
-  // console.log(currentWord);
-
   return (
     <div className="text-center text-white">
       <span
         className={`${
-          currentWord < words.length ? words[currentWord].font : ""
+          currentWord < words.length
+            ? words[currentWord].font
+            : words[words.length - 1].font
         }`}
       >
-        {currentWord < words.length && words[currentWord].text}
+        {currentWord < words.length
+          ? words[currentWord].text
+          : words[words.length - 1].text}
       </span>
     </div>
   );
