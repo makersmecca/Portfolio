@@ -1,5 +1,5 @@
 import DisplayDateTime from "./DateTime";
-import DisplayWeather from "./DisplayWeather";
+import ForkGithub from "./ForkGithub";
 import DownloadResume from "./DownloadResume";
 import "./profileborder.css";
 import { useState } from "react";
@@ -27,9 +27,9 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
           <li>
             <DownloadResume />
           </li>
-          {/* <li>
-            <DisplayWeather />
-          </li> */}
+          <li>
+            <ForkGithub />
+          </li>
           <li>
             <DisplayDateTime />
           </li>
@@ -85,9 +85,9 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
             <li className="py-4">
               <DownloadResume />
             </li>
-            {/* <li>
-              <DisplayWeather />
-            </li> */}
+            <li>
+              <ForkGithub />
+            </li>
           </ul>
         </div>
       </div>
