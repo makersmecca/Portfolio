@@ -44,7 +44,7 @@ const App = () => {
   const [isGlobalBlur, setIsGlobalBlur] = useState(false);
   const blurStatus = (isBlur) => {
     setIsGlobalBlur(isBlur);
-    console.log("app.jsx" + isBlur);
+    // console.log("app.jsx" + isBlur);
   };
 
   return (
