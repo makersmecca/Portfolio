@@ -27,9 +27,9 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
           <li>
             <DownloadResume />
           </li>
-          <li>
+          {/* <li>
             <DisplayWeather />
-          </li>
+          </li> */}
           <li>
             <DisplayDateTime />
           </li>
@@ -85,9 +85,9 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
             <li className="py-4">
               <DownloadResume />
             </li>
-            <li>
+            {/* <li>
               <DisplayWeather />
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
