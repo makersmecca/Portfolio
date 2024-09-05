@@ -19,7 +19,7 @@ const BackToTop = ({ toTheTop, splashStatus }) => {
       onClick={toTheTop}
       className={`${
         splashStatus ? "hidden" : "fixed ease-in-out"
-      } md:bottom-11 md:right-24 bottom-10 right-10 animate-appear transition-opacity duration-200 h-10 w-10 rounded-full bg-gray-600 border-gray-700 hover:bg-gray-700 md:bg-opacity-100 bg-opacity-60
+      } md:bottom-11 md:right-24 bottom-10 right-6 animate-appear transition-opacity duration-200 h-10 w-10 rounded-full bg-gray-600 border-gray-700 hover:bg-gray-700 md:bg-opacity-100 bg-opacity-60
       flex justify-center items-center 
       ${isVisible ? "" : "hidden ease-in-out"}
       `}
