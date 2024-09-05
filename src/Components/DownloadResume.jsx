@@ -1,4 +1,4 @@
-import myResume from "/Resume 26-08-24.pdf";
+import myResume from "/Resume.pdf";
 const DownloadResume = () => {
   return (
     <div className="px-2 hover:scale-95 ease-in-out">
