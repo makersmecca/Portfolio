@@ -16,12 +16,12 @@ const DisplayDateTime = () => {
           <span>0{currentTime.getHours()}</span>
         ) : (
           <span>{currentTime.getHours()}</span>
-        )}
-        :
+        )}{" "}
+        <span>:</span>{" "}
         {currentTime.getMinutes() < 10 ? (
           <span>0{currentTime.getMinutes()}</span>
         ) : (
-          <span>{currentTime.getMinutes()},</span>
+          <span>{currentTime.getMinutes()} ,</span>
         )}
         <span className="px-2">
           {currentTime.toDateString().substring(0, 3)},{" "}
