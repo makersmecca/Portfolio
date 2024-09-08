@@ -11,7 +11,7 @@ export default {
         newYellow: "#d4bb2c",
       },
       animation: {
-        typing: "typing 2s steps(11), blink 0.4s infinite alternate",
+        typing: "typing 2s steps(14), blink 0.5s infinite alternate",
         slideDown: "slideDown 1s ease-in-out forwards",
         appear: "appear 0.8s ease-in-out",
         blob: "blob 5s ease-in-out infinite",

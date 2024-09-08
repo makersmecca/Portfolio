@@ -50,7 +50,7 @@ const Intro = ({ backToTop, splashStatus, scrollHandler, globalBlur }) => {
                     : `text-white inline-block overflow-hidden whitespace-nowrap font-mono animate-typing border-r-4 md:text-5xl text-3xl`
                 }
               >
-                Hi...
+                Hi...<span className="text-darktheme">.</span>
               </div>
             </div>
 
