@@ -10,11 +10,11 @@ const TypingAnimate = ({ splashStatus }) => {
       <TypeAnimation
         sequence={[
           "Hi...", // Types 'One'
-          3000,
+          2500,
           "Hello...", // Deletes 'One' and types 'Two'
-          4000,
+          1500,
           "Hi there...", // Types 'Three' without deleting 'Two'
-          3000,
+          2500,
         ]}
         wrapper="span"
         cursor={true}
