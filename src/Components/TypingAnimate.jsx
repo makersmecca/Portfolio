@@ -5,7 +5,7 @@ const TypingAnimate = ({ splashStatus }) => {
     <div
       className={`${
         splashStatus ? "hidden" : "absolute fadeInOnly"
-      } md:text-xl text-lg`}
+      } md:text-xl text-base`}
     >
       <TypeAnimation
         sequence={[
