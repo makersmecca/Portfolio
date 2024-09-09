@@ -6,38 +6,38 @@ const HelloText = ({ helloTextStatus }) => {
   const words = [
     {
       text: "Hello!",
-      font: "font-Kanit text-4xl animate-slideDown transition-opacity duration-300 ease-in-out",
+      font: "text-4xl font-Kanit",
     },
     {
       text: "নমস্কার",
-      font: "text-4xl font-Bengali animate-slideDown transition-opacity duration-150 ease-in-out",
+      font: "text-4xl font-Bengali ",
     },
     {
       text: "नमस्ते",
-      font: "text-4xl font-Hindi animate-slideDown transition-opacity duration-150 ease-in-out",
+      font: "text-4xl font-Hindi",
     },
     {
       text: "வணக்கம்",
-      font: "text-4xl font-Tamil animate-slideDown transition-opacity duration-150 ease-in-out",
+      font: "text-4xl font-Tamil",
     },
     {
       text: "مرحبا",
-      font: "text-5xl font-Urdu animate-slideDown transition-opacity duration-150 ease-in-out",
+      font: "text-5xl font-Urdu",
     },
     {
       text: "こんにちは",
-      font: "text-4xl font-Japanese animate-slideDown transition-opacity duration-150 ease-in-out",
+      font: "text-4xl font-Japanese",
     },
     {
       text: "Bonjour!",
-      font: "text-3xl font-French animate-slideDown transition-opacity duration-150 ease-in-out",
+      font: "text-3xl font-French",
     },
   ];
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentWord((i) => (currentWord < words.length ? i + 1 : 0));
       if (currentWord == 0) {
-        setIntervals(() => 170);
+        setIntervals(() => 180);
       }
 
       //update the state variable once all the words are done displaying
@@ -52,9 +52,9 @@ const HelloText = ({ helloTextStatus }) => {
       <span
         className={`${
           currentWord < words.length
-            ? words[currentWord].font
-            : words[words.length - 1].font
-        }`}
+            ? words[currentWord].font + " duration-300"
+            : words[words.length - 1].font + " duration-200"
+        } animate-slideDown transition-opacity ease-in-out`}
       >
         {currentWord < words.length
           ? words[currentWord].text
