@@ -3,6 +3,7 @@ import "/src/index.css";
 import ScrollDownArrow from "./ScrollDownArrow";
 import Navbar from "./Navbar";
 import { useState, useRef } from "react";
+import TypingAnimate from "./TypingAnimate";
 
 const Intro = ({ backToTop, splashStatus, scrollHandler, globalBlur }) => {
   const topRef = useRef(null);
@@ -43,7 +44,7 @@ const Intro = ({ backToTop, splashStatus, scrollHandler, globalBlur }) => {
               <DisplayPicture splashStatus={splashStatus} />
             </div>
             <div className="col-span-2 md:col-span-3 md:col-start-3 text-center md:text-start flex md:justify-start justify-center items-center mt-12 px-10 md:mt-0">
-              <div
+              {/* <div
                 className={
                   splashStatus
                     ? `text-darktheme md:text-5xl text-3xl`
@@ -51,7 +52,9 @@ const Intro = ({ backToTop, splashStatus, scrollHandler, globalBlur }) => {
                 }
               >
                 Hi...<span className="text-darktheme">.</span>
-              </div>
+              </div> */}
+              {/*using an external animation library*/}
+              <TypingAnimate splashStatus={splashStatus} />
             </div>
 
             <div className="col-span-3 md:col-start-3 md:text-start text-center flex justify-center md:justify-start mt-8 px-10 text-2xl md:text-3xl">
