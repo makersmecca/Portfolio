@@ -2,12 +2,12 @@ import DisplayPicture from "./DisplayPicture";
 import "/src/index.css";
 import ScrollDownArrow from "./ScrollDownArrow";
 import Navbar from "./Navbar";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import TypingAnimate from "./TypingAnimate";
+import ConsoleMsg from "./ConsoleMsg";
 
 const Intro = ({ backToTop, splashStatus, scrollHandler, globalBlur }) => {
   const topRef = useRef(null);
-
   // console.log(backToTop);
   if (backToTop) {
     if (topRef.current) {
@@ -23,6 +23,7 @@ const Intro = ({ backToTop, splashStatus, scrollHandler, globalBlur }) => {
   //console.log(splashStatus);
   return (
     <div>
+      <ConsoleMsg />
       <div
         ref={topRef}
         className={`flex flex-col min-h-screen ${
