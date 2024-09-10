@@ -11,4 +11,3 @@
   <li><strong>Custom Animations:</strong> Created custom animation sequences using Tailwind config and CSS</li>
 </ul>
 
-<img src="/public/images/portfolioPoster.png">
