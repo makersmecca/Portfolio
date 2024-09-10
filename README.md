@@ -11,3 +11,12 @@
   <li><strong>Custom Animations:</strong> Created custom animation sequences using Tailwind config and CSS</li>
 </ul>
 
+<h3>Technologies used</h3>
+<ul>
+  <li>React JS</li>
+  <li>Vite</li>
+  <li>Tailwind CSS</li>
+  <li>GOogle Fonts</li>
+  <li>Netlify</li>
+</ul>
+
