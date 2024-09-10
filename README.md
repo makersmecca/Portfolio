@@ -29,16 +29,26 @@ Before you begin, make sure you have the following tools installed on your syste
 </ul>
 <strong>To run this project locally, follow these steps:</strong>
 <ol>
-  <li>Clone this repository</li> ## Installation
+  <li>Clone this repository</li> 
+  
+  ```bash
+    git clone https://github.com/thtauhid/terminal-portfolio
+  ```
+  <li>Navigate to the project folder</li>
 
-```bash
-git clone https://github.com/thtauhid/terminal-portfolio
-cd terminal-portfolio
-npm install
-```
-  <li>Navigate to the project folder</li><p>"cd Portfolio"</p>
-  <li>Install Dependancies</li><p>"npm install"</p>
-  <li>Start Dev Server</li><p>"npm run dev"</p>
+  ```bash
+    cd Portfolio
+  ```
+  <li>Install Dependancies</li>
+
+  ```bash
+    npm install
+  ```
+  <li>Start Dev Server</li>
+
+  ```bash
+    npm run dev
+  ```
   <li>Open on browser</li><p>Go to "http://localhost:5173"</p>
 </ol>
 You should be able to see the portfolio website up and running on your browser.
