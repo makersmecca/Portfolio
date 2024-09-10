@@ -4,21 +4,21 @@
 <img src="/public/images/portfolioPoster.png">
 <h3>Features</h3>
 <ul>
-  <li> <strong>Minimalistic UI:</strong> I prefer a clean look with attention to small details, hence I went with a minimalist design, with subtle animations.</li>
-  <li><strong>Responsive:</strong> Fully optimized for various screen sizes and devices. </li>
-  <li><strong>Interactive:</strong> Subtle animations and transitions for enhanced UX</li>
-  <li><strong>Specified Sections:</strong> Showcases various aspects of my work in separate sections, like My Projects, Technical Skills etc.</li>
-  <li><strong>Downloadable Resume:</strong> Download button to download my Resume.</li>
-  <li><strong>Custom Animations:</strong> Created custom animation sequences using Tailwind config and CSS</li>
+  <li> <strong>Minimalistic UI: </strong> I prefer a clean look with attention to small details, hence I went with a minimalist design, with subtle animations.</li>
+  <li><strong>Responsive: </strong> Fully optimized for various screen sizes and devices. </li>
+  <li><strong>Interactive: </strong> Subtle animations and transitions for enhanced UX</li>
+  <li><strong>Specified Sections: </strong> Showcases various aspects of my work in separate sections, like My Projects, Technical Skills etc.</li>
+  <li><strong>Downloadable Resume: </strong> Download button to download my Resume.</li>
+  <li><strong>Custom Animations: </strong> Created custom animation sequences using Tailwind config and CSS</li>
 </ul>
 
 <h3>Technologies used</h3>
 <ul>
-  <li>React JS</li>
-  <li>Vite</li>
-  <li>Tailwind CSS</li>
-  <li>GOogle Fonts</li>
-  <li>Netlify</li>
+  <li>React JS: A JavaScript library for building user interfaces.</li>
+  <li>Vite: A build tool that helps make development faster. Provides quick development servers and efficient production builds.</li>
+  <li>Tailwind CSS: A utility-first CSS framework that simplifies styling by providing pre-built classes for common styles.</li>
+  <li>Google Fonts: Fun creative fonts from Google that can be imported to your project</li>
+  <li>Netlify: A platform that provides build, deployment, and serverless backend services for web applications and dynamic websites.</li>
 </ul>
 
 <h3>Installation</h3>
