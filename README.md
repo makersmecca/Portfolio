@@ -32,7 +32,7 @@ Before you begin, make sure you have the following tools installed on your syste
   <li>Clone this repository</li> 
   
   ```bash
-    git clone https://github.com/thtauhid/terminal-portfolio
+    git clone https://github.com/makersmecca/Portfolio
   ```
   <li>Navigate to the project folder</li>
 
