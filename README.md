@@ -32,22 +32,22 @@ Before you begin, make sure you have the following tools installed on your syste
   <li>Clone this repository</li> 
   
   ```bash
-    git clone https://github.com/makersmecca/Portfolio
+git clone https://github.com/makersmecca/Portfolio
   ```
   <li>Navigate to the project folder</li>
 
   ```bash
-    cd Portfolio
+cd Portfolio
   ```
   <li>Install Dependancies</li>
 
   ```bash
-    npm install
+npm install
   ```
   <li>Start Dev Server</li>
 
   ```bash
-    npm run dev
+npm run dev
   ```
   <li>Open on browser</li><p>Go to "http://localhost:5173"</p>
 </ol>
