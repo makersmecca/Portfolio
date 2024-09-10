@@ -30,6 +30,15 @@ Before you begin, make sure you have the following tools installed on your syste
 <strong>To run this project locally, follow these steps:</strong>
 <ol>
   <li>Clone this repository</li> <p>"git clone https://github.com/makersmecca/Portfolio"</p>
-  
+  <li>Navigate to the project folder</li><p>"cd Portfolio"</p>
+  <li>Install Dependancies</li><p>"npm install"</p>
+  <li>Start Dev Server</li><p>"npm run dev"</p>
+  <li>Open on browser</li><p>Go to "http://localhost:5173"</p>
 </ol>
+You should be able to see the portfolio website up and running on your browser.
 
+<h3>Planned Future Improvements</h3>
+<ul>
+  <li><strong>Blog Section:</strong> Add blogs to share my experiences, thoughts, skills and other random projects.</li>
+  <li><strong>Switchable Themes:</strong> Switchable Dark and Light theme.</li>
+</ul>
