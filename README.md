@@ -50,7 +50,7 @@ npm install
   ```bash
 npm run dev
   ```
-  <li>Open on browser</li><p>Go to "http://localhost:5173"</p>
+  <li>Open on browser</li><pre>Go to "http://localhost:5173"</pre>
 </ol>
 You should be able to see the portfolio website up and running on your browser.
 
