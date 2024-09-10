@@ -21,6 +21,12 @@
 </ul>
 
 <h3>Installation</h3>
+Before you begin, make sure you have the following tools installed on your system:
+<ul>
+  <li>Node.js: Download and install <a href="https://nodejs.org/en/download/package-manager" target="_blank" rel="noopener noreferrer">Node.js Official site</a></li>
+  <li>npm or yarn: Included with Node.js (check by running "npm -v" or "yarn -v" in tour terminal)</li>
+  <li>Git: Download and install from <a href="https://git-scm.com/downloads">Git Official Site</a></li>
+</ul>
 <strong>To run this project locally, follow these steps:</strong>
 <ol>
   <li>Clone this repository</li> <p>"git clone https://github.com/makersmecca/Portfolio"</p>
