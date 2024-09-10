@@ -20,3 +20,10 @@
   <li>Netlify</li>
 </ul>
 
+<h3>Installation</h3>
+<strong>To run this project locally, follow these steps:</strong>
+<ol>
+  <li>Clone this repository</li> <p>"git clone https://github.com/makersmecca/Portfolio"</p>
+  
+</ol>
+
