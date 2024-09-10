@@ -63,5 +63,5 @@ You should be able to see the portfolio website up and running on your browser.
 <p>MIT License</p>
 <p>You are free to use, customize, and modify this project to whatever suits your needs.</p>
 <p>Let me know if you do, I'd love to see your versions as well!</p>
-
+<sub>Easter Eggs</sub>
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true"/>
