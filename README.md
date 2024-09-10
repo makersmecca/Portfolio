@@ -39,7 +39,7 @@ git clone https://github.com/makersmecca/Portfolio
   ```bash
 cd Portfolio
   ```
-  <li>Install Dependancies</li>
+  <li>Install Dependencies</li>
 
   ```bash
 npm install
