@@ -1,6 +1,7 @@
 <h2>Portfolio</h2>
 <img src="https://api.netlify.com/api/v1/badges/9c78e292-0d53-4cbd-a9ab-fb5afdea7139/deploy-status?branch=main"/>
 <h4>My personal portfolio website, built using React, Vite, and Tailwind CSS.</h4>
+<img src="/public/images/portfolioPoster.png" width="600" height="400">
 <h3>Features</h3>
 <ul>
   <li> <strong>Minimalistic UI:</strong> I prefer a clean look with attention to small details, hence I went with a minimalist design, with subtle animations.</li>
@@ -61,6 +62,6 @@ You should be able to see the portfolio website up and running on your browser.
 
 <h3>License</h3>
 <p>MIT License</p>
-<p>You are free to use, customize, and modify this project to whatever suits your needs.</p>
+<p>You can use, customize, and modify this project to suit your needs.</p>
 <p>Let me know if you do, I'd love to see your versions as well!</p>
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true"/>
