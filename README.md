@@ -4,7 +4,7 @@
 <img src="/public/images/portfolioPoster.png">
 <h3>Features</h3>
 <ul>
-  <li><strong>Minimalistic UI: </strong></li> I prefer a clean look with attention to small details, hence I went with a minimalist design, with subtle animations.
+  <li><strong>Minimalistic UI: </strong> I prefer a clean look with attention to small details, hence I went with a minimalist design, with subtle animations.</li>
   <li><strong>Responsive: </strong> Fully optimized for various screen sizes and devices. </li>
   <li><strong>Interactive: </strong> Subtle animations and transitions for enhanced UX</li>
   <li><strong>Specified Sections: </strong> Showcases various aspects of my work in separate sections, like My Projects, Technical Skills etc.</li>
