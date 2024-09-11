@@ -61,12 +61,23 @@ const Intro = ({ backToTop, splashStatus, scrollHandler, globalBlur }) => {
             <div className="col-span-3 md:col-start-3 md:text-start text-center flex justify-center md:justify-start mt-8 px-10 text-2xl md:text-3xl">
               I'm <span className="ps-2 text-textBlue">Ayudh</span>.
             </div>
-            <div className="col-span-3 md:col-start-3 md:text-start text-center hyphens-none mt-5 px-10 md:text-xl">
-              I am a Frontend developer with experience in building responsive,
-              <br />
-              user-friendly websites & Progressive Web Apps with{" "}
-              <span className="text-newOrange">React</span>,{" "}
-              <span className="text-darkBlue">Vite</span> and{" "}
+            <div className="col-span-3 md:col-start-3 md:text-start text-center hyphens-none mt-5 px-16 sm:px-12 md:px-10 md:text-xl">
+              I am a Frontend developer with experience in building{" "}
+              <span className="text-newOrange">responsive,</span> user-friendly
+              websites &{" "}
+              <span className="underline decoration-wavy decoration-darkBlue decoration-1">
+                P
+              </span>
+              rogressive{" "}
+              <span className="underline decoration-wavy decoration-darkBlue decoration-1">
+                W
+              </span>
+              eb{" "}
+              <span className="underline decoration-wavy decoration-darkBlue decoration-1">
+                A
+              </span>
+              pps with <span className="text-newOrange">React</span>,{" "}
+              <span className="text-textBlue">Vite</span> and{" "}
               <span className="text-newYellow"> Tailwind</span>.
               <br />
               <br />
