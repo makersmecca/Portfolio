@@ -66,16 +66,10 @@ const Intro = ({ backToTop, splashStatus, scrollHandler, globalBlur }) => {
               <span className="text-newOrange">responsive,</span> user-friendly
               websites &{" "}
               <span className="underline decoration-wavy decoration-darkBlue decoration-1">
-                P
+                Pro
               </span>
-              rogressive{" "}
-              <span className="underline decoration-wavy decoration-darkBlue decoration-1">
-                W
-              </span>
-              eb{" "}
-              <span className="underline decoration-wavy decoration-darkBlue decoration-1">
-                A
-              </span>
+              gressive <span className="">W</span>
+              eb <span className="">A</span>
               pps with <span className="text-newOrange">React</span>,{" "}
               <span className="text-textBlue">Vite</span> and{" "}
               <span className="text-newYellow"> Tailwind</span>.
