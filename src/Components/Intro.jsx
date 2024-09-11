@@ -70,7 +70,7 @@ const Intro = ({ backToTop, splashStatus, scrollHandler, globalBlur }) => {
               <span className="text-newYellow"> Tailwind</span>.
               <br />
               <br />
-              I'm eager to contribute and grow in a collaborative team.
+              {/* I'm eager to contribute and grow in a collaborative team. */}
             </div>
           </div>
         </div>
