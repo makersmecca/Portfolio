@@ -53,7 +53,7 @@ const HelloText = ({ helloTextStatus }) => {
         className={`${
           currentWord < words.length
             ? words[currentWord].font + " duration-300"
-            : words[words.length - 1].font + " duration-200"
+            : words[words.length - 1].font + " duration-150"
         } animate-slideDown transition-opacity ease-in-out`}
       >
         {currentWord < words.length
