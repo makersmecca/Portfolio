@@ -33,6 +33,7 @@ const HelloText = ({ helloTextStatus }) => {
       font: "text-3xl font-French",
     },
   ];
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentWord((i) => (currentWord < words.length ? i + 1 : 0));
