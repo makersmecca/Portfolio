@@ -1,6 +1,7 @@
 import DisplayDateTime from "./DateTime";
 import ForkGithub from "./ForkGithub";
 import DownloadResume from "./DownloadResume";
+import ThemeSwitch from "./ThemeSwitch";
 import "./profileborder.css";
 import { useState } from "react";
 
@@ -23,7 +24,26 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
       }`}
     >
       <div className="md:block hidden">
-        <ul className="flex justify-end px-24 md:text-lg">
+        <div className="flex justify-between px-24 md:text-lg">
+          <span className="px-24">{/* <ThemeSwitch /> */}</span>
+          <span>
+            <ul className="flex">
+              <li>
+                <DownloadResume />
+              </li>
+              <li>
+                <ForkGithub />
+              </li>
+              <li>
+                <DisplayDateTime />
+              </li>
+            </ul>
+          </span>
+        </div>
+        {/* <ul className="flex px-24 md:text-lg">
+          <li>
+            <ThemeSwitch />
+          </li>
           <li>
             <DownloadResume />
           </li>
@@ -33,7 +53,7 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
           <li>
             <DisplayDateTime />
           </li>
-        </ul>
+        </ul> */}
       </div>
       <div className="md:hidden block">
         <div className="grid grid-cols-3 pt-8">
