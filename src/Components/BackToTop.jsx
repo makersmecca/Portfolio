@@ -19,11 +19,11 @@ const BackToTop = ({ toTheTop, splashStatus, isLight }) => {
       onClick={toTheTop}
       className={`${
         splashStatus ? "hidden" : "fixed ease-in-out"
-      } md:bottom-11 md:right-24 bottom-10 right-6 animate-appear transition-opacity duration-200 h-10 w-10 rounded-full
+      } md:bottom-11 md:right-24 bottom-10 right-6 animate-appear transition-opacity duration-200 h-10 w-10 rounded-full z-10
       ${
         isLight
-          ? "bg-highlightBrown bg-opacity-80"
-          : "bg-gray-600 hover:bg-gray-700 bg-opacity-60"
+          ? "bg-highlightBrown opacity-70 hover:opacity-95"
+          : "bg-gray-600 opacity-50 md:opacity-100 hover:opacity-90"
       }
        md:bg-opacity-100 
       flex justify-center items-center 
