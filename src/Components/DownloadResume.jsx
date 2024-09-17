@@ -1,5 +1,7 @@
 import myResume from "/Resume.pdf";
-const DownloadResume = () => {
+const DownloadResume = ({ isLight }) => {
+  const lightColor = "#537188";
+  const darkColor = "white";
   return (
     <div className="px-2 hover:scale-95 ease-in-out">
       <a
@@ -19,7 +21,7 @@ const DownloadResume = () => {
         >
           <path
             fill="none"
-            stroke="currentColor"
+            stroke={`${isLight ? lightColor : darkColor}`}
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"
@@ -28,7 +30,7 @@ const DownloadResume = () => {
           ></path>
           <path
             fill="none"
-            stroke="currentColor"
+            stroke={`${isLight ? lightColor : darkColor}`}
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"
@@ -37,7 +39,7 @@ const DownloadResume = () => {
           ></path>
           <polyline
             fill="none"
-            stroke="currentColor"
+            stroke={`${isLight ? lightColor : darkColor}`}
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"
@@ -50,7 +52,7 @@ const DownloadResume = () => {
             y1="25.3"
             y2="40.3"
             fill="none"
-            stroke="currentColor"
+            stroke={`${isLight ? lightColor : darkColor}`}
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"

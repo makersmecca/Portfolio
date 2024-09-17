@@ -1,4 +1,7 @@
-const ForkGithub = () => {
+const ForkGithub = ({ isLight }) => {
+  const lightColor = "#537188";
+  const darkColor = "white";
+
   return (
     <div className="px-3 hover:scale-95 ease-in-out">
       <a
@@ -12,7 +15,7 @@ const ForkGithub = () => {
           xmlns="http://www.w3.org/2000/svg"
           width="23"
           height="23"
-          fill="currentColor"
+          fill={`${isLight ? lightColor : darkColor}`}
           viewBox="0 0 350 512"
           className="sm:pt-1 pt-0 pb-1 sm:pb-0 me-1"
         >
