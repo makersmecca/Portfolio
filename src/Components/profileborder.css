@@ -54,13 +54,15 @@
 
 .shadowBlobFadeIn {
   border-radius: 60% 30% 40% 70% / 60% 30% 70% 40%;
-
-  /* Enable hardware acceleration*/
   transform: translateZ(0);
-
   animation: shadowFadeIn 2s ease-in-out forwards,
     shadowBlob 5s ease-in-out infinite;
+  will-change: border-radius, opacity; /* iOS hardware acceleration */
+}
 
-  /*iOS hardware acceleration */
-  will-change: border-radius, opacity;
+/* Disable any default focus or highlight styling */
+img {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  box-shadow: none;
 }
