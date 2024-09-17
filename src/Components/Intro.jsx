@@ -75,7 +75,7 @@ const Intro = ({
               <span
                 className={`ps-2 ${
                   isLight
-                    ? "text-highlightBrown underline decoration-wavy decoration-highlightBrown decoration-0"
+                    ? "text-highlightBrown underline decoration-wavy decoration-highlightBrown decoration-1"
                     : "text-textBlue"
                 } `}
               >
