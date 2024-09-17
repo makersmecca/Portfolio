@@ -1,21 +1,23 @@
 import { useState } from "react";
 const ThemeSwitch = ({ toggleTheme, isLight }) => {
-  console.log(isLight);
+  // console.log(isLight);
+
+  const lightColor = "#C96868";
+  const darkColor = "#1e293b";
 
   return (
     <div>
       <button
         onClick={toggleTheme}
-        className={`flex align-middle rounded-lg h-8 w-8 pt-0.5 ps-1 ${
-          isLight ? "bg-gray-700" : "bg-gray-700"
-        }`}
+        className={`flex align-middle rounded-lg h-8 w-8 pt-0.5 ps-1 `}
+        style={{ backgroundColor: `${isLight ? lightColor : darkColor}` }}
       >
         {isLight ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="26"
             height="27"
-            fill="white"
+            fill="#FFF4EA"
             className="bi bi-brightness-low-fill transition-all duration-75 ease-in-out pe-0.5"
             viewBox="0 0 16 16"
           >
