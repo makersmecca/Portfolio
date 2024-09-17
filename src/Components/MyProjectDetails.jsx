@@ -34,10 +34,20 @@ const MyProjectDetails = ({ projectDetails, isLight }) => {
                       className="rounded-lg inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                     />
                   </div>
-                  <h5 className="pt-2 mb-2 text-center text-2xl font-bold tracking-tight text-white rounded-lg">
+                  <h5
+                    className={`pt-2 mb-2 text-center text-2xl font-bold tracking-tight ${
+                      isLight ? "text-slate-700" : "text-white"
+                    } rounded-lg`}
+                  >
                     {i.name}
                   </h5>
-                  <p className="font-normal text-center text-sm">{i.details}</p>
+                  <p
+                    className={`font-normal text-center text-sm ${
+                      isLight ? "font-semibold" : "font-normal"
+                    }`}
+                  >
+                    {i.details}
+                  </p>
                 </a>
               </li>
             ))}
@@ -66,10 +76,20 @@ const MyProjectDetails = ({ projectDetails, isLight }) => {
                       className="rounded-lg inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                     />
                   </div>
-                  <h5 className="pt-2 mb-2 text-center text-2xl font-bold tracking-tight text-white rounded-lg">
+                  <h5
+                    className={`pt-2 mb-2 text-center text-2xl font-bold tracking-tight ${
+                      isLight ? "text-slate-700" : "text-white"
+                    } rounded-lg`}
+                  >
                     {i.name}
                   </h5>
-                  <p className="font-normal text-center text-sm">{i.details}</p>
+                  <p
+                    className={`font-normal text-center text-sm ${
+                      isLight ? "font-semibold" : "font-normal"
+                    }`}
+                  >
+                    {i.details}
+                  </p>
                 </a>
               </li>
             ))}
