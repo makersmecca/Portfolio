@@ -71,7 +71,15 @@ const Intro = ({
             </div>
 
             <div className="col-span-3 md:col-start-3 md:text-start text-center flex justify-center md:justify-start mt-8 px-10 text-2xl md:text-3xl">
-              I'm <span className="ps-2 text-textBlue">Ayudh</span>.
+              I'm{" "}
+              <span
+                className={`ps-2 ${
+                  isLight ? "text-highlightBrown" : "text-textBlue"
+                } `}
+              >
+                Ayudh
+              </span>
+              .
             </div>
             <div className="col-span-3 md:col-start-3 md:text-start text-center hyphens-none mt-5 px-16 sm:px-12 md:px-10 md:text-xl">
               I am a Frontend developer with experience in building{" "}
