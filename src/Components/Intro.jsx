@@ -74,7 +74,9 @@ const Intro = ({
               I'm{" "}
               <span
                 className={`ps-2 ${
-                  isLight ? "text-highlightBrown" : "text-textBlue"
+                  isLight
+                    ? "text-highlightBrown underline decoration-wavy decoration-highlightBrown decoration-0"
+                    : "text-textBlue"
                 } `}
               >
                 Ayudh
