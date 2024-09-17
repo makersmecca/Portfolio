@@ -25,16 +25,16 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
     >
       <div className="md:block hidden">
         <div className="flex justify-between px-24 md:text-lg">
-          <span className="px-24">{/* <ThemeSwitch /> */}</span>
-          <span>
+          <span className="px-10">{/* <ThemeSwitch /> */}</span>
+          <span className="flex align-bottom">
             <ul className="flex">
-              <li>
+              <li className="flex flex-col justify-center">
                 <DownloadResume />
               </li>
-              <li>
+              <li className="flex flex-col justify-center">
                 <ForkGithub />
               </li>
-              <li>
+              <li className="flex flex-col justify-center">
                 <DisplayDateTime />
               </li>
             </ul>
