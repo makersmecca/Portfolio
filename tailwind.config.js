@@ -12,6 +12,7 @@ export default {
         newBlue: "#98c3e4",
         pastelRed: "#FFD7C4",
         pastelRedLight: "#E2BFB3",
+        highlightBrown: "#C96868",
       },
       animation: {
         typing: "typing 2s steps(14), blink 0.5s infinite alternate",
