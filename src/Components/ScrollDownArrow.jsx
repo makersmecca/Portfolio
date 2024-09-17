@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-const ScrollDownArrow = ({ splashStatus, btnClicked, blurStatus }) => {
+const ScrollDownArrow = ({ splashStatus, btnClicked, blurStatus, isLight }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -9,6 +9,9 @@ const ScrollDownArrow = ({ splashStatus, btnClicked, blurStatus }) => {
     window.addEventListener("scroll", scrollDetect);
     //console.log(isVisible);
   });
+
+  const darkColor = "white";
+  const lightColor = "#C96868";
 
   return (
     <>
@@ -21,7 +24,7 @@ const ScrollDownArrow = ({ splashStatus, btnClicked, blurStatus }) => {
         `}
       >
         <button
-          className={`text-3xl text-gray-500 animate-bounce ${
+          className={`text-3xl animate-bounce ${
             blurStatus
               ? "blur-sm md:blur-none duration-500"
               : "blur-none duration-500"
@@ -29,7 +32,7 @@ const ScrollDownArrow = ({ splashStatus, btnClicked, blurStatus }) => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="white"
+            fill={`${isLight ? lightColor : darkColor}`}
             viewBox="0 0 512 512"
             className="cursor-pointer w-6 h-6 md:w-7 md:h-7 hover:scale-110"
             onClick={btnClicked}
