@@ -1,18 +1,34 @@
 // import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import { useState, useEffect } from "react";
 
-const TypingAnimate = ({ splashStatus }) => {
+const TypingAnimate = ({ splashStatus, isLight }) => {
   //   const [cursorChar, setCursorChar] = useState(true);
 
   //   setTimeout(() => {
   //     setCursorChar(() => !cursorChar);
   //   }, 400);
+  const lightColor = "#537188";
+  const darkColor = "white";
+
+  const [textColor, setTextColor] = useState(darkColor);
+
+  useEffect(() => {
+    if (isLight) {
+      setTextColor(lightColor);
+    } else {
+      setTextColor(darkColor);
+    }
+    document.getElementById("typeText").style.color = textColor;
+  });
+  // console.log(textColor);
 
   return (
     <div
       className={`${
         splashStatus ? "hidden" : "absolute fadeInOnly"
       } md:text-xl text-base`}
+      id="typeText"
     >
       <TypeAnimation
         sequence={[
@@ -26,7 +42,10 @@ const TypingAnimate = ({ splashStatus }) => {
         wrapper="span"
         cursor={true}
         repeat={Infinity}
-        style={{ fontSize: "2em", display: "inline-block" }}
+        style={{
+          fontSize: "2em",
+          display: "inline-block",
+        }}
       />
       {/* <span style={{ fontSize: "1.8em" }}>
         {cursorChar ? <span>/.</span> : <span>\.</span>}
