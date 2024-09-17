@@ -3,7 +3,7 @@ import dispPic from "/images/displayPicture.jpg";
 
 const DisplayPicture = ({ splashStatus, isLight }) => {
   return (
-    <div className="relative">
+    <div className={`${splashStatus ? "" : "relative"}`}>
       <div
         className={`${
           splashStatus
