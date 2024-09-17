@@ -19,7 +19,7 @@ const DownloadResume = () => {
         >
           <path
             fill="none"
-            stroke="#fff"
+            stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"
@@ -28,7 +28,7 @@ const DownloadResume = () => {
           ></path>
           <path
             fill="none"
-            stroke="#fff"
+            stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"
@@ -37,7 +37,7 @@ const DownloadResume = () => {
           ></path>
           <polyline
             fill="none"
-            stroke="#fff"
+            stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"
@@ -50,7 +50,7 @@ const DownloadResume = () => {
             y1="25.3"
             y2="40.3"
             fill="none"
-            stroke="#fff"
+            stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"
