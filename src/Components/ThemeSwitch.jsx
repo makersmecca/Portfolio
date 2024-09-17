@@ -3,7 +3,7 @@ const ThemeSwitch = ({ toggleTheme, isLight }) => {
   // console.log(isLight);
 
   const lightColor = "#C96868";
-  const darkColor = "#1e293b";
+  const darkColor = "#334155";
 
   return (
     <div>
