@@ -54,7 +54,7 @@ const Intro = ({
             <div
               className={`col-span-2 md:row-span-3 flex justify-center md:items-center`}
             >
-              <DisplayPicture splashStatus={splashStatus} />
+              <DisplayPicture splashStatus={splashStatus} isLight={isLight} />
             </div>
             <div className="col-span-2 md:col-span-3 md:col-start-3 text-center md:text-start flex md:justify-start justify-center items-center mt-12 px-10 md:mt-0">
               {/* <div
