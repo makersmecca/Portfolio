@@ -13,6 +13,8 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
     invokeBlur(isOpen);
     setIsOpen(() => !isOpen);
   };
+  const lightColor = "#C96868";
+  const darkColor = "currentColor";
 
   return (
     <nav
@@ -75,7 +77,7 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="35"
                   height="35"
-                  fill="currentColor"
+                  fill={isLight ? lightColor : darkColor}
                   className="bi bi-x"
                   viewBox="0 0 16 16"
                 >
@@ -88,7 +90,7 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="35"
                   height="35"
-                  fill="currentColor"
+                  fill={isLight ? lightColor : darkColor}
                   className="bi bi-justify-right"
                   viewBox="0 0 16 16"
                 >
