@@ -67,7 +67,7 @@ const Intro = ({
                 Hi...<span className="text-darktheme">.</span>
               </div> */}
               {/*using an external animation library*/}
-              <TypingAnimate splashStatus={splashStatus} />
+              <TypingAnimate splashStatus={splashStatus} isLight={isLight} />
             </div>
 
             <div className="col-span-3 md:col-start-3 md:text-start text-center flex justify-center md:justify-start mt-8 px-10 text-2xl md:text-3xl">
@@ -95,6 +95,7 @@ const Intro = ({
           splashStatus={splashStatus}
           btnClicked={scrollHandler}
           blurStatus={isBlur}
+          isLight={isLight}
         />
       </div>
     </div>
