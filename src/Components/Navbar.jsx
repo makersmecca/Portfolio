@@ -58,15 +58,15 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
         </ul> */}
       </div>
       <div className="md:hidden block">
-        <div className="grid grid-cols-4 pt-8">
-          <div className="col-span-2 flex items-center ps-4">
+        <div className="grid grid-cols-5 pt-8">
+          <div className="col-span-3 flex items-center ps-4">
             <DisplayDateTime />
           </div>
-          <div className="col-start-3 flex items-center justify-end">
+          <div className="col-start-4 flex items-center justify-end">
             <ThemeSwitch toggleTheme={toggleTheme} isLight={isLight} />
           </div>
           <div
-            className="col-start-4 flex items-center justify-end pe-4"
+            className="col-start-5 flex items-center justify-end pe-4"
             onClick={toggleNav}
           >
             {isOpen ? (
