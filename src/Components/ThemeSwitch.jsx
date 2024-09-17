@@ -7,7 +7,7 @@ const ThemeSwitch = ({ toggleTheme, isLight }) => {
       <button
         onClick={toggleTheme}
         className={`flex align-middle rounded-lg h-8 w-8 pt-0.5 ps-1 ${
-          isLight ? "bg-gray-800" : "bg-gray-700"
+          isLight ? "bg-gray-700" : "bg-gray-700"
         }`}
       >
         {isLight ? (
@@ -15,7 +15,7 @@ const ThemeSwitch = ({ toggleTheme, isLight }) => {
             xmlns="http://www.w3.org/2000/svg"
             width="26"
             height="27"
-            fill="currentColor"
+            fill="white"
             className="bi bi-brightness-low-fill transition-all duration-75 ease-in-out pe-0.5"
             viewBox="0 0 16 16"
           >
@@ -26,7 +26,7 @@ const ThemeSwitch = ({ toggleTheme, isLight }) => {
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="22"
-            fill="currentColor"
+            fill="white"
             className="bi bi-moon-stars-fill mt-1 pb-0.5 ms-0.5 transition-all duration-75 ease-in-out"
             viewBox="0 0 16 16"
           >
