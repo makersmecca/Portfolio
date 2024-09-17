@@ -11,11 +11,12 @@ xl	                    1280px	       @media (min-width: 1280px) { ... }
 
 ----------------------------------------------------------**Things To Add**-------------------------------------------------------------
 
--- Add a navbar with resume download link, time date and weather[if possible]
 -- add a few subtle scroll effects
 -- maybe add an animation to the background preferebly one that responses to the cursor position
--- add project links and card thumbnails for the projects inside the project cards
 
+-- Add switchable light and dark themes [DONE]
+-- add project links and card thumbnails for the projects inside the project cards [DONE]
+-- Add a navbar with resume download link, time date and weather[if possible] [DONE]
 -- add wobbly ellipse animation to the display picture [DONE]
 -- The downward scroll arrow, when clicked, should scroll to the Projects section [DONE]
    !--->need to add a prop to do this
