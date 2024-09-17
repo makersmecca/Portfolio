@@ -21,9 +21,6 @@ xl	                    1280px	       @media (min-width: 1280px) { ... }
 -- The downward scroll arrow, when clicked, should scroll to the Projects section [DONE]
    !--->need to add a prop to do this
 
-
-
-
 ----------------------------------------------------------**Things to Fix**-------------------------------------------------------------
 
 
