@@ -1,4 +1,3 @@
-import { useState } from "react";
 const ThemeSwitch = ({ toggleTheme, isLight }) => {
   // console.log(isLight);
 
@@ -9,7 +8,7 @@ const ThemeSwitch = ({ toggleTheme, isLight }) => {
     <div>
       <button
         onClick={toggleTheme}
-        className={`flex align-middle rounded-lg h-8 w-8 pt-0.5 ps-1 `}
+        className={`flex align-middle rounded-lg md:h-10 md:w-10 md:pt-1.5 md:ps-2 h-8 w-8 pt-0.5 ps-1 hover:opacity-75 transition-opacity ease-in-out delay-75`}
         style={{ backgroundColor: `${isLight ? lightColor : darkColor}` }}
       >
         {isLight ? (
