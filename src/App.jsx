@@ -13,8 +13,10 @@ const App = () => {
   useLayoutEffect(() => {
     if (isLight) {
       document.body.style.backgroundColor = "rgb(181, 228, 255)";
+      document.body.style.color = "rgb(13,13,13)";
     } else {
       document.body.style.backgroundColor = "rgb(13,13,13)";
+      document.body.style.color = "aliceblue";
     }
   });
 
