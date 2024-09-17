@@ -7,7 +7,9 @@ const DownloadResume = ({ isLight }) => {
       <a
         href={myResume}
         download={"Ayudh_Nandi.pdf"}
-        className="flex flex-row justify-center"
+        className={`flex flex-row justify-center ${
+          isLight ? "font-semibold" : "font-normal"
+        }`}
       >
         Resume
         <svg
@@ -25,7 +27,7 @@ const DownloadResume = ({ isLight }) => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"
-            strokeWidth="3"
+            strokeWidth={`${isLight ? "5" : "4"}`}
             d="M32.4,13.8c-1.9-2.6-5-4.3-8.4-4.3c-5.8,0-10.5,4.7-10.5,10.5v0.5H12c-4.1,0-7.5,3.4-7.5,7.5s3.4,7.5,7.5,7.5	h2.1"
           ></path>
           <path
@@ -34,7 +36,7 @@ const DownloadResume = ({ isLight }) => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"
-            strokeWidth="3"
+            strokeWidth={`${isLight ? "5" : "4"}`}
             d="M33.5,35.5H36c4.1,0,7.5-3.4,7.5-7.5s-3.4-7.5-7.5-7.5h-1.5"
           ></path>
           <polyline
@@ -43,7 +45,7 @@ const DownloadResume = ({ isLight }) => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"
-            strokeWidth="3"
+            strokeWidth={`${isLight ? "5" : "4"}`}
             points="28.5,35.8 24,40.3 19.5,35.8"
           ></polyline>
           <line
@@ -56,7 +58,7 @@ const DownloadResume = ({ isLight }) => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"
-            strokeWidth="3"
+            strokeWidth={`${isLight ? "5" : "4"}`}
           ></line>
         </svg>
         {/* <svg
