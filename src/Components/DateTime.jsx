@@ -1,5 +1,5 @@
 import { useState } from "react";
-const DisplayDateTime = () => {
+const DisplayDateTime = ({ isLight }) => {
   const [currentTime, setCurrentTime] = useState(new Date());
   function updateTime() {
     setCurrentTime((c) => new Date());
@@ -11,7 +11,7 @@ const DisplayDateTime = () => {
 
   return (
     <>
-      <div className="px-2">
+      <div className={`px-2 font-semibold`}>
         {currentTime.getHours() < 10 ? (
           <span>0{currentTime.getHours()}</span>
         ) : (
