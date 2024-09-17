@@ -57,7 +57,9 @@
   transform: translateZ(0);
   animation: shadowFadeIn 2s ease-in-out forwards,
     shadowBlob 5s ease-in-out infinite;
-  will-change: border-radius, opacity; /* iOS hardware acceleration */
+  will-change: border-radius, opacity;
+  backface-visibility: hidden; /* iOS rendering */
+  perspective: 1000px; /* Helps with 3D rendering */
 }
 
 /* Disable any default focus or highlight styling */
