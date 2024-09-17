@@ -6,7 +6,14 @@ import { useState, useRef, useEffect } from "react";
 import TypingAnimate from "./TypingAnimate";
 import ConsoleMsg from "./ConsoleMsg";
 
-const Intro = ({ backToTop, splashStatus, scrollHandler, globalBlur }) => {
+const Intro = ({
+  backToTop,
+  splashStatus,
+  scrollHandler,
+  globalBlur,
+  toggleTheme,
+  isLight,
+}) => {
   const topRef = useRef(null);
   // console.log(backToTop);
   if (backToTop) {
@@ -30,7 +37,12 @@ const Intro = ({ backToTop, splashStatus, scrollHandler, globalBlur }) => {
           splashStatus ? "" : "relative"
         }`}
       >
-        <Navbar splashStatus={splashStatus} invokeBlur={blurContent} />
+        <Navbar
+          splashStatus={splashStatus}
+          invokeBlur={blurContent}
+          toggleTheme={toggleTheme}
+          isLight={isLight}
+        />
         <div
           className={`flex justify-center items-center min-h-screen sm:mt-24 mt-12 lg:mt-0 ${
             isBlur

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const BackToTop = ({ toTheTop, splashStatus }) => {
+const BackToTop = ({ toTheTop, splashStatus, isLight }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

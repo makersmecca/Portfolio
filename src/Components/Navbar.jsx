@@ -5,7 +5,7 @@ import ThemeSwitch from "./ThemeSwitch";
 import "./profileborder.css";
 import { useState } from "react";
 
-const Navbar = ({ splashStatus, invokeBlur }) => {
+const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = () => {
@@ -26,7 +26,7 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
       <div className="md:block hidden">
         <div className="flex justify-between px-24 md:text-lg">
           <span className="px-10">
-            <ThemeSwitch />
+            <ThemeSwitch toggleTheme={toggleTheme} isLight={isLight} />
           </span>
           <span className="flex align-bottom">
             <ul className="flex">
@@ -58,12 +58,15 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
         </ul> */}
       </div>
       <div className="md:hidden block">
-        <div className="grid grid-cols-3 pt-8">
+        <div className="grid grid-cols-4 pt-8">
           <div className="col-span-2 flex items-center ps-4">
             <DisplayDateTime />
           </div>
+          <div className="col-start-3 flex items-center justify-end">
+            <ThemeSwitch toggleTheme={toggleTheme} isLight={isLight} />
+          </div>
           <div
-            className="col-start-3 flex justify-end pe-4"
+            className="col-start-4 flex items-center justify-end pe-4"
             onClick={toggleNav}
           >
             {isOpen ? (
@@ -73,7 +76,7 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
                   width="35"
                   height="35"
                   fill="currentColor"
-                  className="bi bi-x mt-1"
+                  className="bi bi-x"
                   viewBox="0 0 16 16"
                 >
                   <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
@@ -86,7 +89,7 @@ const Navbar = ({ splashStatus, invokeBlur }) => {
                   width="35"
                   height="35"
                   fill="currentColor"
-                  className="bi bi-justify-right mt-1"
+                  className="bi bi-justify-right"
                   viewBox="0 0 16 16"
                 >
                   <path
