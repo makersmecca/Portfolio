@@ -28,18 +28,18 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
       <div className="md:block hidden">
         <div className="flex justify-between px-24 md:text-lg">
           <span className="px-10">
-            <ThemeSwitch toggleTheme={toggleTheme} isLight={isLight} />
+            <DisplayDateTime isLight={isLight} />
           </span>
           <span className="flex align-bottom">
             <ul className="flex">
-              <li className="flex flex-col justify-center">
+              <li className="flex justify-center md:w-36">
+                <ThemeSwitch toggleTheme={toggleTheme} isLight={isLight} />
+              </li>
+              <li className="flex flex-col justify-center md:w-36">
                 <DownloadResume isLight={isLight} />
               </li>
-              <li className="flex flex-col justify-center">
+              <li className="flex flex-col justify-center md:w-36">
                 <ForkGithub isLight={isLight} />
-              </li>
-              <li className="flex flex-col justify-center">
-                <DisplayDateTime isLight={isLight} />
               </li>
             </ul>
           </span>
