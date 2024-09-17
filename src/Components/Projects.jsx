@@ -1,6 +1,6 @@
 import MyProjectDetails from "./MyProjectDetails";
 import { useRef } from "react";
-const Projects = ({ scrollClicked, globalBlur }) => {
+const Projects = ({ scrollClicked, globalBlur, isLight }) => {
   const targetRef = useRef(null);
 
   if (scrollClicked) {
@@ -48,7 +48,7 @@ const Projects = ({ scrollClicked, globalBlur }) => {
           : "blur-none duration-500 ease-in-out"
       }`}
     >
-      <MyProjectDetails projectDetails={projectDetails} />
+      <MyProjectDetails projectDetails={projectDetails} isLight={isLight} />
     </div>
   );
 };
