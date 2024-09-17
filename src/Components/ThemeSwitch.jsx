@@ -1,10 +1,5 @@
 import { useState } from "react";
-const ThemeSwitch = () => {
-  const [isLight, setIsLight] = useState(false);
-
-  const toggleTheme = () => {
-    setIsLight(() => !isLight);
-  };
+const ThemeSwitch = ({ toggleTheme, isLight }) => {
   console.log(isLight);
 
   return (
@@ -12,16 +7,16 @@ const ThemeSwitch = () => {
       <button
         onClick={toggleTheme}
         className={`flex align-middle rounded-lg h-8 w-8 pt-0.5 ps-1 ${
-          isLight ? "bg-gray-800" : "bg-gray-700 bg-blend-darken"
+          isLight ? "bg-gray-800" : "bg-gray-700"
         }`}
       >
         {isLight ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="26"
+            width="26"
+            height="27"
             fill="currentColor"
-            className="bi bi-brightness-low-fill transition-all duration-200 ease-in-out"
+            className="bi bi-brightness-low-fill transition-all duration-75 ease-in-out pe-0.5"
             viewBox="0 0 16 16"
           >
             <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8.5 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m5-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-11 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9.743-4.036a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m-7.779 7.779a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m7.072 0a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707M3.757 4.464a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707" />
@@ -32,7 +27,7 @@ const ThemeSwitch = () => {
             width="20"
             height="22"
             fill="currentColor"
-            className="bi bi-moon-stars-fill mt-1 pb-0.5 ms-0.5 transition-all duration-200 ease-in-out"
+            className="bi bi-moon-stars-fill mt-1 pb-0.5 ms-0.5 transition-all duration-75 ease-in-out"
             viewBox="0 0 16 16"
           >
             <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
