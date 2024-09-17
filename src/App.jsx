@@ -14,7 +14,7 @@ const App = () => {
     if (isLight) {
       document.body.style.backgroundColor = "#FFF4EA";
       document.body.style.color = "#354259";
-      document.body.style.fontWeight = "bold";
+      document.body.style.fontWeight = "600";
     } else {
       document.body.style.backgroundColor = "rgb(13,13,13)";
       document.body.style.color = "aliceblue";
