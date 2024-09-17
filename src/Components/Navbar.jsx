@@ -33,13 +33,13 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
           <span className="flex align-bottom">
             <ul className="flex">
               <li className="flex flex-col justify-center">
-                <DownloadResume />
+                <DownloadResume isLight={isLight} />
               </li>
               <li className="flex flex-col justify-center">
-                <ForkGithub />
+                <ForkGithub isLight={isLight} />
               </li>
               <li className="flex flex-col justify-center">
-                <DisplayDateTime />
+                <DisplayDateTime isLight={isLight} />
               </li>
             </ul>
           </span>
@@ -108,12 +108,12 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
             isOpen ? "animate-slideIn block" : "animate-slideOut hidden"
           }`}
         >
-          <ul className="flex flex-col items-end md:text-lg">
+          <ul className="flex flex-col items-end md:text-lg me-2">
             <li className="py-4">
-              <DownloadResume />
+              <DownloadResume isLight={isLight} />
             </li>
             <li>
-              <ForkGithub />
+              <ForkGithub isLight={isLight} />
             </li>
           </ul>
         </div>
