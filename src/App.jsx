@@ -12,11 +12,13 @@ import "./Components/style.css";
 const App = () => {
   useLayoutEffect(() => {
     if (isLight) {
-      document.body.style.backgroundColor = "rgb(181, 228, 255)";
+      document.body.style.backgroundColor = "#FFF4EA";
       document.body.style.color = "rgb(13,13,13)";
+      document.body.style.fontWeight = "bold";
     } else {
       document.body.style.backgroundColor = "rgb(13,13,13)";
       document.body.style.color = "aliceblue";
+      document.body.style.fontWeight = "";
     }
   });
 
