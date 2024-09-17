@@ -9,9 +9,10 @@ const DisplayPicture = ({ splashStatus, isLight }) => {
           splashStatus
             ? "hidden"
             : isLight
-            ? "hidden"
-            : "absolute shadowBlobFadeIn transition-all ease-in-out duration-500 blur-2xl"
-        } md:h-64 md:w-64 h-44 w-44 bg-slate-800`}
+            ? "absolute bg-highlightBrown shadowBlobFadeIn transition-all ease-in-out duration-500 md:bg-opacity-50 bg-opacity-60 blur-xl"
+            : "absolute bg-slate-800 shadowBlobFadeIn transition-all ease-in-out duration-500 blur-2xl"
+        }
+        } md:h-64 md:w-64 h-44 w-44`}
       ></div>
       <img
         src={dispPic}
