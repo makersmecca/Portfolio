@@ -19,7 +19,13 @@ const BackToTop = ({ toTheTop, splashStatus, isLight }) => {
       onClick={toTheTop}
       className={`${
         splashStatus ? "hidden" : "fixed ease-in-out"
-      } md:bottom-11 md:right-24 bottom-10 right-6 animate-appear transition-opacity duration-200 h-10 w-10 rounded-full bg-gray-600 border-gray-700 hover:bg-gray-700 md:bg-opacity-100 bg-opacity-60
+      } md:bottom-11 md:right-24 bottom-10 right-6 animate-appear transition-opacity duration-200 h-10 w-10 rounded-full
+      ${
+        isLight
+          ? "bg-highlightBrown bg-opacity-80"
+          : "bg-gray-600 hover:bg-gray-700 bg-opacity-60"
+      }
+       md:bg-opacity-100 
       flex justify-center items-center 
       ${isVisible ? "" : "hidden ease-in-out"}
       `}
@@ -28,7 +34,9 @@ const BackToTop = ({ toTheTop, splashStatus, isLight }) => {
         xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="16"
-        fill="currentColor"
+        fill={`${isLight ? "#FFF4EA" : "white"}`}
+        stroke={`${isLight ? "#FFF4EA" : "white"}`}
+        strokeWidth="3"
         className="bi bi-chevron-up"
         viewBox="0 0 16 16"
       >
