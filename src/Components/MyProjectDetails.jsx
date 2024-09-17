@@ -1,4 +1,4 @@
-const MyProjectDetails = ({ projectDetails }) => {
+const MyProjectDetails = ({ projectDetails, isLight }) => {
   const arr1 = projectDetails.slice(0, projectDetails.length / 2);
   const arr2 = projectDetails.slice(
     projectDetails.length / 2,
@@ -21,7 +21,11 @@ const MyProjectDetails = ({ projectDetails }) => {
                   href={i.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block max-w-sm p-6 bg-gray-800 border-gray-700 group-hover:bg-gray-700 rounded-lg"
+                  className={`block max-w-sm p-6 ${
+                    isLight
+                      ? "bg-pastelRed group-hover:bg-pastelRedLight"
+                      : "bg-gray-800 group-hover:bg-gray-700"
+                  } rounded-lg`}
                 >
                   <div className="overflow-hidden rounded-lg">
                     <img
@@ -49,7 +53,11 @@ const MyProjectDetails = ({ projectDetails }) => {
                   href={i.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block max-w-sm p-6 bg-gray-800 border-gray-700 group-hover:bg-gray-700 rounded-lg"
+                  className={`block max-w-sm p-6 ${
+                    isLight
+                      ? "bg-pastelRed group-hover:bg-pastelRedLight"
+                      : "bg-gray-800 group-hover:bg-gray-700"
+                  }  rounded-lg`}
                 >
                   <div className="overflow-hidden rounded-lg">
                     <img
