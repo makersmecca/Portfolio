@@ -5,11 +5,19 @@ import TechStack from "./Components/TechStack";
 import Projects from "./Components/Projects";
 import BackToTop from "./Components/BackToTop";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 
 import "./Components/style.css";
 
 const App = () => {
+  useLayoutEffect(() => {
+    if (isLight) {
+      document.body.style.backgroundColor = "rgb(181, 228, 255)";
+    } else {
+      document.body.style.backgroundColor = "rgb(13,13,13)";
+    }
+  });
+
   const [showSplash, setShowSplash] = useState(true);
 
   const updateShowSplash = () => {
@@ -47,19 +55,35 @@ const App = () => {
     // console.log("app.jsx" + isBlur);
   };
 
+  const [isLight, setIsLight] = useState(false);
+
+  const toggleTheme = () => {
+    setIsLight(() => !isLight);
+  };
+
   return (
     <>
       {showSplash && <SplashScreen onAnimationEnd={updateShowSplash} />}
-      <BackToTop toTheTop={toTheTop} splashStatus={showSplash} />
+      <BackToTop
+        toTheTop={toTheTop}
+        splashStatus={showSplash}
+        isLight={isLight}
+      />
       <Intro
         backToTop={backToTop}
         splashStatus={showSplash}
         scrollHandler={scrollHandler}
         globalBlur={blurStatus}
+        toggleTheme={toggleTheme}
+        isLight={isLight}
       />
-      <Projects scrollClicked={scrollClicked} globalBlur={isGlobalBlur} />
-      <TechStack globalBlur={isGlobalBlur} />
-      <Socials globalBlur={isGlobalBlur} />
+      <Projects
+        scrollClicked={scrollClicked}
+        globalBlur={isGlobalBlur}
+        isLight={isLight}
+      />
+      <TechStack globalBlur={isGlobalBlur} isLight={isLight} />
+      <Socials globalBlur={isGlobalBlur} isLight={isLight} />
     </>
   );
 };
