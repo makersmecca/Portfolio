@@ -59,10 +59,19 @@ const App = () => {
     // console.log("app.jsx" + isBlur);
   };
 
-  const [isLight, setIsLight] = useState(false);
+  // state to manage light and dark theme across webpage
+  //using localstorage to add persistent theme on subsequent page loads
+  const [isLight, setIsLight] = useState(() => {
+    return localStorage.getItem("localTheme") //try to fetch the state value from localstorage
+      ? JSON.parse(localStorage.getItem("localTheme")) //if value exists then parse it to set the state accordingly
+      : false; //if the vaue doesn't exist set false as default
+  });
 
   const toggleTheme = () => {
-    setIsLight(() => !isLight);
+    setIsLight((prevTheme) => {
+      localStorage.setItem("localTheme", JSON.stringify(!prevTheme)); //save the current theme state in localstorage for susequent page load
+      return !prevTheme;
+    });
   };
 
   return (
