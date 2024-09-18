@@ -3,16 +3,7 @@ const CACHE_NAME = "offline";
 // Customize this with a different URL if needed.
 const OFFLINE_URL = "fallback.html";
 
-const assets = [
-  "/fallback.html",
-  "/public/letter.png",
-  "/public/192x192.png",
-  "/public/512x512.png",
-  "/public/apple-touch-icon.png",
-  "/public/favicon-16x16.png",
-  "/public/favicon-32x32.png",
-  "/public/favicon.ico",
-];
+const assets = ["/fallback.html", "/public/letter.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
