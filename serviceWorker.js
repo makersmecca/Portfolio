@@ -1,65 +1,92 @@
-const cacheVersion = "1.0";
+const OFFLINE_VERSION = "1.";
+const CACHE_NAME = "offline";
+// Customize this with a different URL if needed.
+const OFFLINE_URL = "fallback.html";
 
 const assets = [
-  "/",
   "/fallback.html",
-  "/fallback.css",
-  "/letter.png",
-  "/192x192.png",
-  "/512x512.png",
-  "/apple-touch-icon.png",
-  "/favicon-16x16.png",
-  "/favicon-32x32.png",
+  "/public/letter.png",
+  "/public/192x192.png",
+  "/public/512x512.png",
+  "/public/apple-touch-icon.png",
+  "/public/favicon-16x16.png",
+  "/public/favicon-32x32.png",
+  "/public/favicon.ico",
 ];
 
-self.addEventListener("install", (e) => {
-  e.waitUntil(
-    caches
-      .open(assets)
-      .then((cache) => {
-        console.log("caching..");
-        return cache.addAll(assets);
-      })
-      .then(() => self.skipWaiting())
-      .catch((err) => {
-        console.log(err);
-      })
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    async () => {
+      const cache = await caches.open(CACHE_NAME);
+      // Setting {cache: 'reload'} in the new request ensures that the
+      // response isn't fulfilled from the HTTP cache; i.e., it will be
+      // from the network.
+      await cache.add(new Request(OFFLINE_URL, { cache: "reload" }));
+    },
+    caches.open(CACHE_NAME).then((cache) => {
+      cache.addAll(assets);
+    })
   );
+  // Force the waiting service worker to become the active service worker.
+  self.skipWaiting();
 });
 
-self.addEventListener("activate", (e) => {
-  console.log("activating");
-
-  e.waitUntil(
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async () => {
+      // Enable navigation preload if it's supported.
+      // See https://developers.google.com/web/updates/2017/02/navigation-preload
+      if ("navigationPreload" in self.registration) {
+        await self.registration.navigationPreload.enable();
+      }
+    })(),
     caches.keys().then((key) => {
       return Promise.all(
-        key
-          .filter((key) => key !== cacheVersion)
-          .map((key) => caches.delete(key))
+        key.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
       );
     })
   );
-  return self.clients.claim();
+
+  // Tell the active service worker to take control of the page immediately.
+  self.clients.claim();
 });
 
-self.addEventListener("fetch", (e) => {
-  e.respondWith(
-    fetch(e.request)
-      .then((response) => {
-        console.log("fetching..");
-        const ClonedResponse = response.clone();
-        caches
-          .open(cacheVersion)
-          .then((cache) => cache.put(e.request, ClonedResponse));
-        return response;
-      })
-      .catch(() => {
-        caches.match(e.request).then((cachedResponse) => {
-          console.log("offline");
-          console.log(cachedResponse);
-          console.log(caches.match("/fallback.html"));
-          return cachedResponse || caches.match("/fallback.html");
-        });
-      })
-  );
+self.addEventListener("fetch", (event) => {
+  // Only call event.respondWith() if this is a navigation request
+  // for an HTML page.
+  if (event.request.mode === "navigate") {
+    event.respondWith(
+      (async () => {
+        try {
+          // First, try to use the navigation preload response if it's
+          // supported.
+          const preloadResponse = await event.preloadResponse;
+          if (preloadResponse) {
+            return preloadResponse;
+          }
+
+          // Always try the network first.
+          const networkResponse = await fetch(event.request);
+          return networkResponse;
+        } catch (error) {
+          // catch is only triggered if an exception is thrown, which is
+          // likely due to a network error.
+          // If fetch() returns a valid HTTP response with a response code in
+          // the 4xx or 5xx range, the catch() will NOT be called.
+          console.log("Fetch failed; returning offline page instead.", error);
+
+          const cache = await caches.open(CACHE_NAME);
+          const cachedResponse = await cache.match(OFFLINE_URL);
+          return cachedResponse;
+        }
+      })()
+    );
+  }
+
+  // If our if() condition is false, then this fetch handler won't
+  // intercept the request. If there are any other fetch handlers
+  // registered, they will get a chance to call event.respondWith().
+  // If no fetch handlers call event.respondWith(), the request
+  // will be handled by the browser as if there were no service
+  // worker involvement.
 });

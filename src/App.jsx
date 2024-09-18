@@ -10,16 +10,11 @@ import { useState, useEffect, useLayoutEffect } from "react";
 import "./Components/style.css";
 
 const App = () => {
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker
-        .register("/serviceWorker.js")
-        .then((registration) => {
-          console.log(registration.scope);
-        })
-        .catch((err) => console.log(err));
-    });
-  }
+  window.addEventListener("load", () => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("serviceWorker.js");
+    }
+  });
 
   useLayoutEffect(() => {
     if (isLight) {
