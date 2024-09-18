@@ -1,4 +1,4 @@
-const OFFLINE_VERSION = "1.";
+const OFFLINE_VERSION = "1.4.5";
 const CACHE_NAME = "offline";
 // Customize this with a different URL if needed.
 const OFFLINE_URL = "fallback.html";
@@ -40,11 +40,16 @@ self.addEventListener("activate", (event) => {
         await self.registration.navigationPreload.enable();
       }
     })(),
-    caches.keys().then((key) => {
-      return Promise.all(
-        key.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
-      );
-    })
+    caches
+      .keys()
+      .then((key) => {
+        return Promise.all(
+          key
+            .filter((key) => key !== CACHE_NAME)
+            .map((key) => caches.delete(key))
+        );
+      })
+      .catch((err) => console.log(err))
   );
 
   // Tell the active service worker to take control of the page immediately.
