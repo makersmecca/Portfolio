@@ -3,21 +3,44 @@ const CACHE_NAME = "offline";
 // Customize this with a different URL if needed.
 const OFFLINE_URL = "fallback.html";
 
-const assets = ["/fallback.html", "/public/letter.png"];
+const assets = [
+  "/fallback.html",
+  "/public/letter.png",
+  "/public/192x192.png",
+  "/public/512x512.png",
+  "/public/apple-touch-icon.png",
+  "/public/favicon-16x16.png",
+  "/public/favicon-32x32.png",
+  "/public/favicon.ico",
+];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    async () => {
-      const cache = await caches.open(CACHE_NAME);
-      // Setting {cache: 'reload'} in the new request ensures that the
-      // response isn't fulfilled from the HTTP cache; i.e., it will be
-      // from the network.
-      await cache.add(new Request(OFFLINE_URL, { cache: "reload" }));
-    },
-    caches.open(CACHE_NAME).then((cache) => {
-      cache.addAll(assets);
-    })
-  );
+  const filesUpdate = (cache) => {
+    console.log("adding cache");
+    const stack = [];
+    assets.forEach((file) =>
+      stack.push(
+        cache
+          .add(file)
+          .catch((_) => console.error(`can't load ${file} to cache`))
+      )
+    );
+    return Promise.all(stack);
+  };
+
+  event.waitUntil(caches.open(CACHE_NAME).then(filesUpdate));
+  // event.waitUntil(
+  //   async () => {
+  //     const cache = await caches.open(CACHE_NAME);
+  //     // Setting {cache: 'reload'} in the new request ensures that the
+  //     // response isn't fulfilled from the HTTP cache; i.e., it will be
+  //     // from the network.
+  //     await cache.add(new Request(OFFLINE_URL, { cache: "reload" }));
+  //   },
+  //   caches.open(CACHE_NAME).then((cache) => {
+  //     cache.addAll(assets);
+  //   })
+  // );
   // Force the waiting service worker to become the active service worker.
   self.skipWaiting();
 });
