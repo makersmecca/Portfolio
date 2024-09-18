@@ -4,14 +4,14 @@ const CACHE_NAME = "offline";
 const OFFLINE_URL = "fallback.html";
 
 const assets = [
-  "/fallback.html",
-  "/public/letter.png",
-  "/public/192x192.png",
-  "/public/512x512.png",
-  "/public/apple-touch-icon.png",
-  "/public/favicon-16x16.png",
-  "/public/favicon-32x32.png",
-  "/public/favicon.ico",
+  "fallback.html",
+  "letter.png",
+  "192x192.png",
+  "512x512.png",
+  "apple-touch-icon.png",
+  "favicon-16x16.png",
+  "favicon-32x32.png",
+  "favicon.ico",
 ];
 
 self.addEventListener("install", (event) => {
