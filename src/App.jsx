@@ -10,6 +10,17 @@ import { useState, useEffect, useLayoutEffect } from "react";
 import "./Components/style.css";
 
 const App = () => {
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("/serviceWorker.js")
+        .then((registration) => {
+          console.log(registration.scope);
+        })
+        .catch((err) => console.log(err));
+    });
+  }
+
   useLayoutEffect(() => {
     if (isLight) {
       document.body.style.backgroundColor = "#FFF4EA";
