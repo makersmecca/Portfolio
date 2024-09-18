@@ -62,7 +62,7 @@
   perspective: 1000px; /* Helps with 3D rendering */
 }
 
-/* Disable any default focus or highlight styling */
+/* disabling default focus/highlight style */
 img {
   -webkit-tap-highlight-color: transparent;
   outline: none;
