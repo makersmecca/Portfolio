@@ -4,7 +4,7 @@ const CACHE_NAME = "offline";
 const OFFLINE_URL = "fallback.html";
 
 const assets = [
-  "./fallback.html",
+  "fallback.html",
   "letter.png",
   "192x192.png",
   "512x512.png",
