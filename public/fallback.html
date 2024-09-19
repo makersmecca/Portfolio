@@ -59,7 +59,6 @@
         margin-top: 50px;
       }
       button {
-        background-color: aliceblue;
         border-radius: 30px;
         border-width: 0;
         width: 80px;
@@ -84,6 +83,16 @@
       )
         ? "#354259"
         : "aliceblue";
+      document.querySelector("button").style.backgroundColor = JSON.parse(
+        localStorage.getItem("localTheme")
+      )
+        ? "#C96868"
+        : "aliceblue";
+      document.querySelector("button").style.color = JSON.parse(
+        localStorage.getItem("localTheme")
+      )
+        ? "aliceblue"
+        : "#354259";
     </script>
   </body>
 </html>
