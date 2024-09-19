@@ -5,7 +5,6 @@ const OFFLINE_URL = "fallback.html";
 
 const assets = [
   "fallback.html",
-  "fallback.css",
   "letter.png",
   "192x192.png",
   "512x512.png",
