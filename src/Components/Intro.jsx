@@ -52,11 +52,11 @@ const Intro = ({
         >
           <div className="grid grid-cols-2 md:grid-cols-5 xl:px-80 lg:px-52 md:px-36 px-8">
             <div
-              className={`col-span-2 md:row-span-3 flex justify-center md:items-center`}
+              className={`col-span-2 md:row-span-8 flex justify-center md:items-center`}
             >
               <DisplayPicture splashStatus={splashStatus} isLight={isLight} />
             </div>
-            <div className="col-span-2 md:col-span-3 md:col-start-3 text-center md:text-start flex md:justify-start justify-center items-center mt-12 px-10 md:mt-0">
+            <div className="col-span-2 md:row-span-4 md:row-start-1  md:col-span-3 md:col-start-3 text-center md:text-start flex md:justify-start justify-center items-center mt-12 px-10 md:mt-0">
               {/* <div
                 className={
                   splashStatus
@@ -70,7 +70,7 @@ const Intro = ({
               <TypingAnimate splashStatus={splashStatus} isLight={isLight} />
             </div>
 
-            <div className="col-span-3 md:col-start-3 md:text-start text-center flex justify-center md:justify-start mt-8 px-10 text-2xl md:text-3xl">
+            <div className="col-span-3 md:row-span-5 md:row-start-4 md:col-start-3 md:text-start text-center flex justify-center md:justify-start mt-8 px-10 text-2xl md:text-3xl">
               I'm{" "}
               <span
                 className={`ps-2 ${
@@ -83,7 +83,7 @@ const Intro = ({
               </span>
               .
             </div>
-            <div className="col-span-3 md:col-start-3 md:text-start text-center hyphens-none mt-5 px-16 sm:px-12 md:px-10 md:text-xl">
+            <div className="col-span-3 md:row-span-1 md:row-start-8 md:col-start-3 md:text-start text-center hyphens-none mt-5 px-16 sm:px-12 md:px-10 md:text-xl">
               I am a Frontend developer with experience in building{" "}
               <span className="text-newOrange">responsive,</span> user-friendly
               websites &{" "}
