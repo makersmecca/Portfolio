@@ -14,6 +14,8 @@ xl	                    1280px	       @media (min-width: 1280px) { ... }
 -- add a few subtle scroll effects
 -- maybe add an animation to the background preferebly one that responses to the cursor position
 
+-- Custom Offline fallback page [DONE, added SW to cache html file and icons]
+-- add animation to the buttons and links [DONE]
 -- Add switchable light and dark themes [DONE]
 -- add project links and card thumbnails for the projects inside the project cards [DONE]
 -- Add a navbar with resume download link, time date and weather[if possible] [DONE]
@@ -23,14 +25,12 @@ xl	                    1280px	       @media (min-width: 1280px) { ... }
 
 ----------------------------------------------------------**Things to Fix**-------------------------------------------------------------
 
-
 -- mobile page becomes horizontally scrollable when nav menu is opened [FIXED, removed overflow]
 -- fix issue with display picture being rendered on splashscreen [FIXED]
    !--->issue is caused by the css property of "infinite". need to use a state to dynamically add and remove the css className to the component
 -- fix issue of adding more than one animation on dp background glow effect. @apply works on localhost but not on netlfiy.[FIXED used separate css]
 -- Fix the alignment and the overall font of the page
--- try to make it look more minimalistic
--- add animation to the buttons and links
+-- try to make it look more minimalistic [FIXED]
 
 ----------------------------------------------------------**Additional Info**-------------------------------------------------------------
 ---------------------------------------------------------**LINKS**------------------------------------------------------------------------
