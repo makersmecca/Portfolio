@@ -40,10 +40,11 @@ self.addEventListener("activate", (event) => {
 // Fetch event: Serve cached assets, fallback to offline page on failure
 self.addEventListener("fetch", (event) => {
   if (event.request.mode === "navigate") {
+    //navigation requests
     event.respondWith(
       (async () => {
         try {
-          // Try fetching from the network
+          // Network fetch
           const preloadResponse = await event.preloadResponse;
           if (preloadResponse) {
             return preloadResponse;
@@ -52,14 +53,13 @@ self.addEventListener("fetch", (event) => {
           return networkResponse;
         } catch (error) {
           console.error("Network failed; returning offline page", error);
-          // Serve offline fallback page from cache
           const cache = await caches.open(CACHE_NAME);
           return await cache.match(OFFLINE_URL);
         }
       })()
     );
   } else {
-    // Handle non-navigation requests (e.g., images, CSS, JS)
+    //non-navigation requests
     event.respondWith(
       caches.match(event.request).then((cachedResponse) => {
         return cachedResponse || fetch(event.request);
