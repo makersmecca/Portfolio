@@ -2,8 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" href="/logoWeb.png" /> -->
-
     <link rel="icon" href="/letter.png" />
     <link rel="icon" href="/192x192.png" />
     <link rel="icon" href="/512x512.png" />
@@ -55,7 +53,6 @@
       }
 
       body {
-        background-color: rgb(13, 13, 13);
         color: aliceblue;
       }
       a {
@@ -77,6 +74,16 @@
       window.addEventListener("online", () => {
         window.open("/", "_parent");
       });
+      document.querySelector("body").style.backgroundColor = JSON.parse(
+        localStorage.getItem("localTheme")
+      )
+        ? "#FFF4EA"
+        : "rgb(13,13,13)";
+      document.querySelector("body").style.color = JSON.parse(
+        localStorage.getItem("localTheme")
+      )
+        ? "#354259"
+        : "aliceblue";
     </script>
   </body>
 </html>
