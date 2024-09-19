@@ -27,7 +27,7 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
     >
       <div className="md:block hidden">
         <div className="flex justify-between px-24 md:text-lg">
-          <span className="px-10">
+          <span className="flex px-10">
             <DisplayDateTime isLight={isLight} />
           </span>
           <span className="flex align-bottom">

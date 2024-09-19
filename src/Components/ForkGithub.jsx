@@ -3,7 +3,7 @@ const ForkGithub = ({ isLight }) => {
   const darkColor = "white";
 
   return (
-    <div className="px-3 hover:scale-95 ease-in-out">
+    <div className="px-3 hover:scale-95 ease-in-out ps-5">
       <a
         href="https://github.com/makersmecca/Portfolio/fork"
         target="_blank"

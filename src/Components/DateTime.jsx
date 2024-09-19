@@ -10,26 +10,24 @@ const DisplayDateTime = ({ isLight }) => {
   setInterval(updateTime, 1000);
 
   return (
-    <>
-      <div className={`px-2 font-semibold`}>
-        {currentTime.getHours() < 10 ? (
-          <span>0{currentTime.getHours()}</span>
-        ) : (
-          <span>{currentTime.getHours()}</span>
-        )}{" "}
-        <span>:</span>{" "}
-        {currentTime.getMinutes() < 10 ? (
-          <span>0{currentTime.getMinutes()}</span>
-        ) : (
-          <span>{currentTime.getMinutes()} ,</span>
-        )}
-        <span className="px-2">
-          {currentTime.toDateString().substring(0, 3)},{" "}
-          {currentTime.toDateString().substring(8, 10)}{" "}
-          {currentTime.toDateString().substring(4, 7)}
-        </span>
-      </div>
-    </>
+    <div className={`px-2 font-semibold self-center`}>
+      {currentTime.getHours() < 10 ? (
+        <span>0{currentTime.getHours()}</span>
+      ) : (
+        <span>{currentTime.getHours()}</span>
+      )}{" "}
+      <span>:</span>{" "}
+      {currentTime.getMinutes() < 10 ? (
+        <span>0{currentTime.getMinutes()}</span>
+      ) : (
+        <span>{currentTime.getMinutes()} ,</span>
+      )}
+      <span className="px-2">
+        {currentTime.toDateString().substring(0, 3)},{" "}
+        {currentTime.toDateString().substring(8, 10)}{" "}
+        {currentTime.toDateString().substring(4, 7)}
+      </span>
+    </div>
   );
 };
 

@@ -3,7 +3,7 @@ const DownloadResume = ({ isLight }) => {
   const lightColor = "#537188";
   const darkColor = "white";
   return (
-    <div className="px-2 hover:scale-95 ease-in-out">
+    <div className="self-center px-2 hover:scale-95 ease-in-out">
       <a
         href={myResume}
         download={"Ayudh_Nandi.pdf"}
