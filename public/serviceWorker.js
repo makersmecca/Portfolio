@@ -1,4 +1,4 @@
-const OFFLINE_VERSION = "1.4.6";
+const OFFLINE_VERSION = "1.4.7";
 const CACHE_NAME = "offline";
 // Customize this with a different URL if needed.
 const OFFLINE_URL = "fallback.html";
