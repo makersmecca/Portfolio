@@ -1,4 +1,4 @@
-const OFFLINE_VERSION = "1.4.9.1";
+const OFFLINE_VERSION = "1.5.0";
 const CACHE_NAME = "offline";
 const OFFLINE_URL = "fallback.html";
 const assets = [
