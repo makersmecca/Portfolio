@@ -1,10 +1,11 @@
-const OFFLINE_VERSION = "1.4.5";
+const OFFLINE_VERSION = "1.4.6";
 const CACHE_NAME = "offline";
 // Customize this with a different URL if needed.
 const OFFLINE_URL = "fallback.html";
 
 const assets = [
   "fallback.html",
+  "fallback.css",
   "letter.png",
   "192x192.png",
   "512x512.png",
