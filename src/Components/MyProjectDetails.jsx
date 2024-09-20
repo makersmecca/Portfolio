@@ -1,9 +1,11 @@
-const MyProjectDetails = ({ projectDetails, isLight }) => {
+const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
   const arr1 = projectDetails.slice(0, projectDetails.length / 2);
   const arr2 = projectDetails.slice(
     projectDetails.length / 2,
     projectDetails.length
   );
+
+  console.log(splashStatus);
 
   return (
     <>
@@ -12,7 +14,15 @@ const MyProjectDetails = ({ projectDetails, isLight }) => {
           Projects
         </div>
         {/* first two projects go here */}
-        <div className="col-span-2 col-start-1 flex justify-center">
+        <div
+          className={`col-span-2 col-start-1 
+          ${
+            splashStatus
+              ? "hidden"
+              : "flex justify-center transition-all duration-1000 ease-in-out animate-slideIn"
+          }
+          `}
+        >
           <ul className="md:pt-10 pt-0">
             {/* first two projects go here */}
             {arr1.map((i) => (
