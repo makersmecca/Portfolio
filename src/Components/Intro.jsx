@@ -44,7 +44,7 @@ const Intro = ({
           isLight={isLight}
         />
         <div
-          className={`flex justify-center items-center min-h-screen sm:mt-24 mt-12 lg:mt-0 ${
+          className={`flex justify-center items-center min-h-screen md:mt-20 lg:mt-0 ${
             isBlur
               ? "md:blur-none blur-md duration-500 ease-in-out"
               : "blur-none duration-500 ease-in-out"
