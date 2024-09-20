@@ -57,6 +57,9 @@ const Intro = ({
               <DisplayPicture splashStatus={splashStatus} isLight={isLight} />
             </div>
             <div className="col-span-2 md:col-span-3 md:col-start-3 text-center md:text-start flex md:justify-start justify-center items-center mt-12 px-10 md:mt-0">
+              {/*using an external animation library*/}
+              <TypingAnimate splashStatus={splashStatus} isLight={isLight} />
+
               {/* <div
                 className={
                   splashStatus
@@ -66,8 +69,6 @@ const Intro = ({
               >
                 Hi...<span className="text-darktheme">.</span>
               </div> */}
-              {/*using an external animation library*/}
-              <TypingAnimate splashStatus={splashStatus} isLight={isLight} />
             </div>
 
             <div className="col-span-3 md:col-start-3 md:text-start text-center flex justify-center md:justify-start mt-8 px-10 text-2xl md:text-3xl">
