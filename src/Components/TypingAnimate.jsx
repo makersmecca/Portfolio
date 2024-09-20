@@ -27,7 +27,7 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
     <div
       className={`${
         splashStatus ? "hidden" : "absolute fadeInOnly"
-      } md:text-xl text-base`}
+      } md:text-xl text-base flex`}
       id="typeText"
     >
       <TypeAnimation
@@ -46,6 +46,7 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
           fontSize: "2em",
           display: "inline-block",
         }}
+        className="self-end"
       />
       {/* <span style={{ fontSize: "1.8em" }}>
         {cursorChar ? <span>/.</span> : <span>\.</span>}
