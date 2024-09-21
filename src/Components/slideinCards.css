@@ -1,0 +1,11 @@
+/* Initial hidden state */
+.slideInAnimate {
+  opacity: 0;
+  transform: translateY(50px); /* Start with a 50px offset */
+}
+
+/* Slide-in animation */
+.slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -100,6 +100,7 @@ const App = () => {
         scrollClicked={scrollClicked}
         globalBlur={isGlobalBlur}
         isLight={isLight}
+        splashStatus={showSplash}
       />
       <TechStack globalBlur={isGlobalBlur} isLight={isLight} />
       <Socials globalBlur={isGlobalBlur} isLight={isLight} />

@@ -1,3 +1,4 @@
+import "./TechStackAnimate.css";
 const TechStack = ({ globalBlur, isLight }) => {
   return (
     <>
@@ -17,7 +18,7 @@ const TechStack = ({ globalBlur, isLight }) => {
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             role="img"
-            className="iconify iconify--logos group-hover:-translate-y-1 ease-in-out transition-transform"
+            className="iconify iconify--logos group-hover:animate-spinSlow ease-in-out transition-transform"
             width="80"
             height="80"
             preserveAspectRatio="xMidYMid meet"
@@ -35,7 +36,7 @@ const TechStack = ({ globalBlur, isLight }) => {
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             role="img"
-            className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
+            className="iconify iconify--logos hover:animate-fastPulse"
             width="80"
             height="80"
             preserveAspectRatio="xMidYMid meet"
@@ -53,7 +54,7 @@ const TechStack = ({ globalBlur, isLight }) => {
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             role="img"
-            className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
+            className="iconify iconify--logos hover:animate-rotateY"
             width="80"
             height="80"
             preserveAspectRatio="xMidYMid meet"
@@ -90,7 +91,7 @@ const TechStack = ({ globalBlur, isLight }) => {
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             role="img"
-            className="iconify iconify--logos hover:-translate-y-1 ease-in-out transition-transform"
+            className="iconify iconify--logos hover:animate-balloonPop"
             width="80"
             height="80"
             preserveAspectRatio="xMidYMid meet"
@@ -109,7 +110,7 @@ const TechStack = ({ globalBlur, isLight }) => {
             viewBox="-3.2 -3.2 38.40 38.40"
             aria-hidden="true"
             role="img"
-            className="hover:-translate-y-1 ease-in-out transition-transform -my-2"
+            className="hover:animate-wave -my-2"
             width="100"
             height="100"
             preserveAspectRatio="xMidYMid meet"
