@@ -1,4 +1,3 @@
-import "./TechStackAnimate.css";
 const TechStack = ({ globalBlur, isLight }) => {
   return (
     <>
