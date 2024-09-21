@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-// import "./slideinCards.css";
+import "./slideinCards.css";
 const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
   const arr1 = projectDetails.slice(0, projectDetails.length / 2);
   const arr2 = projectDetails.slice(
@@ -33,7 +33,7 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
   }, []);
 
   return (
-    <>
+    <div className={`${splashStatus ? "hidden" : "block"}`}>
       <div className="mt-10 md:mt-20 pt-5 grid grid-cols-2 md:grid-cols-5 xl:px-80 lg:px-52 md:px-36 px-8">
         <div className="col-span-2 col-start-1 text-center md:text-start md:ps-16 md:me-9 text-3xl md:text-4xl">
           Projects
@@ -44,7 +44,7 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
               <li
                 key={i.name}
                 ref={(el) => (projectRefs.current[index] = el)} // Track the ref
-                className="md:pt-7 pt-5 group opacity-0 transform transition-all duration-500" // Initially hidden
+                className="md:pt-7 pt-5 group opacity-0 transform transition-all duration-1000 slideInAnimate" // Initially hidden
               >
                 <a
                   href={i.url}
@@ -88,7 +88,7 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
               <li
                 key={i.name}
                 ref={(el) => (projectRefs.current[index + arr1.length] = el)} // Track the ref for the second half
-                className="md:pt-7 pt-5 group opacity-0 transform transition-all duration-500"
+                className="md:pt-7 pt-5 group opacity-0 transform transition-all duration-1000 slideInAnimate"
               >
                 <a
                   href={i.url}
@@ -127,7 +127,7 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
