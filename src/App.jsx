@@ -102,7 +102,11 @@ const App = () => {
         isLight={isLight}
         splashStatus={showSplash}
       />
-      <TechStack globalBlur={isGlobalBlur} isLight={isLight} />
+      <TechStack
+        globalBlur={isGlobalBlur}
+        isLight={isLight}
+        splashStatus={showSplash}
+      />
       <Socials globalBlur={isGlobalBlur} isLight={isLight} />
     </>
   );

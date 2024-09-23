@@ -1,6 +1,6 @@
-const TechStack = ({ globalBlur, isLight }) => {
+const TechStack = ({ globalBlur, isLight, splashStatus }) => {
   return (
-    <>
+    <div className={`${splashStatus ? "hidden" : "block"}`}>
       <div
         className={`${
           globalBlur
@@ -122,7 +122,7 @@ const TechStack = ({ globalBlur, isLight }) => {
           </svg>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
