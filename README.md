@@ -60,7 +60,7 @@ You should be able to see the portfolio website up and running on your browser.
 </ul>
 
 <h3>License</h3>
-<p>MIT License</p>
+Licensed under <a href ="https://github.com/makersmecca/Portfolio/blob/main/LICENSE" >MIT License</a>
 <p>You can use, customize, and modify this project to suit your needs.</p>
 <p>Let me know if you do, I'd love to see your versions as well!</p>
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true"/>
