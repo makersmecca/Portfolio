@@ -33,11 +33,13 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
       <TypeAnimation
         preRenderFirstString={true}
         sequence={[
-          "Hi...", // Types 'One'
+          "Hi...",
           3000,
-          "Hello...", // Deletes 'One' and types 'Two'
+          "Hello...",
           1500,
-          "Hi there...", // Types 'Three' without deleting 'Two'
+          "Hi tg",
+          500,
+          "Hi there...",
           2500,
         ]}
         speed={{ type: "keyStrokeDelayInMs", value: 40 }}
