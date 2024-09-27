@@ -109,7 +109,7 @@ const TechStack = ({ globalBlur, isLight, splashStatus }) => {
             viewBox="-3.2 -3.2 38.40 38.40"
             aria-hidden="true"
             role="img"
-            className="animate-wave -my-2"
+            className="hover:animate-wave -my-2"
             width="100"
             height="100"
             preserveAspectRatio="xMidYMid meet"
