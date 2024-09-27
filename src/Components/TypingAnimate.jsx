@@ -38,12 +38,12 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
           "Hello...",
           1500,
           "Hi tg",
-          500,
+          800,
           "Hi there...",
           2500,
         ]}
-        speed={{ type: "keyStrokeDelayInMs", value: 40 }}
-        deletionSpeed={{ type: "keyStrokeDelayInMs", value: 70 }}
+        speed={{ type: "keyStrokeDelayInMs", value: 50 }}
+        deletionSpeed={{ type: "keyStrokeDelayInMs", value: 60 }}
         wrapper="span"
         cursor={true}
         repeat={Infinity}
