@@ -19,8 +19,8 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
     } else {
       setTextColor(darkColor);
     }
-    document.getElementById("typeText").style.color = textColor;
-  });
+    //document.getElementById("typeText").style.color = textColor;
+  }, [isLight]);
   // console.log(textColor);
 
   return (
@@ -29,6 +29,7 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
         splashStatus ? "hidden" : "absolute fadeInOnly"
       } md:text-xl text-base flex`}
       id="typeText"
+      style={{ color: textColor }}
     >
       <TypeAnimation
         preRenderFirstString={true}
