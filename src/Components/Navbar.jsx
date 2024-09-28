@@ -3,10 +3,12 @@ import ForkGithub from "./ForkGithub";
 import DownloadResume from "./DownloadResume";
 import ThemeSwitch from "./ThemeSwitch";
 import "./profileborder.css";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const menuRef = useRef(null);
 
   const toggleNav = () => {
     // console.log("toggled");
@@ -15,6 +17,24 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
   };
   const lightColor = "#C96868";
   const darkColor = "currentColor";
+
+  const handleMenu = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      toggleNav();
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("click", handleMenu);
+    } else {
+      document.removeEventListener("click", handleMenu);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleMenu);
+    };
+  }, [isOpen]);
 
   return (
     <nav
@@ -59,7 +79,7 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
           </li>
         </ul> */}
       </div>
-      <div className="md:hidden block">
+      <div className="md:hidden block" ref={menuRef}>
         <div className="grid grid-cols-5 pt-8">
           <div className="col-span-3 flex items-center ps-4">
             <DisplayDateTime />
