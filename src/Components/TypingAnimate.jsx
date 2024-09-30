@@ -1,8 +1,8 @@
 // import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
-const TypingAnimate = ({ splashStatus, isLight }) => {
+const TypingAnimate = React.memo(({ splashStatus, isLight }) => {
   //   const [cursorChar, setCursorChar] = useState(true);
 
   //   setTimeout(() => {
@@ -20,6 +20,8 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
       setTextColor(darkColor);
     }
     //document.getElementById("typeText").style.color = textColor;
+
+    return;
   }, [isLight]);
   // console.log(textColor);
 
@@ -29,19 +31,20 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
         splashStatus ? "hidden" : "absolute fadeInOnly"
       } md:text-xl text-base flex`}
       id="typeText"
-      style={{ color: textColor }}
+      style={{ color: textColor, willChange: "auto" }}
     >
       <TypeAnimation
         preRenderFirstString={true}
         sequence={["Hi...", 3000, "Hello...", 1500, "Hi there...", 2500]}
-        speed={{ type: "keyStrokeDelayInMs", value: 50 }}
-        deletionSpeed={{ type: "keyStrokeDelayInMs", value: 60 }}
+        speed={30}
+        deletionSpeed={40}
         wrapper="span"
         cursor={true}
         repeat={Infinity}
         style={{
           fontSize: "2em",
           display: "inline-block",
+          willChange: "contents",
         }}
         className="self-end"
       />
@@ -50,6 +53,6 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
       </span> */}
     </div>
   );
-};
+});
 
 export default TypingAnimate;
