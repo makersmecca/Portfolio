@@ -2,7 +2,7 @@
 import { TypeAnimation } from "react-type-animation";
 import React, { useState, useEffect } from "react";
 
-const TypingAnimate = React.memo(({ splashStatus, isLight }) => {
+const TypingAnimate = ({ splashStatus, isLight }) => {
   //   const [cursorChar, setCursorChar] = useState(true);
 
   //   setTimeout(() => {
@@ -53,6 +53,6 @@ const TypingAnimate = React.memo(({ splashStatus, isLight }) => {
       </span> */}
     </div>
   );
-});
+};
 
 export default TypingAnimate;
