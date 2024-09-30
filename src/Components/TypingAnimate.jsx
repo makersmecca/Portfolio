@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import React, { useState, useEffect } from "react";
 
@@ -31,7 +30,7 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
         splashStatus ? "hidden" : "absolute fadeInOnly"
       } md:text-xl text-base flex`}
       id="typeText"
-      style={{ color: textColor, willChange: "auto" }}
+      style={{ color: textColor, willChange: "contents" }}
     >
       <TypeAnimation
         preRenderFirstString={true}
@@ -44,7 +43,8 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
         style={{
           fontSize: "2em",
           display: "inline-block",
-          willChange: "contents",
+          willChange: "transform",
+          transform: "translate3d(0,0,0)",
         }}
         className="self-end"
       />
