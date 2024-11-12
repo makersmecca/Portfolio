@@ -24,18 +24,19 @@ const Projects = ({ scrollClicked, globalBlur, isLight, splashStatus }) => {
       details: "My personal portfolio built with Vite-ReactJS and Tailwind CSS",
       url: "https://github.com/makersmecca/Portfolio",
     },
+
+    {
+      img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/haloFocusPoster.png",
+      name: "Halo Focus",
+      details: "Study companion app for focused, productive study sessions",
+      url: "https://github.com/makersmecca/Halo-Focus-Pomodoro",
+    },
     {
       img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/wirelessChargerPoster.png",
       name: "Charge Spot",
       details:
         "Companion PWA for Wireless Charger project to monitor battery status",
       url: "https://github.com/makersmecca/ChargeSpot-Wireless-Charger",
-    },
-    {
-      img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/hidknobPoster.png",
-      name: "HID Knob",
-      details: "Multifunction Customizable Controller for Personal Computers",
-      url: "https://github.com/makersmecca/HID-Knob",
     },
   ];
 
