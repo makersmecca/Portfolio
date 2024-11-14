@@ -1,6 +1,9 @@
 <h2>Portfolio</h2>
 <img src="https://api.netlify.com/api/v1/badges/9c78e292-0d53-4cbd-a9ab-fb5afdea7139/deploy-status?branch=main"/>
 <h3>My personal portfolio website, built using React, Vite, and Tailwind CSS.</h3>
+
+![](https://raw.githubusercontent.com/makersmecca/Portfolio/refs/heads/main/Portfolio%20Poster.png)
+
 <h3>Features</h3>
 <ul>
   <li><strong>Minimalistic UI: </strong> I prefer a clean look with attention to small details, hence I went with a minimalist design, with subtle animations.</li>
@@ -36,19 +39,22 @@ git clone https://github.com/makersmecca/Portfolio
   ```
   <li>Navigate to the project folder</li>
 
-  ```bash
+```bash
 cd Portfolio
-  ```
+```
+
   <li>Install Dependencies</li>
 
-  ```bash
+```bash
 npm install
-  ```
+```
+
   <li>Start Dev Server</li>
 
-  ```bash
+```bash
 npm run dev
-  ```
+```
+
   <li>Open on browser</li><pre>Go to "http://localhost:5173"</pre>
 </ol>
 You should be able to see the portfolio website up and running on your browser.
