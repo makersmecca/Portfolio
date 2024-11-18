@@ -1,15 +1,10 @@
 const ThemeSwitch = ({ toggleTheme, isLight }) => {
-  // console.log(isLight);
-
-  const lightColor = "#C96868";
-  const darkColor = "#334155";
 
   return (
     <div>
       <button
         onClick={toggleTheme}
-        className={`flex align-middle rounded-lg md:h-10 md:w-10 md:pt-1.5 md:ps-2 h-8 w-8 pt-0.5 ps-1 hover:opacity-75 transition-opacity ease-in-out delay-75`}
-        style={{ backgroundColor: `${isLight ? lightColor : darkColor}` }}
+        className={`flex align-middle rounded-lg md:h-10 md:w-10 md:pt-1.5 md:ps-2 h-8 w-8 pt-0.5 ps-1 hover:opacity-75 transition-opacity ease-in-out delay-75 ${isLight?"bg-lightBtnColor":"bg-darkBtnColor"}`}
       >
         {isLight ? (
           <svg
