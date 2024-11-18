@@ -15,6 +15,7 @@ export default {
         highlightBrown: "#C96868",
         lightBg: "#FFF4EA",
         pastelSlate: "#7EACB5",
+        lightColor: "#537188"
       },
       animation: {
         // typing: "typing 2s steps(14), blink 0.5s infinite alternate",

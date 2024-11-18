@@ -7,30 +7,29 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
   //   setTimeout(() => {
   //     setCursorChar(() => !cursorChar);
   //   }, 400);
-  const lightColor = "#537188";
-  const darkColor = "white";
+  // const lightColor = "#537188";
+  // const darkColor = "white";
 
-  const [textColor, setTextColor] = useState(darkColor);
+  // const [textColor, setTextColor] = useState(darkColor);
 
-  useEffect(() => {
-    if (isLight) {
-      setTextColor(lightColor);
-    } else {
-      setTextColor(darkColor);
-    }
-    //document.getElementById("typeText").style.color = textColor;
+  // useEffect(() => {
+  //   if (isLight) {
+  //     setTextColor(lightColor);
+  //   } else {
+  //     setTextColor(darkColor);
+  //   }
+  //   //document.getElementById("typeText").style.color = textColor;
 
-    return;
-  }, [isLight]);
+  //   return(()=>{});
+  // }, [isLight]);
   // console.log(textColor);
 
   return (
     <div
       className={`${
         splashStatus ? "hidden" : "absolute fadeInOnly"
-      } md:text-xl text-base flex`}
+      } md:text-xl text-base flex ${isLight?"text-lightColor":"text-white"}`}
       id="typeText"
-      style={{ color: textColor, willChange: "contents" }}
     >
       <TypeAnimation
         preRenderFirstString={true}
@@ -47,6 +46,7 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
           transform: "translate3d(0,0,0)",
         }}
         className="self-end"
+        key = {isLight?"ligh":"dark"}
       />
       {/* <span style={{ fontSize: "1.8em" }}>
         {cursorChar ? <span>/.</span> : <span>\.</span>}
@@ -55,4 +55,4 @@ const TypingAnimate = ({ splashStatus, isLight }) => {
   );
 };
 
-export default TypingAnimate;
+export default React.memo(TypingAnimate);
