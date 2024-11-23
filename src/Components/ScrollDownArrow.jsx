@@ -32,7 +32,7 @@ const ScrollDownArrow = ({ splashStatus, btnClicked, blurStatus, isLight }) => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill={`${isLight ? lightColor : darkColor}`}
+            fill={isLight ? lightColor : darkColor}
             viewBox="0 0 512 512"
             className="cursor-pointer w-6 h-6 md:w-7 md:h-7 hover:scale-110"
             onClick={btnClicked}
