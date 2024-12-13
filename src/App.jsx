@@ -5,16 +5,16 @@ import TechStack from "./Components/TechStack";
 import Projects from "./Components/Projects";
 import BackToTop from "./Components/BackToTop";
 
-import { useState, useEffect, useLayoutEffect, useMemo } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 
 import "./Components/style.css";
 
 const App = () => {
-  useEffect(() => {
+  window.addEventListener("load", () => {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("serviceWorker.js");
     }
-  }, []);
+  });
 
   useLayoutEffect(() => {
     if (isLight) {
@@ -41,31 +41,14 @@ const App = () => {
   let scrollPos = 0;
 
   useEffect(() => {
-    let timeoutId;
-
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-
-      // Clear any existing timeout
-      clearTimeout(timeoutId);
-
-      // Update states based on scroll position
-      setScrollClicked(currentScrollPos > 90);
-      setBackToTop(currentScrollPos > 1000);
-
-      // Set timeout to detect when scrolling stops
-      timeoutId = setTimeout(() => {
-        setScrollClicked(false);
-      }, 150);
+    const scrollDetect = () => {
+      scrollPos = window.scrollY;
+      setScrollClicked(scrollPos <= 90 ? false : ""); //if the page is scrolled to top set state to false again
+      setBackToTop(scrollPos >= 1000 ? false : "");
     };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(timeoutId);
-    };
-  }, []);
+    window.addEventListener("scroll", scrollDetect);
+    //console.log(isVisible);
+  });
 
   const scrollHandler = () => {
     setScrollClicked(true);
@@ -84,12 +67,11 @@ const App = () => {
 
   // state to manage light and dark theme across webpage
   //using localstorage to add persistent theme on subsequent page loads
-  const getInitialTheme = () => {
-    const savedTheme = localStorage.getItem("localTheme");
-    return savedTheme ? JSON.parse(savedTheme) : false;
-  };
-
-  const [isLight, setIsLight] = useState(getInitialTheme);
+  const [isLight, setIsLight] = useState(() => {
+    return localStorage.getItem("localTheme") //try to fetch the state value from localstorage
+      ? JSON.parse(localStorage.getItem("localTheme")) //if value exists then parse it to set the state accordingly
+      : false; //if the vaue doesn't exist set false as default
+  });
 
   const toggleTheme = () => {
     setIsLight((prevTheme) => {
@@ -97,18 +79,6 @@ const App = () => {
       return !prevTheme;
     });
   };
-
-  const introProps = useMemo(
-    () => ({
-      backToTop,
-      splashStatus: showSplash,
-      scrollHandler,
-      globalBlur: blurStatus,
-      toggleTheme,
-      isLight,
-    }),
-    [backToTop, showSplash, scrollHandler, blurStatus, toggleTheme, isLight]
-  );
 
   return (
     <>
@@ -118,7 +88,14 @@ const App = () => {
         splashStatus={showSplash}
         isLight={isLight}
       />
-      <Intro {...introProps} />
+      <Intro
+        backToTop={backToTop}
+        splashStatus={showSplash}
+        scrollHandler={scrollHandler}
+        globalBlur={blurStatus}
+        toggleTheme={toggleTheme}
+        isLight={isLight}
+      />
       <Projects
         scrollClicked={scrollClicked}
         globalBlur={isGlobalBlur}

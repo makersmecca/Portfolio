@@ -3,29 +3,26 @@ import ForkGithub from "./ForkGithub";
 import DownloadResume from "./DownloadResume";
 import ThemeSwitch from "./ThemeSwitch";
 import "./profileborder.css";
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuRef = useRef(null);
 
-  const toggleNav = useCallback(() => {
+  const toggleNav = () => {
+    // console.log("toggled");
     invokeBlur(isOpen);
-    setIsOpen((prev) => !prev);
-  }, [invokeBlur, isOpen]);
-
+    setIsOpen(() => !isOpen);
+  };
   const lightColor = "#C96868";
   const darkColor = "currentColor";
 
-  const handleMenu = useCallback(
-    (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        toggleNav();
-      }
-    },
-    [toggleNav]
-  );
+  const handleMenu = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      toggleNav();
+    }
+  };
 
   useEffect(() => {
     if (isOpen) {
