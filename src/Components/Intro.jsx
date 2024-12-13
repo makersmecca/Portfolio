@@ -2,7 +2,7 @@ import DisplayPicture from "./DisplayPicture";
 import "/src/index.css";
 import ScrollDownArrow from "./ScrollDownArrow";
 import Navbar from "./Navbar";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import TypingAnimate from "./TypingAnimate";
 import ConsoleMsg from "./ConsoleMsg";
 
@@ -15,41 +15,54 @@ const Intro = ({
   isLight,
 }) => {
   const topRef = useRef(null);
+  const [isBlur, setIsBlur] = useState(false);
   // console.log(backToTop);
-  if (backToTop) {
-    if (topRef.current) {
+  useEffect(() => {
+    if (backToTop && topRef.current) {
       topRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }
-  const [isBlur, setIsBlur] = useState(false);
+  }, [backToTop]);
 
-  const blurContent = (isopen) => {
-    setIsBlur(!isopen);
-    globalBlur(!isopen);
-  };
+  const blurContent = useCallback(
+    (isopen) => {
+      setIsBlur(!isopen);
+      globalBlur(!isopen);
+      if (backToTop) {
+        if (topRef.current) {
+          topRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    },
+    [globalBlur]
+  );
+
+  const containerClasses = useMemo(
+    () => `flex flex-col min-h-screen ${splashStatus ? "" : "relative"}`,
+    [splashStatus]
+  );
+
+  const blurClasses = useMemo(
+    () =>
+      `flex justify-center items-center min-h-screen md:mt-20 lg:mt-0 ${
+        isBlur
+          ? "md:blur-none blur-md duration-500 ease-in-out"
+          : "blur-none duration-500 ease-in-out"
+      }`,
+    [isBlur]
+  );
+
   //console.log(splashStatus);
   return (
     <div>
       <ConsoleMsg />
-      <div
-        ref={topRef}
-        className={`flex flex-col min-h-screen ${
-          splashStatus ? "" : "relative"
-        }`}
-      >
+      <div ref={topRef} className={containerClasses}>
         <Navbar
           splashStatus={splashStatus}
           invokeBlur={blurContent}
           toggleTheme={toggleTheme}
           isLight={isLight}
         />
-        <div
-          className={`flex justify-center items-center min-h-screen md:mt-20 lg:mt-0 ${
-            isBlur
-              ? "md:blur-none blur-md duration-500 ease-in-out"
-              : "blur-none duration-500 ease-in-out"
-          }`}
-        >
+        <div className={blurClasses}>
           <div className="grid grid-cols-2 md:grid-cols-5 xl:px-80 lg:px-52 md:px-36 px-8">
             <div
               className={`col-span-2 md:row-span-4 md:row-start-1 flex justify-center md:items-center`}
