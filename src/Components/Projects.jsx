@@ -12,31 +12,29 @@ const Projects = ({ scrollClicked, globalBlur, isLight, splashStatus }) => {
 
   const projectDetails = [
     {
+      img: "https://raw.githubusercontent.com/makersmecca/Vibie/refs/heads/master/public/Vibie%20Poster.png",
+      name: "Vibie Social Media",
+      details: "A Social Media Platform for sharing images and videos",
+      url: "https://vibie.netlify.app",
+    },
+    {
+      img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/haloFocusPoster.png",
+      name: "Halo Focus",
+      details: "Study companion app for focused, productive study sessions",
+      url: "https://halofocus.netlify.app",
+    },
+    {
       img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/shopsumPoster.png",
       name: "Shop Sum",
       details:
         "Payment App for Small Vendors, Roadside Stalls and Humble Corner Shops",
-      url: "https://github.com/makersmecca/Project-ShopSum",
+      url: "https://letsshopsum.netlify.app",
     },
     {
       img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/portfolioPoster.png",
       name: "Portfolio",
       details: "My personal portfolio built with Vite-ReactJS and Tailwind CSS",
-      url: "https://github.com/makersmecca/Portfolio",
-    },
-
-    {
-      img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/haloFocusPoster.png",
-      name: "Halo Focus",
-      details: "Study companion app for focused, productive study sessions",
-      url: "https://github.com/makersmecca/Halo-Focus-Pomodoro",
-    },
-    {
-      img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/wirelessChargerPoster.png",
-      name: "Charge Spot",
-      details:
-        "Companion PWA for Wireless Charger project to monitor battery status",
-      url: "https://github.com/makersmecca/ChargeSpot-Wireless-Charger",
+      url: "https://ayudh.netlify.app",
     },
   ];
 
