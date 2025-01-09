@@ -47,18 +47,29 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
     >
       <div className="md:block hidden">
         <div className="flex justify-between px-24 md:text-lg">
-          <span className="flex px-10">
+          <span title="Today's Date and Time" className="flex px-10">
             <DisplayDateTime isLight={isLight} />
           </span>
           <span className="flex align-bottom">
             <ul className="flex">
-              <li className="flex justify-center md:w-36">
+              <li
+                title={`${
+                  isLight ? "Switch To Dark Theme" : "Switch to Light Theme"
+                }`}
+                className="flex justify-center md:w-36"
+              >
                 <ThemeSwitch toggleTheme={toggleTheme} isLight={isLight} />
               </li>
-              <li className="flex flex-col justify-center md:w-36">
+              <li
+                title="Download Resume PDF"
+                className="flex flex-col justify-center md:w-36"
+              >
                 <DownloadResume isLight={isLight} />
               </li>
-              <li className="flex flex-col justify-center md:w-36">
+              <li
+                title="Fork this project from Github Repository"
+                className="flex flex-col justify-center md:w-36"
+              >
                 <ForkGithub isLight={isLight} />
               </li>
             </ul>
@@ -88,6 +99,7 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
             <ThemeSwitch toggleTheme={toggleTheme} isLight={isLight} />
           </div>
           <div
+            title={`${isOpen ? "Close Menu" : "Open Menu"}`}
             className="col-start-5 flex items-center justify-end pe-4"
             onClick={toggleNav}
           >
