@@ -16,6 +16,7 @@ const BackToTop = ({ toTheTop, splashStatus, isLight }) => {
 
   return (
     <button
+      title="Back to Top"
       onClick={toTheTop}
       className={`${
         splashStatus ? "hidden" : "fixed ease-in-out"
