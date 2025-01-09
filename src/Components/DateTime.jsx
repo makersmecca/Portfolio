@@ -1,32 +1,45 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 const DisplayDateTime = ({ isLight }) => {
   const [currentTime, setCurrentTime] = useState(new Date());
-  function updateTime() {
-    setCurrentTime((c) => new Date());
-  }
 
-  //console.log(currentTime);
+  const formatTime = (num) => (num < 10 ? `0${num}` : num);
 
-  setInterval(updateTime, 1000);
+  const formatDate = (date) => {
+    const day = date.toDateString().substring(0, 3);
+    const dayNum = date.toDateString().substring(8, 10);
+    const month = date.toDateString().substring(4, 7);
+    return `${day}, ${dayNum} ${month}`;
+  };
+
+  useEffect(() => {
+    // Calculate milliseconds until next minute
+    const now = new Date();
+    const millisToNextMinute = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+
+    // Initial timeout to sync with the next minute
+    const timeoutId = setTimeout(() => {
+      setCurrentTime(new Date());
+      
+      // Start the interval exactly on the minute
+      const intervalId = setInterval(() => {
+        setCurrentTime(new Date());
+      }, 60000);
+
+      // Cleanup interval on unmount
+      return () => clearInterval(intervalId);
+    }, millisToNextMinute);
+
+    // Cleanup timeout on unmount
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   return (
     <div className={`px-2 font-semibold self-center`}>
-      {currentTime.getHours() < 10 ? (
-        <span>0{currentTime.getHours()}</span>
-      ) : (
-        <span>{currentTime.getHours()}</span>
-      )}{" "}
+      <span>{formatTime(currentTime.getHours())}</span>
       <span>:</span>{" "}
-      {currentTime.getMinutes() < 10 ? (
-        <span>0{currentTime.getMinutes()}</span>
-      ) : (
-        <span>{currentTime.getMinutes()} ,</span>
-      )}
-      <span className="px-2">
-        {currentTime.toDateString().substring(0, 3)},{" "}
-        {currentTime.toDateString().substring(8, 10)}{" "}
-        {currentTime.toDateString().substring(4, 7)}
-      </span>
+      <span>{formatTime(currentTime.getMinutes())}</span>
+      <span className="px-2">{formatDate(currentTime)}</span>
     </div>
   );
 };
