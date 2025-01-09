@@ -1,11 +1,14 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import "./slideinCards.css";
 const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
-  const arr1 = projectDetails.slice(0, projectDetails.length / 2);
-  const arr2 = projectDetails.slice(
-    projectDetails.length / 2,
-    projectDetails.length
-  );
+  // const arr1 = projectDetails.slice(0, projectDetails.length / 2);
+  // const arr2 = projectDetails.slice(projectDetails.length / 2, projectDetails.length);
+
+  // Add useMemo for array splitting
+  const [arr1, arr2] = useMemo(() => {
+    const half = Math.ceil(projectDetails.length / 2);
+    return [projectDetails.slice(0, half), projectDetails.slice(half)];
+  }, [projectDetails]);
 
   const projectRefs = useRef([]); // Ref to track each project card
 
@@ -15,10 +18,12 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("slide-in");
+          } else {
+            entry.target.classList.remove("slide-in");
           }
         });
       },
-      { threshold: 0.1 } // Trigger animation when 10% of the card is visible
+    { threshold: 0.1 } // Trigger animation when 10% of the card is visible
     );
 
     projectRefs.current.forEach((ref) => {
@@ -60,6 +65,7 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
                     <img
                       src={i.img}
                       alt="banner"
+                      loading="lazy"
                       className="rounded-lg inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                     />
                   </div>
@@ -104,6 +110,7 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
                     <img
                       src={i.img}
                       alt="banner"
+                      loading="lazy"
                       className="rounded-lg inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                     />
                   </div>
