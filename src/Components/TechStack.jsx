@@ -218,7 +218,7 @@ const TechStack = ({ globalBlur, isLight, splashStatus }) => {
           {/* firebase */}
           <div
             title="Google Firebase"
-            className="flex justify-center items-center mt-3 md:mt-0 hover:animate-pulse cursor-pointer"
+            className="flex justify-center items-center mt-3 md:mt-0 hover:scale-105 cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -257,8 +257,6 @@ const TechStack = ({ globalBlur, isLight, splashStatus }) => {
               height="60"
               viewBox="0 0 92 92"
             >
-              <path d="M0 .113h91.887V92H0Zm0 0" />
-
               <path
                 style={{
                   stroke: "none",

@@ -18,7 +18,7 @@ const Projects = ({ scrollClicked, globalBlur, isLight, splashStatus }) => {
       url: "https://vibie.netlify.app",
     },
     {
-      img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/haloFocusPoster.png",
+      img: "https://raw.githubusercontent.com/makersmecca/Halo-Focus-Pomodoro/refs/heads/master/Halo%20Focus%20UI.png",
       name: "Halo Focus",
       details: "Study companion app for focused, productive study sessions",
       url: "https://halofocus.netlify.app",
@@ -31,7 +31,7 @@ const Projects = ({ scrollClicked, globalBlur, isLight, splashStatus }) => {
       url: "https://letsshopsum.netlify.app",
     },
     {
-      img: "https://raw.githubusercontent.com/makersmecca/Portfolio/main/public/images/portfolioPoster.png",
+      img: "https://raw.githubusercontent.com/makersmecca/Portfolio/refs/heads/main/Portfolio%20Poster.png",
       name: "Portfolio",
       details: "My personal portfolio built with Vite-ReactJS and Tailwind CSS",
       url: "https://ayudh.netlify.app",
