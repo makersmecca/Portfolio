@@ -1,5 +1,7 @@
 ## Portfolio
 <img src="https://api.netlify.com/api/v1/badges/9c78e292-0d53-4cbd-a9ab-fb5afdea7139/deploy-status?branch=main"/>
+
+[![https://api.netlify.com/api/v1/badges/f2c94f76-3d2a-47b9-b437-e3a14346a71b/deploy-status](https://api.netlify.com/api/v1/badges/9c78e292-0d53-4cbd-a9ab-fb5afdea7139/deploy-status?branch=main)](https://app.netlify.com/sites/ayudh/deploys)
 ### My personal portfolio website, built using React, Vite, and Tailwind CSS.
 
 ![](https://raw.githubusercontent.com/makersmecca/Portfolio/refs/heads/main/Portfolio%20Poster.png)
