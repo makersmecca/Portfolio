@@ -27,6 +27,7 @@ Before you begin, make sure you have the following tools installed on your syste
 - Node.js: Download and install [Node.js Official site](https://nodejs.org/en/download/package-manager)
 - npm or yarn: Included with Node.js (check by running "npm -v" or "yarn -v" in your terminal)
 - Git: Download and install from [Git Official Site](https://git-scm.com/downloads)
+- VS Code: Download and install [VS Code](https://code.visualstudio.com/download). The integrated terminal of VS Code makes it easier to run the bash commands, mentioned in the following steps.
 
 #### To run this project locally, follow these steps:
 <ol>
