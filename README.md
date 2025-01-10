@@ -1,9 +1,9 @@
-## Portfolio
+# Portfolio
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9c78e292-0d53-4cbd-a9ab-fb5afdea7139/deploy-status?branch=main)](https://app.netlify.com/sites/ayudh/deploys)
 [![CodeQL Advanced](https://github.com/makersmecca/Portfolio/actions/workflows/codeql.yml/badge.svg)](https://github.com/makersmecca/Portfolio/actions/workflows/codeql.yml)
 [![CodeQL](https://github.com/makersmecca/Portfolio/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/makersmecca/Portfolio/actions/workflows/github-code-scanning/codeql)
 
-### My personal portfolio website, built using React, Vite, and Tailwind CSS.
+### My portfolio website. Developed using React, Vite, and Tailwind CSS.
 
 ![](https://raw.githubusercontent.com/makersmecca/Portfolio/refs/heads/main/Portfolio%20Poster.png)
 
@@ -16,11 +16,11 @@
 - Custom Animations: Created custom animation sequences using Tailwind config and CSS.
 
 ### Technologies used
-- React JS: </strong> A JavaScript library for building user interfaces.
-- Vite: </strong> A build tool that helps make development faster. Provides quick development servers and efficient production builds.
-- Tailwind CSS: </strong> A utility-first CSS framework that simplifies styling by providing pre-built classes for common styles.
-- Google Fonts: </strong> Fun creative fonts from Google that can be imported to your project.
-- Netlify: </strong> A platform that provides build, deployment, and serverless backend services for web applications and dynamic websites.
+- React JS: A JavaScript library for building user interfaces.
+- Vite: A build tool that helps make development faster. Provides quick development servers and efficient production builds.
+- Tailwind CSS: A utility-first CSS framework that simplifies styling by providing pre-built classes for common styles.
+- Google Fonts: Fun creative fonts from Google that can be imported to your project.
+- Netlify: A platform that provides build, deployment, and serverless backend services for web applications and dynamic websites.
 
 ### Installation
 Before you begin, make sure you have the following tools installed on your system:
