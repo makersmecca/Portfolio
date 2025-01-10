@@ -1,10 +1,9 @@
-import Intro from "./Components/Intro";
-import SplashScreen from "./Components/SplashScreen";
-import Socials from "./Components/Socials";
-import TechStack from "./Components/TechStack";
-import Projects from "./Components/Projects";
+import Intro from "./Components/Introductory Part/MyDetails/Intro";
+import SplashScreen from "./Components/SplashScreen/SplashScreen";
+import Socials from "./Components/Footer/Socials";
+import TechStack from "./Components/Footer/TechStack";
+import Projects from "./Components/Projects/Projects";
 import BackToTop from "./Components/BackToTop";
-
 import { useState, useEffect, useLayoutEffect } from "react";
 
 import "./Components/style.css";

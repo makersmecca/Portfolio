@@ -2,7 +2,8 @@ import DisplayDateTime from "./DateTime";
 import ForkGithub from "./ForkGithub";
 import DownloadResume from "./DownloadResume";
 import ThemeSwitch from "./ThemeSwitch";
-import "./profileborder.css";
+import "../MyDetails/profileborder.css";
+
 import { useState, useEffect, useRef } from "react";
 
 const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {

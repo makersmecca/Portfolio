@@ -1,10 +1,10 @@
 import DisplayPicture from "./DisplayPicture";
 import "/src/index.css";
-import ScrollDownArrow from "./ScrollDownArrow";
-import Navbar from "./Navbar";
+import ScrollDownArrow from "../ScrollDownArrow";
+import Navbar from "../NavMenu/Navbar";
 import { useState, useRef, useEffect } from "react";
 import TypingAnimate from "./TypingAnimate";
-import ConsoleMsg from "./ConsoleMsg";
+import ConsoleMsg from "../../ConsoleMsg";
 
 const Intro = ({
   backToTop,
