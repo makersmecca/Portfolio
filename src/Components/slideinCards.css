@@ -2,6 +2,7 @@
 .slideInAnimate {
   opacity: 0;
   transform: translateY(50px); /* Start with a 50px offset */
+  will-change: transform, opacity;
 }
 
 /* Slide-in animation */
