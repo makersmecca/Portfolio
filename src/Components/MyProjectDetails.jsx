@@ -1,31 +1,67 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useCallback, useRef, useState } from "react";
 import "./slideinCards.css";
+
 const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
-  // const arr1 = projectDetails.slice(0, projectDetails.length / 2);
-  // const arr2 = projectDetails.slice(projectDetails.length / 2, projectDetails.length);
+  const [imageLoaded, setImageLoaded] = useState({});
+  const [imageErrors, setImageErrors] = useState({});
+  const projectRefs = useRef([]);
 
-  // Add useMemo for array splitting
-  const [arr1, arr2] = useMemo(() => {
-    const half = Math.ceil(projectDetails.length / 2);
-    return [projectDetails.slice(0, half), projectDetails.slice(half)];
-  }, [projectDetails]);
+  // Memoized image load handler
+  const handleImageLoad = useCallback((projectName) => {
+    setImageLoaded((prev) => ({
+      ...prev,
+      [projectName]: true,
+    }));
+  }, []);
 
-  const projectRefs = useRef([]); // Ref to track each project card
+  // Memoized image error handler
+  const handleImageError = useCallback((projectName) => {
+    setImageErrors((prev) => ({
+      ...prev,
+      [projectName]: true,
+    }));
+    setImageLoaded((prev) => ({
+      ...prev,
+      [projectName]: true, // Remove loading state even if error
+    }));
+  }, []);
+
+
+  // Pre-loading images
+  useEffect(() => {
+    projectDetails.forEach((project) => {
+      const img = new Image();
+      img.src = project.img;
+
+      img.onload = () => handleImageLoad(project.name);
+      img.onerror = () => handleImageError(project.name);
+    });
+  }, [projectDetails, handleImageLoad, handleImageError]);
+
+  const observerCallback = useCallback((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("slide-in");
+      } else {
+        entry.target.classList.remove("slide-in");
+      }
+    });
+  }, []);
+
+  const observerOptions = useMemo(
+    () => ({
+      threshold: 0.1,
+      rootMargin: "50px 0px",
+    }),
+    []
+  );
+
+  const observer = useMemo(
+    () => new IntersectionObserver(observerCallback, observerOptions),
+    [observerCallback, observerOptions]
+  );
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("slide-in");
-          } else {
-            entry.target.classList.remove("slide-in");
-          }
-        });
-      },
-    { threshold: 0.1 } // Trigger animation when 10% of the card is visible
-    );
-
     projectRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
@@ -35,7 +71,91 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
         if (ref) observer.unobserve(ref);
       });
     };
-  }, []);
+  }, [observer]);
+
+  // Memoize the project cards rendering
+  const renderProjectCards = useMemo(() => {
+    return projectDetails.map((project, index) => (
+      <div
+        key={project.name}
+        className={`col-span-2 ${
+          index % 2 === 0 ? "" : "md:col-start-4"
+        } col-start-1 flex justify-center`}
+      >
+        <div
+          ref={(el) => (projectRefs.current[index] = el)}
+          className="md:pt-7 pt-5 group opacity-0 transform transition-all duration-1000 slideInAnimate"
+        >
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`block max-w-sm p-6 ${
+              isLight
+                ? "bg-pastelRed group-hover:bg-pastelRedLight"
+                : "bg-gray-800 group-hover:bg-gray-700"
+            } rounded-lg`}
+          >
+            <div className="relative overflow-hidden rounded-lg aspect-video">
+              {/* Placeholder/Loading State */}
+              {!imageLoaded[project.name] && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+                </div>
+              )}
+
+              {/* Error State */}
+              {imageErrors[project.name] && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
+                  <span className="text-gray-500">Image unavailable</span>
+                </div>
+              )}
+
+              {/* Actual Image */}
+              {!imageErrors[project.name] && (
+                <img
+                  src={project.img}
+                  alt={`${project.name} preview`}
+                  loading="lazy"
+                  decoding="async"
+                  className={`
+                    absolute inset-0 w-full h-full object-cover
+                    duration-300 ease-in-out
+                    group-hover:scale-110 transition-all
+                    ${!imageLoaded[project.name] ? "opacity-0" : "opacity-100"}
+                  `}
+                  onLoad={() => handleImageLoad(project.name)}
+                  onError={() => handleImageError(project.name)}
+                />
+              )}
+            </div>
+
+            <h5
+              className={`pt-2 mb-2 text-center text-2xl font-bold tracking-tight ${
+                isLight ? "text-slate-700" : "text-white"
+              } rounded-lg`}
+            >
+              {project.name}
+            </h5>
+            <p
+              className={`font-normal text-center text-sm ${
+                isLight ? "font-semibold" : "font-normal"
+              }`}
+            >
+              {project.details}
+            </p>
+          </a>
+        </div>
+      </div>
+    ));
+  }, [
+    projectDetails,
+    isLight,
+    imageLoaded,
+    imageErrors,
+    handleImageLoad,
+    handleImageError,
+  ]);
 
   return (
     <div className={`${splashStatus ? "hidden" : "block"}`}>
@@ -43,96 +163,7 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
         <div className="col-span-2 col-start-1 text-center md:text-start md:ps-16 md:me-9 text-3xl md:text-4xl">
           Projects
         </div>
-        <div className="col-span-2 col-start-1 flex justify-center">
-          <ul className="md:pt-10 pt-0">
-            {arr1.map((i, index) => (
-              <li
-                key={i.name}
-                ref={(el) => (projectRefs.current[index] = el)} // Track the ref
-                className="md:pt-7 pt-5 group opacity-0 transform transition-all duration-1000 slideInAnimate" // Initially hidden
-              >
-                <a
-                  href={i.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`block max-w-sm p-6 ${
-                    isLight
-                      ? "bg-pastelRed group-hover:bg-pastelRedLight"
-                      : "bg-gray-800 group-hover:bg-gray-700"
-                  } rounded-lg`}
-                >
-                  <div className="overflow-hidden rounded-lg">
-                    <img
-                      src={i.img}
-                      alt="banner"
-                      loading="lazy"
-                      className="rounded-lg inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
-                    />
-                  </div>
-                  <h5
-                    className={`pt-2 mb-2 text-center text-2xl font-bold tracking-tight ${
-                      isLight ? "text-slate-700" : "text-white"
-                    } rounded-lg`}
-                  >
-                    {i.name}
-                  </h5>
-                  <p
-                    className={`font-normal text-center text-sm ${
-                      isLight ? "font-semibold" : "font-normal"
-                    }`}
-                  >
-                    {i.details}
-                  </p>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="col-span-2 md:col-start-4 flex justify-center">
-          <ul className="md:pt-10 pt-0">
-            {arr2.map((i, index) => (
-              <li
-                key={i.name}
-                ref={(el) => (projectRefs.current[index + arr1.length] = el)} // Track the ref for the second half
-                className="md:pt-7 pt-5 group opacity-0 transform transition-all duration-1000 slideInAnimate"
-              >
-                <a
-                  href={i.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`block max-w-sm p-6 ${
-                    isLight
-                      ? "bg-pastelRed group-hover:bg-pastelRedLight"
-                      : "bg-gray-800 group-hover:bg-gray-700"
-                  } rounded-lg`}
-                >
-                  <div className="overflow-hidden rounded-lg">
-                    <img
-                      src={i.img}
-                      alt="banner"
-                      loading="lazy"
-                      className="rounded-lg inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
-                    />
-                  </div>
-                  <h5
-                    className={`pt-2 mb-2 text-center text-2xl font-bold tracking-tight ${
-                      isLight ? "text-slate-700" : "text-white"
-                    } rounded-lg`}
-                  >
-                    {i.name}
-                  </h5>
-                  <p
-                    className={`font-normal text-center text-sm ${
-                      isLight ? "font-semibold" : "font-normal"
-                    }`}
-                  >
-                    {i.details}
-                  </p>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {renderProjectCards}
       </div>
     </div>
   );
