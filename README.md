@@ -1,5 +1,8 @@
 ## Portfolio
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9c78e292-0d53-4cbd-a9ab-fb5afdea7139/deploy-status?branch=main)](https://app.netlify.com/sites/ayudh/deploys)
+[![CodeQL Advanced](https://github.com/makersmecca/Portfolio/actions/workflows/codeql.yml/badge.svg)](https://github.com/makersmecca/Portfolio/actions/workflows/codeql.yml)
+[![CodeQL](https://github.com/makersmecca/Portfolio/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/makersmecca/Portfolio/actions/workflows/github-code-scanning/codeql)
+
 ### My personal portfolio website, built using React, Vite, and Tailwind CSS.
 
 ![](https://raw.githubusercontent.com/makersmecca/Portfolio/refs/heads/main/Portfolio%20Poster.png)
