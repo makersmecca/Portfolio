@@ -59,11 +59,9 @@ npm run dev
 </ol>
 You should be able to see the portfolio website up and running on your browser.
 
-<h3>Planned Future Improvements</h3>
-<ul>
-  <li><strong>Blog Section:</strong> Add blogs to share my experiences, thoughts, skills, and other random projects.</li>
-  <li><strong>Contact Me Form</strong> An integrated form to send a message to me.</li>
-</ul>
+### Planned Future Improvements
+- Blog Section: Add blogs to share my experiences, thoughts, skills, and other random projects.
+- Contact Me Form: An integrated form to send a message to me.
 
 <h3>License</h3>
 Licensed under <a href ="https://github.com/makersmecca/Portfolio/blob/main/LICENSE" >MIT License</a>
