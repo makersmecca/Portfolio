@@ -17,7 +17,7 @@ export default {
         pastelSlate: "#7EACB5",
         lightColor: "#537188",
         darkBtnColor: "#334155",
-        lightBtnColor:"#C96868"
+        lightBtnColor: "#C96868",
       },
       animation: {
         // typing: "typing 2s steps(14), blink 0.5s infinite alternate",
@@ -27,6 +27,7 @@ export default {
         slideIn: "slideIn 0.2s ease-in-out forwards",
         slideOut: "slideOut 0.2s ease-in-out forwards",
         spinSlow: "spin 4s linear infinite",
+        revSpinSlow: "rotateX 2s linear infinite",
         fastPulse: "pulse 0.8s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         wave: "wave 2s ease infinite",
         balloonPop: "balloonPop 1.2s ease forwards",
@@ -36,6 +37,10 @@ export default {
         rotateY: {
           "0%": { transform: "rotateY(0deg)" },
           "100%": { transform: "rotateY(360deg)" },
+        },
+        rotateX: {
+          "0%": { transform: "rotateZ(360deg)" },
+          "100%": { transform: "rotateZ(0deg)" },
         },
         wave: {
           "0%": {
@@ -88,41 +93,29 @@ export default {
         balloonPop: {
           "0%": {
             transform: "scale(1)",
-            opacity: "1",
+            opacity: "100%",
           },
           "50%": {
             transform: "scale(1.3)",
-            opacity: "1",
+            opacity: "90%",
           },
           "80%": {
             transform: "scale(1.5)",
-            opacity: "1",
+            opacity: "80%",
           },
-          "93%": {
+          "90%": {
             transform: "scale(1.7)",
-            opacity: "1",
+            opacity: "40%",
           },
-          "100%": {
+          "95%": {
             transform: "scale(5)",
             opacity: "0",
           },
+          "100%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
         },
-        // typing: {
-        //   from: {
-        //     width: "0",
-        //   },
-        //   to: {
-        //     width: "3ch",
-        //   },
-        // },
-        // blink: {
-        //   from: {
-        //     "border-color": "black",
-        //   },
-        //   to: {
-        //     "border-color": "white",
-        //   },
-        // },
       },
     },
     fontFamily: {

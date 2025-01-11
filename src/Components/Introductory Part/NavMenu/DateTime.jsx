@@ -15,12 +15,13 @@ const DisplayDateTime = () => {
   useEffect(() => {
     // Calculate milliseconds until next minute
     const now = new Date();
-    const millisToNextMinute = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+    const millisToNextMinute =
+      (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
 
     // Initial timeout to sync with the next minute
     const timeoutId = setTimeout(() => {
       setCurrentTime(new Date());
-      
+
       // Start the interval exactly on the minute
       const intervalId = setInterval(() => {
         setCurrentTime(new Date());
@@ -35,10 +36,9 @@ const DisplayDateTime = () => {
   }, []);
 
   return (
-    <div className={`px-2 font-semibold self-center`}>
+    <div className={`px-2 sm:px-0 font-semibold self-center`}>
       <span>{formatTime(currentTime.getHours())}</span>
-      <span>:</span>{" "}
-      <span>{formatTime(currentTime.getMinutes())}</span>
+      <span>:</span> <span>{formatTime(currentTime.getMinutes())}</span>
       <span className="px-2">{formatDate(currentTime)}</span>
     </div>
   );

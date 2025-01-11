@@ -48,7 +48,7 @@ const Navbar = ({ splashStatus, invokeBlur, toggleTheme, isLight }) => {
     >
       <div className="md:block hidden">
         <div className="flex justify-between px-24 md:text-lg">
-          <span title="Today's Date and Time" className="flex px-10">
+          <span title="Today's Date and Time" className="flex px-10 sm:px-0">
             <DisplayDateTime isLight={isLight} />
           </span>
           <span className="flex align-bottom">

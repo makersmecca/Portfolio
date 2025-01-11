@@ -50,13 +50,13 @@ const Intro = ({
               : "blur-none duration-500 ease-in-out"
           }`}
         >
-          <div className="grid grid-cols-2 md:grid-cols-5 xl:px-80 lg:px-52 md:px-36 px-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:px-80 lg:px-52 md:px-36 px-8">
             <div
-              className={`col-span-2 md:row-span-4 md:row-start-1 flex justify-center md:items-center`}
+              className={`col-span-2 sm:col-span-full md:col-span-2 sm:row-span-full md:row-span-4 sm:row-start-3 row-start-1 flex justify-center md:items-center sm:mb-16 md:mb-0`}
             >
               <DisplayPicture splashStatus={splashStatus} isLight={isLight} />
             </div>
-            <div className="col-span-2 md:row-start-1 row-start-2 md:row-span-2 md:col-span-3 md:col-start-3 text-center md:text-start flex md:justify-start justify-center items-center md:items-end mt-10 px-10 md:mt-0">
+            <div className="col-span-2 sm:col-span-full md:row-start-1 row-start-2 md:row-span-2 md:col-span-3 md:col-start-3 text-center md:text-start flex md:justify-start justify-center items-center md:items-end mt-10 sm:mt-16 px-10 md:mt-0">
               {/*using an external animation library*/}
               <TypingAnimate splashStatus={splashStatus} isLight={isLight} />
 
@@ -83,7 +83,7 @@ const Intro = ({
                 Ayudh.
               </span>
             </div>
-            <div className="col-span-3 md:row-start-4 md:col-start-3 md:text-start text-center flex justify-center md:justify-start hyphens-none px-16 sm:px-12 md:px-10 md:text-xl">
+            <div className="col-span-3 sm:col-span-3 md:row-start-4 md:col-start-3 md:text-start text-center flex justify-center md:justify-start hyphens-none px-16 sm:pt-5 sm:px-12 md:px-10 md:text-xl">
               <span className="md:self-end self-center">
                 I am a Frontend developer with experience in building{" "}
                 <span className="text-newOrange">responsive,</span>{" "}
@@ -127,7 +127,7 @@ const Intro = ({
               className={`${
                 splashStatus
                   ? "hidden"
-                  : "sm:flex sm:col-span-3 sm:col-start-3 sm:px-10"
+                  : "sm:flex sm:col-span-full justify-center md:justify-start md:col-span-3 md:col-start-3 sm:px-10"
               } `}
             >
               <a

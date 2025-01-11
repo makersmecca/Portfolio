@@ -26,7 +26,6 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
     }));
   }, []);
 
-
   // Pre-loading images
   useEffect(() => {
     projectDetails.forEach((project) => {
@@ -78,13 +77,13 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
     return projectDetails.map((project, index) => (
       <div
         key={project.name}
-        className={`col-span-2 ${
-          index % 2 === 0 ? "" : "md:col-start-4"
-        } col-start-1 flex justify-center`}
+        className={`col-span-3 ${
+          index % 2 === 0 ? "" : "sm:col-start-5"
+        } col-start-1 flex justify-center mt-7`}
       >
         <div
           ref={(el) => (projectRefs.current[index] = el)}
-          className="md:pt-7 pt-5 group opacity-0 transform transition-all duration-1000 slideInAnimate"
+          className="group opacity-0 transform transition-all duration-1000 slideInAnimate"
         >
           <a
             href={project.url}
@@ -94,9 +93,9 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
               isLight
                 ? "bg-pastelRed group-hover:bg-pastelRedLight"
                 : "bg-gray-800 group-hover:bg-gray-700"
-            } rounded-lg`}
+            } rounded-3xl`}
           >
-            <div className="relative overflow-hidden rounded-lg aspect-video">
+            <div className="relative overflow-hidden rounded-xl aspect-video">
               {/* Placeholder/Loading State */}
               {!imageLoaded[project.name] && (
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
@@ -159,8 +158,12 @@ const MyProjectDetails = ({ projectDetails, isLight, splashStatus }) => {
 
   return (
     <div className={`${splashStatus ? "hidden" : "block"}`}>
-      <div className="mt-10 md:mt-20 pt-5 grid grid-cols-2 md:grid-cols-5 xl:px-80 lg:px-52 md:px-36 px-8">
-        <div className="col-span-2 col-start-1 text-center md:text-start md:ps-16 md:me-9 text-3xl md:text-4xl">
+      <div
+        className={` mt-10 md:mt-20 pt-5 grid grid-cols-2 sm:grid-cols-7 xl:px-80 lg:px-52 md:px-36 px-8`}
+      >
+        <div
+          className={`col-span-3 col-start-1 text-center md:text-start md:ps-16 md:me-9 text-3xl md:text-4xl`}
+        >
           Projects
         </div>
         {renderProjectCards}

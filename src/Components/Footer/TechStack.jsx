@@ -5,13 +5,25 @@ const TechStack = ({ globalBlur, isLight, splashStatus }) => {
         className={`${
           globalBlur
             ? "md:blur-none blur-md duration-500 ease-in-out"
-            : "blur-none duration-500 ease-in-out "
-        }mt-10 md:mt-20 pt-5 flex flex-col xl:px-80 lg:px-52 md:px-36 px-8`}
+            : "blur-none duration-500 ease-in-out"
+        } mt-10 md:mt-20 pt-5 flex flex-col xl:px-80`}
       >
         <div className="mb-10 col-span-full col-start-1 text-center md:text-start md:ps-16 md:me-9 text-3xl md:text-4xl">
           Tech-Stack
         </div>
-        <div className="grid grid-cols-3 md:flex md:flex-row gap-4 items-center justify-center">
+      </div>
+      <div
+        className={`${
+          globalBlur
+            ? "md:blur-none blur-md duration-500 ease-in-out"
+            : "blur-none duration-500 ease-in-out"
+        } pt-5 flex flex-col xl:px-80 lg:px-52 md:px-36 px-8 ${
+          isLight ? "md:bg-white py-7 md:py-2" : ""
+        }`}
+      >
+        <div
+          className={` grid grid-cols-3 lg:flex lg:flex-row gap-4 items-center justify-center`}
+        >
           {/* react */}
           <div
             title="React JS"
@@ -21,7 +33,7 @@ const TechStack = ({ globalBlur, isLight, splashStatus }) => {
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
               role="img"
-              className="iconify iconify--logos animate-spinSlow ease-in-out transition-transform"
+              className="iconify iconify--logos animate-spinSlow hover:animate-revSpinSlow ease-in-out transition-all"
               width="65"
               height="65"
               preserveAspectRatio="xMidYMid meet"
@@ -37,14 +49,14 @@ const TechStack = ({ globalBlur, isLight, splashStatus }) => {
           {/* vite */}
           <div
             title="Vite"
-            className="flex justify-center items-center mt-3 md:mt-0 hover:animate-pulse cursor-pointer"
+            className="flex justify-center items-center mt-3 md:mt-0  cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               aria-hidden="true"
               role="img"
-              class="iconify iconify--logos"
+              className="hover:animate-wave iconify iconify--logos"
               width="60"
               height="60"
               preserveAspectRatio="xMidYMid meet"
@@ -249,7 +261,7 @@ const TechStack = ({ globalBlur, isLight, splashStatus }) => {
           {/* git */}
           <div
             title="Git"
-            className="flex justify-center items-center mt-3 md:mt-0 hover:animate-rotateY cursor-pointer col-span-3 sm:col-span-1"
+            className="flex justify-center items-center mt-3 md:mt-0 hover:animate-rotateY cursor-pointer col-span-3 lg:col-span-1"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
