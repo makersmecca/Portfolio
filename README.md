@@ -66,4 +66,5 @@ You should be able to see the portfolio website up and running on your browser.
 Licensed under [MIT License](https://github.com/makersmecca/Portfolio/blob/main/LICENSE)
 - You can use, customize, and modify this project to suit your needs.
 - Let me know if you do, I'd love to see your versions as well!
-![](https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true)
+
+<img src="https://github.com/makersmecca/DiscordFileStore/blob/filestore/src/footercat.svg"/>
